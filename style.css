@@ -1,29 +1,43 @@
 @font-face {
-  src: url('./font/Montserrat-Medium.otf');
-  font-family: 'Montserrat';
+  src: url('./font/Nunito/Nunito-VariableFont_wght.ttf');
+  font-family: 'Nunito';
+}
+@font-face {
+  src: url('./font/Nunito/NunitoSans-Italic.ttf');
+  font-family: 'NunitoItalic';
   font-style: normal;
-
 }
 
-@font-face {
-  src: url('./font/Montserrat-Light.otf');
-  font-family: 'Montserrat-Light';
-  font-style: normal;
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-@font-face {
-  src: url('./font/sofiapro-light.otf');
-  font-family: 'SofiaPro';
-  font-style: normal;
 
-}
-
-@font-face {
-  src: url('./font/Newake-Font-Demo.otf');
-  font-family: 'Newake';
-  font-style: normal;
-
+.noSelectableText {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 
@@ -35,10 +49,20 @@ body {
   background-color: black;
   text-align: center;
   color: white;
-  font-family: 'SofiaPro';
+  font-family: 'Nunito';
 
 }
 
+
+h3 {
+  font-family: 'Nunito';
+  font-size: 23px;
+}
+
+p {
+  font-family: 'Nunito';
+  font-size: 20px;
+}
 
 
 a:link {
@@ -64,12 +88,12 @@ a:active {
 
 
 .unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 
@@ -103,7 +127,7 @@ a:active {
   width: 100%;
   height: 100%;
 
-  filter: blur(5px) brightness(70%);
+  filter: blur(5px) brightness(80%);
 }
 
 
@@ -139,23 +163,171 @@ a:active {
 }
 
 
+/* Accueil */
 
 
-.GrandTitre {
-  margin-top: 5%;
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  text-align: left;
-  font-size: 48px;
-  font-family: 'Montserrat';
-  font-weight: 700;
-  line-height: 38px;
+
+  height: 15%;
+
+
 }
+.headerItems{
+  cursor: pointer;
+
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.headerItems a{
+  margin: 0 5%;
+  font-family: 'Nunito';
+  
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.logo{
+  background-image: url('./Images/Logo.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 5%;
+  height: 100%;
+}
+
+
+.accueilPage{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.accueil{
+  display: flex;
+  justify-content: space-between;
+}
+
+.accueilText{
+  width: 50%;
+}
+.accueilTitre{
+  font-family: 'Nunito';
+  font-size: 140px;
+  text-align: left;
+
+  font-weight: 700;
+
+  line-height: 90%;
+
+  letter-spacing: 0.055em;
+
+  margin: 5% 0;
+}
+.accueilDescription{
+  text-align: left;
+
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+
+  width: 78%;
+
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.barDeco{
+  width: 1.5vw;
+  height: 70px;
+  
+
+  border-radius: 50px;
+
+  margin-right: 10%;
+
+  background-color: #FF005C;
+}
+
+
+
+
+.buttonSuite{
+  
+  justify-self: flex-end;
+
+  font-size: 32px;
+  font-weight: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2.5% 0;  
+
+  position: relative;
+}
+
+.buttonSuite a {
+  text-decoration: none;
+}
+
+.buttonSuite div {
+  width: fit-content;
+  padding: 1% 2.5%;
+
+  border: solid 5px #FF005C;
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+#circleDiscover {
+  width: 92%;
+  height: 85%;
+  top: -2.5%;
+  left: 0%;
+
+  opacity: 0;
+
+  /* line-height: 40px; */
+  border-radius: 100px;
+  background: #fa194e;
+  
+  transition: all .15s linear;
+
+  position: absolute;
+
+  z-index: -1;
+
+}
+
+.buttonSuite div:hover #circleDiscover {
+  width: 92%;
+  height: 85%;
+  top: -2.5%;
+  left: 0%;
+  opacity: 0.5;
+}
+
+
+
 
 .MoyenTitre {
   margin-top: 4%;
   text-align: left;
   font-size: 20px;
-  font-family: 'Montserrat-Light';
+  font-family: 'Nunito';
   font-weight: 700;
   line-height: 38px;
   text-transform: uppercase;
@@ -166,8 +338,8 @@ a:active {
   margin-top: 0%;
   text-align: left;
   font-size: 18px;
-  font-family: 'Montserrat-Light';
-  font-weight: 700;
+  font-family: 'Nunito';
+  font-weight: 500;
   line-height: 38px;
   margin-bottom: 5%;
 }
@@ -177,31 +349,7 @@ a:active {
 
 
 
-.column1 {
-  float: left;
-  width: 28%;
-  font-size: 17px;
-  margin-bottom: 6%;
 
-}
-.column2 {
-  float: right;
-  width: 68%;
-  text-transform: uppercase;
-  font-size: 100px;
-  font-family: 'Newake';
-  letter-spacing: 20px;
-  border: 0px solid;
-  line-height: 140%;
-  text-align: right;
-
-}
-
-.strokeme {
-  color: white;
-  text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
-  text-shadow: 3px 3px 0px #fa194e;
-}
 
 .row:after {
   content: "";
@@ -213,66 +361,61 @@ a:active {
 
 /* ---- Parties ---- */
 
+
+.TitresParties{
+  display: flex;
+  justify-content: center;
+
+  
+}
+
 .TitresParties:after {
   content: "";
   display: table;
   clear: both;
+  
 
 }
 
 
 
 .TitresParties .Image {
+
   float: left;
   margin: 0 30px;
 
-
   transition: all 0.1s linear;
   display: block;
-  height: 92px;
-  width: 161px;
-  border-radius: 8px;
+  height: calc(92px*1.5);
+  width: calc(161px*1.5);
+  border-radius: 10px;
   clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% calc(100% - 20px), 0% 20px);
 
 }
 
 .TitresParties .Image div b{
-  font-weight: normal;
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
   margin-top: -9px;
+
+  font-family: 'Nunito';
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .TitresParties .Image div{
-  box-shadow: inset -2px 2px 5px rgba(0,0,0,0.2);
+  box-shadow: inset -5px 5px 5px rgba(0,0,0,0.2);
   position: relative;
+
+  width: 100%;
+  height: 100%;
 }
 
-
-/* --------- 3D --------- */
-
-.TitresParties #Titre3DPart div:hover{
-  transition: all 0.1s linear;
-  cursor: pointer;
-  background-color: rgba(199, 37, 49, 0.38);
+.TitresParties .Image div:hover{
+  box-shadow: inset -2px 2px 4px rgba(0,0,0,0.2);
 }
-
-
-.TitresParties #Titre3DPart div{
-  transition: all 0.1s linear;
-  background-color: rgba(199, 37, 49, 0.3);
-  height: 92px;
-  width: 161px;
-  object-fit: cover;
-  border-radius: 8px;
-  text-align: center;
-  font-family: 'Montserrat';
-  font-size: 20px;
-}
-
-/* --------- Dessin --------- */
 
 .TitresParties #TitreDessinPart div:hover{
   transition: all 0.1s linear;
@@ -289,9 +432,32 @@ a:active {
   object-fit: cover;
   border-radius: 8px;
   text-align: center;
+  font-family: 'Nunito';
+  font-size: 20px;
+}
+
+/* --------- Lab --------- */
+
+.TitresParties #TitreLabPart div:hover{
+  transition: all 0.1s linear;
+  cursor: pointer;
+  background-color: rgba(199, 37, 49, 0.38);
+}
+
+
+.TitresParties #TitreLabPart div{
+  transition: all 0.1s linear;
+  background-color: rgba(199, 37, 49, 0.3);
+  /* height: 92px;
+  width: 161px; */
+  object-fit: cover;
+  border-radius: 8px;
+  text-align: center;
   font-family: 'Montserrat';
   font-size: 20px;
 }
+
+
 
 /* --------- Python --------- */
 
@@ -305,8 +471,8 @@ a:active {
 .TitresParties #TitrePythonPart div{
   transition: all 0.1s linear;
   background-color: rgba(183, 83, 223, 0.3);
-  height: 92px;
-  width: 161px;
+  /* height: 92px;
+  width: 161px; */
   object-fit: cover;
   border-radius: 8px;
   text-align: center;
@@ -326,8 +492,8 @@ a:active {
 .TitresParties #TitreHtmlCssPart div{
   transition: all 0.1s linear;
   background-color: rgba(57, 121, 231, 0.3);
-  height: 92px;
-  width: 161px;
+  /* height: 92px;
+  width: 161px; */
   object-fit: cover;
   border-radius: 8px;
   text-align: center;
@@ -347,8 +513,8 @@ a:active {
 .TitresParties #TitreCsPart div{
   transition: all 0.1s linear;
   background-color: rgba(128, 192, 238, 0.3);
-  height: 92px;
-  width: 161px;
+  /* height: 92px;
+  width: 161px; */
   object-fit: cover;
   border-radius: 8px;
   text-align: center;
@@ -359,33 +525,39 @@ a:active {
 
 
 #CodePythonPart {
-  display: block;
+  display: none;
 }
 #CodeHtmlPart {
-  display: none;
+  display: block;
 }
 #CodeCsPart {
   display: none;
 }
-#Design3DPart {
+#LabPart {
   display: none;
 }
-#Design2DPart {
-  display: none;
-}
+
 
 
 /* --------------------------- Design : 3D Part --------------------------- */
 
-#Design3DPart {
-  display: none;
+#Design3DPart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Design3DPart .MoyenTitre{
+  align-self: flex-start;
 }
 
 #Design3DPart #Ligne-1 {
   display: block;
+  width: 75%;
 }
 #Design3DPart #Ligne-2 {
   display: none;
+  width: 75%;
 }
 
 
@@ -803,7 +975,10 @@ a:active {
 
   cursor: pointer;
 
-  clip-path: polygon(1.5vw 0%, calc(100% - 1.5vw) 0%, 100% 0, 100% calc(100% - 1.5vw), calc(100% - 1.5vw) 100%, 0 100%, 0% calc(100% - 1.5vw), 0% 1.5vw);
+  /* clip-path: polygon(1.5vw 0%, calc(100% - 1.5vw) 0%, 100% 0, 100% calc(100% - 1.5vw), calc(100% - 1.5vw) 100%, 0 100%, 0% calc(100% - 1.5vw), 0% 1.5vw); */
+
+  border-radius: 10px;
+  clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% calc(100% - 20px), 0% 20px);
 
   filter: brightness(0.9) grayscale(60%);
 
@@ -812,7 +987,7 @@ a:active {
 }
 
 .ImageDessin:hover{
-  filter: blur(2px);
+  filter: none;
 
   transform: scale(1.01);
 }
@@ -934,4 +1109,54 @@ a:active {
 
     z-index: 5;
   }
+}
+
+
+.arrowUp {
+
+  transition: all 0.25s linear;
+
+  position:fixed;
+
+  right: 5%;
+  bottom: 5%;
+  
+  font-size: 30px;
+
+  border: solid 5px #fa194e;
+  border-radius: 100px;
+
+  padding: 0.5%;
+
+  opacity: 0;
+}
+
+#circle {
+  width: 10px;
+  height: 10px;
+
+  opacity: 0;
+
+  line-height: 40px;
+  border-radius: 50%;
+  background: #fa194e;
+  
+  transition: all .15s ease-Out;
+
+  position: absolute;
+
+
+  left: 40%;
+  top: 40%;
+
+  z-index: -1;
+
+}
+
+.arrowUp:hover #circle {
+  width: 105%;
+  height: 105%;
+  opacity: 0.5;
+  top: -2.5%;
+  left: -2.5%;
 }
