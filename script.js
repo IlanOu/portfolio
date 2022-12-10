@@ -1,7 +1,7 @@
 // ========= MOUSE FOLLOW =========
 
 let constrain = 1500;
-let mouseOverContainer = document.getElementById("body");
+let mouseOverContainer = document.getElementsByTagName("body")[0];
 let ex1Layer = document.getElementById("ex1-layer");
 
 const transforms = (x, y, el) => {
@@ -32,8 +32,6 @@ mouseOverContainer.onmousemove = (e) => {
 
 
 
-
-
 const ImagesDessin = (imgs) => {
   let expandImg = document.getElementById("expandedImg");
   let imgText = document.getElementById("imgtext");
@@ -59,19 +57,22 @@ AfficheFond("Tracking");
 
 
 const scrollBlur = () => {
-  let scroll = document.getElementById("body").scrollTop;
+  let scroll = document.getElementsByTagName("body")[0].scrollTop;
   if (scroll >= 500) {
     document.getElementById("bg").classList.add("background-image-blur");
     document.querySelector(".arrowUp").style.opacity = "100%";
     document.querySelector(".arrowUp").style.pointerEvent = "all";
     document.querySelector(".arrowUp").style.cursor = "pointer";
-    
+
+    CanCardRotate = false;
   }
   else {
     document.getElementById("bg").classList.remove("background-image-blur");
     document.querySelector(".arrowUp").style.opacity = "0%";
     document.querySelector(".arrowUp").style.pointerEvent = "none";
     document.querySelector(".arrowUp").style.cursor = "default";
+
+    CanCardRotate = true;
   }
 }
 
@@ -98,10 +99,28 @@ const ShowMe = (id) => {
 
 
 const toTop = () => {
-  document.getElementById("body").scrollIntoView({behavior: "smooth", block: "start"});
+  document.getElementsByTagName("body")[0].scrollIntoView({behavior: "smooth", block: "start"});
 }
 
 
 const discoverButton = () => {
   document.getElementById("suiteSite").scrollIntoView({behavior: "smooth", block: "start"});
 }
+
+window.addEventListener("scroll", () => scrollBlur())
+
+document.querySelector(".aProposDiv").addEventListener("click", (e) => {
+  console.log(e.target.classList[0])
+  e.stopPropagation();
+  if (e.target.classList[0] === "aProposDiv"){
+      e.target.style.display = "none";
+  }
+})
+
+document.querySelector(".Cross").addEventListener("click", (e) => {
+  console.log(e.target.classList[0])
+  e.stopPropagation();
+  if (e.target.classList[0] === "Cross"){
+    document.querySelector(".aProposDiv").style.display = "none";
+  }
+})
