@@ -45,11 +45,17 @@ time, mark, audio, video {
   display: none;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 body {
   background-color: black;
   text-align: center;
   color: white;
   font-family: 'Nunito';
+
+  
 
 }
 
@@ -104,7 +110,7 @@ a:active {
   top: 0;
   z-index: 1;
   display: block;
-  background-image: url('./Images/Background.png');
+  background-image: url('./Images/BookWallpaper.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -121,7 +127,7 @@ a:active {
   top: 0;
   z-index: 1;
   display: block;
-  background-image: url('./Images/Background.png');
+  background-image: url('./Images/BookWallpaper.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -214,6 +220,8 @@ a:active {
 .accueil{
   display: flex;
   justify-content: space-between;
+
+  position: relative;
 }
 
 .accueilText{
@@ -239,7 +247,8 @@ a:active {
   font-weight: 500;
   letter-spacing: 0.05em;
 
-  width: 78%;
+  /* width: 78%; */
+  width: 610px;
 
   display: flex;
   justify-content: space-between;
@@ -256,6 +265,21 @@ a:active {
   margin-right: 10%;
 
   background-color: #FF005C;
+}
+
+
+
+.Div3D{
+  position: absolute;
+  width: 110%;
+  height: 250%;
+  right: -50%;
+
+  top:-50%;
+
+  /* border: solid 5px black; */
+
+  pointer-events: none;
 }
 
 
@@ -391,6 +415,11 @@ a:active {
   border-radius: 10px;
   clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% calc(100% - 20px), 0% 20px);
 
+  background-color: red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .TitresParties .Image div b{
@@ -406,20 +435,29 @@ a:active {
 }
 
 .TitresParties .Image div{
-  box-shadow: inset -5px 5px 5px rgba(0,0,0,0.2);
+  /* box-shadow: inset -5px 5px 5px rgba(0,0,0,0.2); */
   position: relative;
 
-  width: 100%;
-  height: 100%;
+  clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% calc(100% - 20px), 0% 20px);
+
+  background-color: #252525;
+  background: linear-gradient(-45deg, #191919, #272727);
+  width: 98%;
+  height: 98%;
 }
 
 .TitresParties .Image div:hover{
-  box-shadow: inset -2px 2px 4px rgba(0,0,0,0.2);
+  box-shadow: inset -2px 2px 8px rgba(0,0,0,0.5);
+  
 }
 
 .TitresParties #TitreDessinPart div:hover{
   transition: all 0.1s linear;
   cursor: pointer;
+  
+}
+
+.TitresParties #TitreDessinPart{
   background-color: rgba(250, 119, 50, 0.38);
 }
 
@@ -441,13 +479,14 @@ a:active {
 .TitresParties #TitreLabPart div:hover{
   transition: all 0.1s linear;
   cursor: pointer;
-  background-color: rgba(199, 37, 49, 0.38);
+  background-color: #c7253161;
+  background: linear-gradient(-45deg, #191919, #c7253161);
 }
 
 
 .TitresParties #TitreLabPart div{
   transition: all 0.1s linear;
-  background-color: rgba(199, 37, 49, 0.3);
+  
   /* height: 92px;
   width: 161px; */
   object-fit: cover;
@@ -456,7 +495,9 @@ a:active {
   font-family: 'Montserrat';
   font-size: 20px;
 }
-
+.TitresParties #TitreLabPart{
+  background-color: rgba(199, 37, 49, 0.3);
+}
 
 
 /* --------- Python --------- */
@@ -464,13 +505,14 @@ a:active {
 .TitresParties #TitrePythonPart div:hover{
   transition: all 0.1s linear;
   cursor: pointer;
-  background-color: rgba(183, 83, 223, 0.38);
+  background-color: #b753df61;
+  background: linear-gradient(-45deg, #191919, #b753df61);
 }
 
 
 .TitresParties #TitrePythonPart div{
   transition: all 0.1s linear;
-  background-color: rgba(183, 83, 223, 0.3);
+  
   /* height: 92px;
   width: 161px; */
   object-fit: cover;
@@ -478,6 +520,10 @@ a:active {
   text-align: center;
   font-family: 'Montserrat';
   font-size: 20px;
+}
+
+.TitresParties #TitrePythonPart{
+  background-color: rgba(183, 83, 223, 0.3);
 }
 
 /* --------- HtmlCss --------- */
@@ -485,13 +531,14 @@ a:active {
 .TitresParties #TitreHtmlCssPart div:hover{
   transition: all 0.1s linear;
   cursor: pointer;
-  background-color: rgba(57, 121, 231, 0.38);
+  background-color: #3979e761;
+  background: linear-gradient(-45deg, #191919, #3979e761);
 }
 
 
 .TitresParties #TitreHtmlCssPart div{
   transition: all 0.1s linear;
-  background-color: rgba(57, 121, 231, 0.3);
+  
   /* height: 92px;
   width: 161px; */
   object-fit: cover;
@@ -499,6 +546,10 @@ a:active {
   text-align: center;
   font-family: 'Montserrat';
   font-size: 20px;
+}
+
+.TitresParties #TitreHtmlCssPart{
+  background-color: rgba(57, 121, 231, 0.3);
 }
 
 /* --------- C# --------- */
@@ -506,13 +557,14 @@ a:active {
 .TitresParties #TitreCsPart div:hover{
   transition: all 0.1s linear;
   cursor: pointer;
-  background-color: rgba(128, 192, 238, 0.38);
+  background-color: #80c0ee61;
+  background: linear-gradient(-45deg, #191919, #80c0ee61);
 }
 
 
 .TitresParties #TitreCsPart div{
   transition: all 0.1s linear;
-  background-color: rgba(128, 192, 238, 0.3);
+  
   /* height: 92px;
   width: 161px; */
   object-fit: cover;
@@ -520,6 +572,9 @@ a:active {
   text-align: center;
   font-family: 'Montserrat';
   font-size: 20px;
+}
+.TitresParties #TitreCsPart{
+  background-color: rgba(128, 192, 238, 0.3);
 }
 
 
@@ -553,7 +608,7 @@ a:active {
 
 #Design3DPart #Ligne-1 {
   display: block;
-  width: 75%;
+  width: 100%;
 }
 #Design3DPart #Ligne-2 {
   display: none;
@@ -742,6 +797,7 @@ a:active {
 }
 
 #CodePythonPart .ContCode {
+  border: solid 1px #b751e1;
 
   position: relative;
   margin: 1%;
@@ -796,6 +852,10 @@ a:active {
   width: 96%;
   display: flex;
   flex-direction: column;
+}
+
+.khanacademy p {
+  font-size: 15px;
 }
 
 .AlignItems{
@@ -857,6 +917,7 @@ a:active {
 }
 
 #CodeHtmlPart .ContCode {
+  border: solid 1px #599de6;
 
   position: relative;
   margin: 1%;
@@ -923,6 +984,7 @@ a:active {
 }
 
 #CodeCsPart .ContCode {
+  border: solid 1px #17adc6;
   position: relative;
   margin: 1%;
   float: left;
@@ -1095,8 +1157,79 @@ a:active {
   height: 2vw;
 }
 
-@media screen and (max-width: 1200px) {
-  .wrapper {
+@media screen and (max-width: 1800px) {
+  
+  .TitresParties{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .TitresParties .Image {
+    width: 200px;
+    height: 120px;
+  }
+  
+  .Div3D{
+    display: none;
+  }
+
+  .accueilTitre{
+    font-size: 80px;
+  }
+
+  .barDeco{
+    margin-right: 2%;
+    min-width: 4px;
+  }
+
+  .accueil{
+    margin-right: 5%;
+  }
+
+  .accueilDescription{
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .accueilTitre{
+    font-size: 50px;
+  }
+
+  .accueilText{
+    width: 100%;
+    
+  }
+
+  .logo{
+    width: 50px;
+  }
+
+  .headerItems {
+    width: 100%;
+  }
+  .headerItems a {
+    font-size: 18px;
+  }
+
+
+  .ElChildren{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  #CodeHtmlPart .ContCode {
+    width: 100%;
+  }
+  #CodePythonPart .ContCode{
+    width: 100%;
+  }
+  #CodeCsPart .ContCode{
+    width: 100%;
+  }
+
+
+  /* .wrapper {
     display: none;
   }
   .NoPossible {
@@ -1108,7 +1241,7 @@ a:active {
   .NoPossible h1{
 
     z-index: 5;
-  }
+  } */
 }
 
 
@@ -1160,3 +1293,98 @@ a:active {
   top: -2.5%;
   left: -2.5%;
 }
+
+
+
+
+
+
+
+.aProposDiv{
+  left: 0;
+  top: 0;
+
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+  
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+
+  
+}
+
+.backgroundDiv{
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+
+  background-color: #191919;
+  opacity: .5;
+
+  position: absolute;
+
+  pointer-events: none;
+
+  
+
+}
+
+.presentDiv{
+  width: 80%;
+  height: 80%;
+
+  background-color: #fffc;
+
+  color: white;
+
+  clip-path: polygon(40px 0%, calc(100% - 40px) 0%, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0% calc(100% - 40px), 0% 40px);
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Cross{
+  position: relative;
+  top: -47.5%;
+  left: 97.5%;
+  color: white;
+
+  font-size: 50px;
+
+  cursor: pointer;
+}
+
+.Cross:hover{
+  transform: scale(1.05);
+}
+
+.contour{
+  width: 99.5%;
+  height: 99%;
+  background-color: #191919;
+  clip-path: polygon(40px 0%, calc(100% - 40px) 0%, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0% calc(100% - 40px), 0% 40px);
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+}
+
+.descriptionParagraphe{
+  width: 33%;
+  margin: 2%;
+
+  text-align: left;
+}
+
