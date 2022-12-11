@@ -59,6 +59,7 @@ body {
   font-family: 'Nunito';
 
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 
