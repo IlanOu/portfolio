@@ -3,6 +3,7 @@
 <head>
   <title>Ilan Outhier - Book</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="style_resp.css" />
   <link rel="shortcut icon" type="image/x-icon" href="./Images/3D/Icon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -13,17 +14,36 @@
 
 <body>
 
-  <div class="background-image" id="bg"></div>
+  <div class="loadPage">
+    <div class="container">
+      <div class="square one"></div>
+      <div class="square two"></div>
+      <div class="square three"></div>
+      <div class="square two"></div>
+      <div class="square three"></div>
+      <div class="square four"></div>
+      <div class="square three"></div>
+      <div class="square four"></div>
+      <div class="square five"></div>
+    </div>
+  </div>
+
+  <div class="background-image" id="bg">
+    <div class="background-image" id="bg1"></div>
+    <div class="background-image" id="bg2"></div>
+    <div class="background-image" id="bg3"></div>
+    <div class="background-image" id="bg4"></div>
+  </div>
+
 
   <div class="wrapper">
 
     <div class="accueilPage">
       <div class="header">
         <div class="logo">
-
         </div>
         <div class="headerItems noSelectableText">
-          <a onclick="discoverButton()">Projets</a>
+          <!-- <a onclick="discoverButton()">Projets</a> -->
           <a onclick="document.querySelector('.aProposDiv').style.display = 'flex'">A propos</a>
         </div>
       </div>
@@ -38,13 +58,13 @@
             <div class="barDeco">
 
             </div>
-            Bienvenue sur mon portfolio ! Je m'appelle Ilan Outhier, je suis étudiant en
-            développement web à l'école Gobelins à Annecy en bachelor.
+            Bienvenue sur mon portfolio ! Je m'appelle Ilan Outhier, je suis étudiant en bachelor
+            développement web à l'école Gobelins à Annecy.
           </div>
         </div>
 
         <div class="Div3D" id="Div3D">
-          
+
         </div>
       </div>
       <div class="buttonSuite noSelectableText">
@@ -105,7 +125,7 @@
 
 
         <div class="khanacademy">
-          <div class="date" style="font-size: 15px;">Octobre 2022</div>
+          <div class="date" style="font-size: 15px;">Oct. 2022</div>
           <div class="Cours" style="left:5vw; font-size: 15px;">Fait en classe</div>
           <h2>Pathfinder</h2>
           <div class="AlignItems">
@@ -113,7 +133,7 @@
             <p>
               Nous avons créé en cours d'algorithme un programme capable de trouver tout seul un chemin vers une
               cible.<br><br>
-              Le bot se créé des murs quand il ne peut plus avancer ou quand il revient sur ses pas. Cela lui permet
+              Le bot se crée des murs quand il ne peut plus avancer ou quand il revient sur ses pas. Cela lui permet
               d'éviter de refaire les mêmes erreurs.
               <br>
               <br>
@@ -123,7 +143,7 @@
             <iframe
               src="https://fr.khanacademy.org/computer-programming/ilan-fonctionnel-mais-juste-un-peu-limit-au-niveau-du-qi-correctionpathfinding_livecoding/6612811972657152/embedded?id=1666782653347-0.9044457756223487&amp;origin=file%3A%2F%2F&amp;editor=no&amp;buttons=no&amp;author=yes&amp;embed=yes"
               frameborder="0" scrolling="no"></iframe>
-            <p>
+            <p class="textExplication">
               Appuyez sur une touche dans le cadre pour lancer le programme (restez appuyé pour voir chaque frames)
               <br><br>
               Si l'iframe ne fonctionne pas, <br>actualisez la page.
@@ -132,35 +152,10 @@
           </div>
         </div>
 
-        <!-- <div class="khanacademy">
-          <div class="date" style="font-size: 15px;">Octobre 2022</div>
-          <div class="Cours" style="left:5vw; font-size: 15px;">Fait en classe</div>
-          <h2>Paint</h2>
-          <div class="AlignItems">
-
-            <p>
-              Nous avons vu comment faire un Paint avec plusieurs couleurs et plusieurs pinceaux.
-
-              <br>
-              <br>
-              <a href="https://fr.khanacademy.org/computer-programming/ilans-paint-brush/4560212490502144"
-                target="_blank"> → Lien vers le programme</a>
-            </p>
-            <iframe
-              src="https://fr.khanacademy.org/computer-programming/ilans-paint-brush/4560212490502144/embedded?id=1666785571477-0.09396894461636962&amp;origin=file%3A%2F%2F&amp;editor=no&amp;buttons=no&amp;author=yes&amp;embed=yes"
-              frameborder="0" scrolling="no"></iframe>
-
-            <p>
-              Sélectionnez un pinceau dans la palette en haut à gauche puis une couleur pour pouvoir dessiner.
-              <br><br>
-              Si l'iframe ne fonctionne pas, <br>actualisez la page.
-            </p>
-
-          </div>
-        </div> -->
+        
 
         <div class="khanacademy">
-          <div class="date" style="font-size: 15px;">Septembre 2022</div>
+          <div class="date" style="font-size: 15px;">Sept. 2022</div>
           <div class="Cours" style="left:5vw; font-size: 15px;">Fait en classe</div>
           <h2>Mini-éditeur de carte de RPG</h2>
           <div class="AlignItems">
@@ -176,11 +171,7 @@
             <iframe
               src="https://fr.khanacademy.org/computer-programming/rpg-maker/5019103909167104/embedded?id=1666785571477-0.09396894461636962&amp;origin=file%3A%2F%2F&amp;editor=no&amp;buttons=no&amp;author=yes&amp;embed=yes"
               frameborder="0" scrolling="no"></iframe>
-            <!-- <iframe id="output- class="ElChildren"frame" class="_1ib5jubf" sandbox="allow-pointer-lock allow-same-origin allow-scripts" src="https://www.kasandbox.org/computer-programming/exec/pjs?lang=fr&amp;v=221123-1612-fa1f07e5d969&amp;host=fr.khanacademy.org" data-src="https://www.kasandbox.org/computer-programming/exec/pjs?lang=fr" style="width: 100%; height: 600px;"></iframe>
-            -->
-            <!-- <script src="https://fr.khanacademy.org/computer-programming/rpg-maker/5019103909167104/embed.js?editor=no&buttons=no&author=no&embed=yes"></script> -->
-
-            <p>
+            <p class="textExplication">
               Sélectionnez un bloc dans la palette d'outils en haut pour poser des blocs.
               <br><br>
               Si l'iframe ne fonctionne pas, <br>actualisez la page.
@@ -252,7 +243,8 @@
             <div class="TextOnBg">
               <b>Macumba Bot (Python)</b>
               <br><br>
-              Un ami m'a demandé de créer un bot Discord qui fait la maintenance de son serveur.
+              <a href="http://www.raphaelmakaryan.fr" target="_blank" rel="noopener noreferrer">Raphael Makaryan</a>
+              m'a demandé de créer un bot Discord qui fait la maintenance de son serveur.
             </div>
           </div>
         </div>
@@ -276,20 +268,21 @@
 
         <h3 class="MoyenTitre">Mes projets : Html, Css, JavaScript</h3>
 
-        
+
         <div class="ContCode">
           <div class="date">30/11/22</div>
           <div class="Cours">Fait en classe</div>
           <a href="https://ilanou.github.io/games/Rockets/" target="_blank" rel="noopener noreferrer">
             <div class="ImgContTop"
-            style="background-image: url('./Images/Html/Rockets.png'); background-position: top;">
-          </div>
+              style="background-image: url('./Images/Html/Rockets.png'); background-position: top;">
+            </div>
           </a>
           <div class="BgGradientCont">
             <div class="TextOnBg">
               <a href="https://ilanou.github.io/games/Rockets/" target="_blank"><b>Rockets (TP2)</b></a>
               <br><br>
-              Pour le TP de JS n°2, le but est de cliquer le plus vite possible pour faire arriver sa fusée sur Mars avant l'autre.  
+              Pour le TP de JS n°2, le but est de cliquer le plus vite possible pour faire arriver sa fusée sur Mars
+              avant l'autre.
             </div>
           </div>
         </div>
@@ -299,26 +292,27 @@
           <div class="Cours">Fait en classe</div>
           <a href="https://ilanou.github.io/games/Merry%20Chrismas/" target="_blank" rel="noopener noreferrer">
             <div class="ImgContTop"
-            style="background-image: url('./Images/Html/MerryChrismas.png'); background-position: top;">
-          </div>
+              style="background-image: url('./Images/Html/MerryChrismas.png'); background-position: top;">
+            </div>
           </a>
           <div class="BgGradientCont">
             <div class="TextOnBg">
-              <a href="https://ilanou.github.io/games/Merry%20Chrismas/" target="_blank"><b>Merry Chrismas (TP1)</b></a>
+              <a href="https://ilanou.github.io/games/Merry%20Chrismas/" target="_blank"><b>Merry Christmas (TP1)</b></a>
               <br><br>
-              On a eu en cours de JS deux TP à faire, voici ici le premier. Le but est de retrouver l'intrus qui se cache dans la grille.  
+              On a eu en cours de JS deux TP à faire, voici ici le premier. Le but est de retrouver l'intrus qui se
+              cache dans la grille.
             </div>
           </div>
         </div>
-        
-        
+
+
         <div class="ContCode">
           <div class="date">21/10/22</div>
           <div class="Cours">Fait en classe</div>
           <a href="https://ilanou.github.io/book/workshop/" target="_blank" rel="noopener noreferrer">
             <div class="ImgContTop"
-            style="background-image: url('./Images/Html/StreamSwitch.png'); background-position: top;">
-          </div>
+              style="background-image: url('./Images/Html/StreamSwitch.png'); background-position: top;">
+            </div>
           </a>
           <div class="BgGradientCont">
             <div class="TextOnBg">
@@ -354,7 +348,8 @@
           <div class="date">30/09/22</div>
           <div class="Cours">Fait en classe</div>
           <a href="https://ilanou.github.io/recette/" target="_blank" rel="noopener noreferrer">
-            <div class="ImgContTop" style="background-image: url('./Images/Html/Recette.png'); background-position: top;">
+            <div class="ImgContTop"
+              style="background-image: url('./Images/Html/Recette.png'); background-position: top;">
             </div>
           </a>
           <div class="BgGradientCont">
@@ -387,8 +382,8 @@
           <div class="date">13/09/21</div>
           <a href="https://ilanou.github.io/book/ancien_book/index.html" target="_blank" rel="noopener noreferrer">
             <div class="ImgContTop"
-            style="background-image: url('./Images/Html/AncienBook.png'); background-position: top;">
-          </div>
+              style="background-image: url('./Images/Html/AncienBook.png'); background-position: top;">
+            </div>
           </a>
           <div class="BgGradientCont">
             <div class="TextOnBg">
@@ -439,7 +434,8 @@
             <div class="TextOnBg">
               <b>The Rook Master</b>
               <br><br>
-              Mon tout premier jeu crée avec <a href="http://www.mathieu-chavanel.fr" target="_blank" rel="noopener noreferrer">Mathieu Chavanel</a>, un ami qui a fait la partie développement, je me suis
+              Mon tout premier jeu crée avec <a href="http://www.mathieu-chavanel.fr" target="_blank"
+                rel="noopener noreferrer">Mathieu Chavanel</a>, un ami qui a fait la partie développement, je me suis
               occupé de la partie design.
             </div>
           </div>
@@ -449,6 +445,9 @@
 
 
       <div id="LabPart">
+        <p class="indispo">
+          Disponible sur pc. En cours d'adaptation pour téléphone.
+        </p>
         <div id="Design3DPart">
 
 
@@ -937,7 +936,7 @@
 
       <div class="divider div-transparent"></div>
 
-      
+
 
 
     </div>
@@ -945,31 +944,71 @@
 
   <div class="aProposDiv">
     <div class="backgroundDiv">
-      <br>
-      A propos de moi
+      <!-- <br>
+      A propos de moi -->
     </div>
     <div class="presentDiv">
       <div class="contour">
         <div class="Cross">
           x
         </div>
-        <div class="descriptionParagraphe">
-          <p>Bonjour, moi c'est Ilan, j'ai 18 ans et je suis étudiant à l'école By CCI d'Annecy. Je suis développeur en bachelor première année. </p>
-          <br>
-          <p>Je suis quelqu'un de créatif alors quand j'ai du temps, je fais des jeux, de la 3D, des dessins ou des montages vidéos. Le meilleur de ces projets sont dans la catégories Lab !</p>
+
+        <div class="titreAPropos">
+          Qui suis-je ?
         </div>
+
+        <div class="descriptionParagraphe">
+          <p>
+            Logique et créatif, j'aime apprendre, développer des projets variés, des jeux vidéos à l'IA en passant par des sites web...
+          </p>
+          <br>
+          <p>
+            J'ai besoin de me challenger sur des projets innovants et créatifs. Je m'inspire de différents univers littéraires, cinématographiques, musicaux...
+          </p>
+          <br>
+          <p>
+            Pour mon équilibre personnel, je pratique régulièrement de sport et aime partager des bons moments avec mes amis et ma famille.
+          </p>
+        </div>
+
+        
+        <div class="social">
+          <a href="https://www.linkedin.com/in/ilan-outhier/" target="_blank" rel="noopener noreferrer">
+            <div class="linkedin">
+
+            </div>
+          </a>
+          
+          <a href="https://codepen.io/IlanOu" target="_blank" rel="noopener noreferrer">
+            <div class="codepen">
+
+            </div>
+          </a>
+
+          <a href="mailto:ilan.outhier04@gmail.com" target="_blank" rel="noopener noreferrer">
+            <div class="mail">
+
+            </div>
+          </a>
+          
+  
+        </div>
+        
+
       </div>
-      
+
     </div>
-    
+
   </div>
-    
+
+
+  <script src="./script.js"></script>
   <script src="./three.js"></script>
   <script src="./GLTFLoader.js"></script>
   <script src="./OrbitControls.js"></script>
-  <script src="./script.js"></script>
-  <script src="./3D.js"></script>
   
+  <script src="./3D.js"></script>
+
 
 </body>
 
