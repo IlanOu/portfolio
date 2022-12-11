@@ -1,0 +1,181 @@
+@media screen and (max-width: 1800px) {
+  
+    .TitresParties{
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .TitresParties .Image {
+      width: 200px;
+      height: 120px;
+    }
+    
+    .Div3D{
+      display: none;
+    }
+  
+    .accueilTitre{
+      font-size: 80px;
+    }
+  
+    .barDeco{
+      margin-right: 2%;
+      min-width: 4px;
+      max-width: min-content;
+    }
+  
+    .accueil{
+      margin-right: 5%;
+    }
+  
+    .accueilDescription{
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .accueilTitre{
+      font-size: 50px;
+    }
+  
+    .accueilText{
+      width: 100%;
+      
+    }
+  
+    .logo{
+      width: 50px;
+    }
+  
+    .headerItems {
+      width: 100%;
+    }
+    .headerItems a {
+      font-size: 18px;
+    }
+  
+  
+    .ElChildren{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+  
+    #CodeHtmlPart .ContCode {
+      width: 100%;
+    }
+    #CodePythonPart .ContCode{
+      width: 100%;
+    }
+    #CodeCsPart .ContCode{
+      width: 100%;
+    }
+
+    #CodeHtmlPart .date {
+      left: 70%;
+    }
+    #CodeCsPart .date{
+      left: 70%;
+    }
+  
+    .khanacademy h2 {
+      margin-top: 15%;
+    }
+  
+    .AlignItems iframe {
+      display: none;
+    }
+  
+    .AlignItems .textExplication{
+      display: none;
+    }
+
+    .indispo{display: block;}
+    #Design3DPart {display: none;}
+    #Design2DPart {display: none;}
+  
+    .AlignItems p {
+      margin-top: 10%;
+      width: 100%;
+    }
+
+
+    .presentDiv {
+      width: 90%;
+    }
+
+    .contour{
+      width: 98%;
+    }
+  
+    .descriptionParagraphe{
+      width: 90%;
+      margin: 2%;
+    
+      text-align: center;
+
+      
+    
+      max-height: 70%;
+    }
+
+    .descriptionParagraphe p {
+      font-size: 15px;
+    }
+    
+    .social {
+      display: flex;
+      width: 50%;
+    
+      position: absolute;
+    
+      bottom: 0;
+    
+      margin: 2%;
+      margin-bottom: 5%;
+    
+      display: flex;
+      justify-content:space-evenly;
+    }
+    
+    .social a {
+      margin: 5%;
+      
+    }
+    
+    .linkedin {
+      background-image: url("https://labreunion.fr/wp-content/uploads/2019/12/linkedin-logo.png");
+      background-position: center;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+    }
+    
+    .codepen {
+      background-image: url("https://icon-library.com/images/codepen-icon/codepen-icon-26.jpg");
+      background-position: center;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+    }
+    
+    .mail {
+      background-image: url("https://premanon.com/wp-content/uploads/2018/03/logo-mail-blanc.png");
+      background-position: center;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+    }
+    
+    
+    .titreAPropos {
+      margin-bottom: 12%;
+    
+      font-size: 25px;
+      font-weight: 900;
+    
+      margin-left: 2%;
+    }
+
+
+  }
+  
