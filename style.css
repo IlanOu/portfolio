@@ -1,3 +1,5 @@
+/* ---------------- Paramètres ---------------- */
+/* #region [rgba(0, 0, 0, 0.5)] */
 @font-face {
   src: url('./font/Nunito/Nunito-VariableFont_wght.ttf');
   font-family: 'Nunito';
@@ -47,6 +49,7 @@ time, mark, audio, video {
 
 html{
   overflow-x: hidden;
+  
 }
 
 body {
@@ -55,8 +58,7 @@ body {
   color: white;
   font-family: 'Nunito';
 
-  
-
+  overflow-y: hidden;
 }
 
 
@@ -101,8 +103,106 @@ a:active {
   -ms-user-select: none;
   user-select: none;
 }
+/* #endregion */
 
 
+/* ---------------- Loading Page ---------------- */
+/* #region [rgba(0,0,0,0.5)]*/
+
+@keyframes loadPage {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+
+.loadPage{
+  background-color: #191919;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+  z-index: 100;
+
+  transition: all 0.25s ease-out;
+}
+
+.container {
+  width:80px;
+  height:80px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:0.3rem;
+  transform:rotate(-45deg);
+}
+
+
+.square {
+  background-color:white;
+  display:grid;
+  place-items:center;
+  border-radius:3px;
+  animation:load 1.6s ease infinite;
+
+  clip-path: polygon(6px 0%, calc(100% - 6px) 0%, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0% calc(100% - 6px), 0% 6px);
+
+}
+
+@keyframes load {
+  0% {
+    transform:scale(1) rotate(0deg);
+    background-color:#FF005C;
+  }
+  50% {
+    transform:scale(0) rotate(45deg);
+    background-color:#191919;
+  }
+  100% {
+    transform:scale(1) rotate(0deg);
+    background-color:#FF005C;
+  }
+}
+
+.two {
+  animation-delay:0.1s;
+}
+
+
+.three {
+  animation-delay:0.2s;
+}
+
+
+.four {
+  animation-delay:0.3s;
+}
+
+
+.five {
+  animation-delay:0.4s;
+}
+/* #endregion */
+
+/* ---------------- Background ---------------- */
+/* #region [rgba(0,0,0,0.5)]*/
 .background-image {
   position: fixed;
   left: 0;
@@ -110,9 +210,7 @@ a:active {
   top: 0;
   z-index: 1;
   display: block;
-  background-image: url('./Images/BookWallpaper.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  
   width: 100%;
   height: 100%;
   transition: all 0.25s linear;
@@ -127,16 +225,90 @@ a:active {
   top: 0;
   z-index: 1;
   display: block;
-  background-image: url('./Images/BookWallpaper.png');
+  
+  width: 100%;
+  height: 100%;
+
+  filter: blur(5px) brightness(80%);
+} 
+
+
+@keyframes Sphere1 {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 40px;
+    
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+#bg1{
+  transition: all 0.25s linear;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  background-image: url('./Images/BookWallpaperPart1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+#bg2{
+  transition: all 0.25s linear;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+
+  background-image: url('./Images/BookWallpaperPart2.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 
-  filter: blur(5px) brightness(80%);
+  animation: 5s ease-in-out Sphere1 infinite;
 }
+#bg3{
+  transition: all 0.25s linear;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
 
+  background-image: url('./Images/BookWallpaperPart3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 
+  animation: 5s ease-in-out 2s Sphere1 infinite;
+}
+#bg4{
+  transition: all 0.25s linear;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+
+  background-image: url('./Images/BookWallpaperPart4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  animation: 5s ease-in-out 1s Sphere1 infinite;
+}
 
 
 
@@ -167,10 +339,10 @@ a:active {
 	height: 1px;
 	background-image: linear-gradient(to right, transparent, rgb(72, 60, 97), transparent);
 }
+/* #endregion */
 
-
-/* Accueil */
-
+/* ---------------- Accueil : 3D ---------------- */
+/* #region [rgba(255,255,255,0.3)]*/
 
 .header{
   display: flex;
@@ -207,8 +379,10 @@ a:active {
   width: 5%;
   height: 100%;
 }
+/* #endregion */
 
-
+/* ---------------- Accueil : Text ---------------- */
+/* #region [rgba(255,255,255,0.3)] */
 .accueilPage{
   height: 100%;
   display: flex;
@@ -380,11 +554,11 @@ a:active {
   display: table;
   clear: both;
 }
+/* #endregion */
 
 
-
-/* ---- Parties ---- */
-
+/* ---- Accueil : Parties ---- */
+/* #region [rgba(255,255,255,0.3)] */
 
 .TitresParties{
   display: flex;
@@ -441,7 +615,7 @@ a:active {
   clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% calc(100% - 20px), 0% 20px);
 
   background-color: #252525;
-  background: linear-gradient(-45deg, #191919, #272727);
+  background: linear-gradient(-45deg, hsl(0, 0%, 10%), hsl(0, 0%, 15%));
   width: 98%;
   height: 98%;
 }
@@ -480,7 +654,7 @@ a:active {
   transition: all 0.1s linear;
   cursor: pointer;
   background-color: #c7253161;
-  background: linear-gradient(-45deg, #191919, #c7253161);
+  background: linear-gradient(-45deg, hsl(0, 0%, 10%), hsla(356, 69%, 46%, 0.38));
 }
 
 
@@ -532,7 +706,7 @@ a:active {
   transition: all 0.1s linear;
   cursor: pointer;
   background-color: #3979e761;
-  background: linear-gradient(-45deg, #191919, #3979e761);
+  background: linear-gradient(-45deg, hsl(0, 0%, 10%), hsla(218, 78%, 56%, 0.38));
 }
 
 
@@ -558,7 +732,7 @@ a:active {
   transition: all 0.1s linear;
   cursor: pointer;
   background-color: #80c0ee61;
-  background: linear-gradient(-45deg, #191919, #80c0ee61);
+  background: linear-gradient(-45deg, hsl(0, 0%, 10%), #80c0ee61);
 }
 
 
@@ -591,10 +765,263 @@ a:active {
 #LabPart {
   display: none;
 }
+/* #endregion */
 
 
 
-/* --------------------------- Design : 3D Part --------------------------- */
+/* ---------------- WEB Part ---------------- */
+/* #region [rgba(57, 121, 231, 0.3)] */
+
+
+#CodeHtmlPart:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#CodeHtmlPart .date {
+  pointer-events: none;
+  width: auto;
+  padding: 2px 4px;
+  background-color: #599de6;
+  position: absolute;
+  left: 80%;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px ;
+}
+
+.Cours {
+  pointer-events: none;
+  width: auto;
+  padding: 2px 4px;
+  background-color: #ae5dd6;
+  position: absolute;
+  left: 2%;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px ;
+}
+
+#CodeHtmlPart .ContCode {
+  border: solid 1px #599de6;
+
+  position: relative;
+  margin: 1%;
+  margin-bottom: 2vw;
+  float: left;
+  width: 30%;
+  border-radius: 10px;
+
+  /*background: rgb(31,31,31);*/
+  background: linear-gradient(0deg, rgba(27,27,27,0) 20%, rgba(89, 157, 230,0.5) 100%);
+  overflow-y: hidden;
+  min-height: 300px;
+  max-height: 300px;
+
+}
+
+#CodeHtmlPart .TextOnBg {
+  margin: 15px;
+  font-size: 15px;
+  font: 'Newake';
+}
+
+#CodeHtmlPart .ImgContTop {
+  height: 15%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: solid 5px #599de6;
+  transition: all 0.05s linear;
+
+}
+
+#CodeHtmlPart .ImgContTop:hover {
+  transition: all 0.05s linear;
+  height: 20%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: solid 5px #599de6;
+
+}
+/* #endregion */
+
+
+/* ---------------- ALGO Part ---------------- */
+/* #region [rgba(183, 83, 223, 0.3)]*/
+
+#CodePythonPart:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#CodePythonPart .date {
+  pointer-events: none;
+  width: auto;
+  padding: 2px 4px;
+  background-color: #b753df;
+  position: absolute;
+  right: 10%;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px ;
+  z-index: 1;
+}
+
+#CodePythonPart .ContCode {
+  border: solid 1px #b751e1;
+
+  position: relative;
+  margin: 1%;
+  float: left;
+  width: 30%;
+  border-radius: 10px;
+
+  /*background: rgb(31,31,31);*/
+  background: linear-gradient(0deg, rgba(27,27,27,0) 20%, rgba(183,81,225,0.5) 100%);
+  overflow-y: hidden;
+  min-height: 300px;
+  max-height: 310px;
+
+}
+
+#CodePythonPart .TextOnBg {
+  margin: 15px;
+  font-size: 15px;
+  font: 'Newake';
+}
+
+#CodePythonPart .ImgContTop {
+  height: 15%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: solid 5px #b751e1;
+
+}
+
+
+.khanacademy{
+  margin: 1%;
+  float: left;
+  border-radius: 10px;
+
+  display: flex;
+
+  /*background: rgb(31,31,31);*/
+  background: linear-gradient(0deg, rgba(27,27,27,0) 20%, rgba(183,81,225,0.5) 100%);
+  
+  /*rgba(120,90,255,0.5)*/
+  
+  border: solid 1px #a6e5;
+
+  overflow-y: hidden;
+  min-height: 300px;
+  max-height: 700px;
+
+
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+}
+
+.khanacademy p {
+  font-size: 15px;
+}
+
+.AlignItems{
+  display: flex;
+
+}
+
+.AlignItems iframe {
+  border-radius: 1vw;
+  margin: 0;
+  padding: 0;
+  width: 20vw;
+  height: 25vw;
+
+  margin-bottom: 1vw;
+}
+
+.AlignItems *:not(iframe) {
+  width: 30%;
+  margin: 1%;
+}
+
+.PreviewKhanacademy{
+  border-radius: 1vw;
+  width: 100%;
+
+}
+/* #endregion */
+
+
+/* ---------------- JEUX Part ---------------- */
+/* #region [ rgba(128, 192, 238, 0.3) ] */
+
+
+#CodeCsPart:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#CodeCsPart .date {
+  width: auto;
+  padding: 2px 4px;
+  background-color: #17adc6;
+  position: absolute;
+  left: 80%;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px ;
+}
+
+#CodeCsPart .ContCode {
+  border: solid 1px #17adc6;
+  position: relative;
+  margin: 1%;
+  float: left;
+  width: 30%;
+  border-radius: 10px;
+
+  /*background: rgb(31,31,31);*/
+  background: linear-gradient(0deg, rgba(27,27,27,0) 20%, rgba(23, 173, 198,0.5) 100%);
+  overflow-y: hidden;
+  min-height: 300px;
+  max-height: 310px;
+
+}
+
+#CodeCsPart .TextOnBg {
+  margin: 15px;
+  font-size: 15px;
+  font: 'Newake';
+}
+
+#CodeCsPart .ImgContTop {
+  height: 15%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: solid 5px #17adc6;
+
+}
+/* #endregion */
+
+
+/* ---------------- Lab : 3D Part ---------------- */
+/* #region [rgba(199, 37, 49, 0.3)] */
+
+.indispo{display: none;}
 
 #Design3DPart{
   display: flex;
@@ -774,249 +1201,13 @@ a:active {
   background-image: url("./Images/3D/Octane_wire.jpeg")
 }
 
+/* #endregion */
 
 
-
-/* --------------------------- Code : Python Part --------------------------- */
-
-#CodePythonPart:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#CodePythonPart .date {
-  width: auto;
-  padding: 2px 4px;
-  background-color: #b753df;
-  position: absolute;
-  left: 80%;
-  font-size: 12px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px ;
-}
-
-#CodePythonPart .ContCode {
-  border: solid 1px #b751e1;
-
-  position: relative;
-  margin: 1%;
-  float: left;
-  width: 30%;
-  border-radius: 10px;
-
-  /*background: rgb(31,31,31);*/
-  background: linear-gradient(0deg, rgba(27,27,27,0) 20%, rgba(183,81,225,0.5) 100%);
-  overflow: hidden;
-  min-height: 300px;
-  max-height: 310px;
-
-}
-
-#CodePythonPart .TextOnBg {
-  margin: 15px;
-  font-size: 15px;
-  font: 'Newake';
-}
-
-#CodePythonPart .ImgContTop {
-  height: 15%;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-bottom: solid 5px #b751e1;
-
-}
+/* ---------------- Lab : DESSIN Part --------------- */
+/* #region [ rgba(199, 37, 49, 0.3) ] */
 
 
-.khanacademy{
-  margin: 1%;
-  float: left;
-  border-radius: 10px;
-
-  display: flex;
-
-  /*background: rgb(31,31,31);*/
-  background: linear-gradient(0deg, rgba(27,27,27,0) 20%, rgba(183,81,225,0.5) 100%);
-  
-  /*rgba(120,90,255,0.5)*/
-  
-  border: solid 1px #a6e5;
-
-  overflow-y: hidden;
-  min-height: 300px;
-  max-height: 700px;
-
-
-  width: 96%;
-  display: flex;
-  flex-direction: column;
-}
-
-.khanacademy p {
-  font-size: 15px;
-}
-
-.AlignItems{
-  display: flex;
-
-}
-
-.AlignItems iframe {
-  border-radius: 1vw;
-  margin: 0;
-  padding: 0;
-  width: 20vw;
-  height: 25vw;
-
-  margin-bottom: 1vw;
-}
-
-.AlignItems *:not(iframe) {
-  width: 30%;
-  margin: 1%;
-}
-
-.PreviewKhanacademy{
-  border-radius: 1vw;
-  width: 100%;
-
-}
-
-/* --------------------------- Code : HTML Part --------------------------- */
-
-#CodeHtmlPart:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#CodeHtmlPart .date {
-  pointer-events: none;
-  width: auto;
-  padding: 2px 4px;
-  background-color: #599de6;
-  position: absolute;
-  left: 80%;
-  font-size: 12px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px ;
-}
-
-.Cours {
-  pointer-events: none;
-  width: auto;
-  padding: 2px 4px;
-  background-color: #ae5dd6;
-  position: absolute;
-  left: 2%;
-  font-size: 12px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px ;
-}
-
-#CodeHtmlPart .ContCode {
-  border: solid 1px #599de6;
-
-  position: relative;
-  margin: 1%;
-  margin-bottom: 2vw;
-  float: left;
-  width: 30%;
-  border-radius: 10px;
-
-  /*background: rgb(31,31,31);*/
-  background: linear-gradient(0deg, rgba(27,27,27,0) 20%, rgba(89, 157, 230,0.5) 100%);
-  overflow: hidden;
-  min-height: 300px;
-  max-height: 300px;
-
-}
-
-#CodeHtmlPart .TextOnBg {
-  margin: 15px;
-  font-size: 15px;
-  font: 'Newake';
-}
-
-#CodeHtmlPart .ImgContTop {
-  height: 15%;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-bottom: solid 5px #599de6;
-  transition: all 0.05s linear;
-
-}
-
-#CodeHtmlPart .ImgContTop:hover {
-  transition: all 0.05s linear;
-  height: 20%;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-bottom: solid 5px #599de6;
-
-}
-
-
-
-/* --------------------------- Code : C# Part --------------------------- */
-
-#CodeCsPart:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#CodeCsPart .date {
-  width: auto;
-  padding: 2px 4px;
-  background-color: #17adc6;
-  position: absolute;
-  left: 80%;
-  font-size: 12px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px ;
-}
-
-#CodeCsPart .ContCode {
-  border: solid 1px #17adc6;
-  position: relative;
-  margin: 1%;
-  float: left;
-  width: 30%;
-  border-radius: 10px;
-
-  /*background: rgb(31,31,31);*/
-  background: linear-gradient(0deg, rgba(27,27,27,0) 20%, rgba(23, 173, 198,0.5) 100%);
-  overflow: hidden;
-  min-height: 300px;
-  max-height: 310px;
-
-}
-
-#CodeCsPart .TextOnBg {
-  margin: 15px;
-  font-size: 15px;
-  font: 'Newake';
-}
-
-#CodeCsPart .ImgContTop {
-  height: 15%;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-bottom: solid 5px #17adc6;
-
-}
-
-
-/* ---------------- Dessin Part --------------- */
 
 .ImageDessinPadre{
   position: relative;
@@ -1026,6 +1217,8 @@ a:active {
   gap: 1vw;
 
 }
+
+
 
 .ImageDessin{
   
@@ -1157,92 +1350,6 @@ a:active {
   height: 2vw;
 }
 
-@media screen and (max-width: 1800px) {
-  
-  .TitresParties{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  .TitresParties .Image {
-    width: 200px;
-    height: 120px;
-  }
-  
-  .Div3D{
-    display: none;
-  }
-
-  .accueilTitre{
-    font-size: 80px;
-  }
-
-  .barDeco{
-    margin-right: 2%;
-    min-width: 4px;
-  }
-
-  .accueil{
-    margin-right: 5%;
-  }
-
-  .accueilDescription{
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .accueilTitre{
-    font-size: 50px;
-  }
-
-  .accueilText{
-    width: 100%;
-    
-  }
-
-  .logo{
-    width: 50px;
-  }
-
-  .headerItems {
-    width: 100%;
-  }
-  .headerItems a {
-    font-size: 18px;
-  }
-
-
-  .ElChildren{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  }
-
-  #CodeHtmlPart .ContCode {
-    width: 100%;
-  }
-  #CodePythonPart .ContCode{
-    width: 100%;
-  }
-  #CodeCsPart .ContCode{
-    width: 100%;
-  }
-
-
-  /* .wrapper {
-    display: none;
-  }
-  .NoPossible {
-    position: absolute;
-    z-index: 5;
-    display: block;
-    
-  }
-  .NoPossible h1{
-
-    z-index: 5;
-  } */
-}
 
 
 .arrowUp {
@@ -1295,10 +1402,12 @@ a:active {
 }
 
 
+/* #endregion */
 
 
 
-
+/* ---------------- A propos de moi ---------------- */
+/* #region */
 
 .aProposDiv{
   left: 0;
@@ -1339,7 +1448,7 @@ a:active {
 }
 
 .presentDiv{
-  width: 80%;
+  width: 40%;
   height: 80%;
 
   background-color: #fffc;
@@ -1356,9 +1465,9 @@ a:active {
 }
 
 .Cross{
-  position: relative;
-  top: -47.5%;
-  left: 97.5%;
+  position: absolute;
+  top: .5%;
+  right: 2.5%;
   color: white;
 
   font-size: 50px;
@@ -1371,7 +1480,9 @@ a:active {
 }
 
 .contour{
-  width: 99.5%;
+  position: relative;
+
+  width: 98.5%;
   height: 99%;
   background-color: #191919;
   clip-path: polygon(40px 0%, calc(100% - 40px) 0%, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0% calc(100% - 40px), 0% 40px);
@@ -1379,12 +1490,73 @@ a:active {
 
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
 }
 
 .descriptionParagraphe{
-  width: 33%;
+  width: 90%;
   margin: 2%;
 
-  text-align: left;
+  text-align: center;
+
+  max-height: 70%;
 }
 
+.social {
+  display: flex;
+  width: 50%;
+
+  position: absolute;
+
+  bottom: 0;
+
+  margin: 2%;
+  margin-bottom: 5%;
+
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.social a {
+  margin: 5%;
+  
+}
+
+.linkedin {
+  background-image: url("https://labreunion.fr/wp-content/uploads/2019/12/linkedin-logo.png");
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.codepen {
+  background-image: url("https://icon-library.com/images/codepen-icon/codepen-icon-26.jpg");
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.mail {
+  background-image: url("https://premanon.com/wp-content/uploads/2018/03/logo-mail-blanc.png");
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+
+.titreAPropos {
+  margin-bottom: 12%;
+
+  font-size: 40px;
+  font-weight: 900;
+
+  margin-left: 2%;
+}
+
+
+/* #endregion */
