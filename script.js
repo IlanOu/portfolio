@@ -31,6 +31,12 @@ mouseOverContainer.onmousemove = (e) => {
 
 
 
+window.addEventListener("load", () => {
+  document.querySelector(".loadPage").style.setProperty('animation', "1s ease-out 1s loadPage forwards");  
+  document.querySelector("body").style.overflowY = 'scroll';
+})
+
+
 
 const ImagesDessin = (imgs) => {
   let expandImg = document.getElementById("expandedImg");
@@ -57,14 +63,19 @@ AfficheFond("Tracking");
 
 
 const scrollBlur = () => {
-  let scroll = document.getElementsByTagName("body")[0].scrollTop;
+
+  let scroll = window.scrollY;
+
+  console.log(scroll)
   if (scroll >= 500) {
+    
     document.getElementById("bg").classList.add("background-image-blur");
     document.querySelector(".arrowUp").style.opacity = "100%";
     document.querySelector(".arrowUp").style.pointerEvent = "all";
     document.querySelector(".arrowUp").style.cursor = "pointer";
 
     CanCardRotate = false;
+    
   }
   else {
     document.getElementById("bg").classList.remove("background-image-blur");
@@ -95,6 +106,8 @@ const ShowMe = (id) => {
     }
   }
   Moi.style.display = "block";
+
+  Moi.children[0].scrollIntoView({behavior: "smooth", block: "start"});
 }
 
 
