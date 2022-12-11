@@ -24,10 +24,20 @@ scene.add( hemiLight );
 const sphere = new THREE.SphereGeometry( 0.01, 8, 8 );
 const sphereLight = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xff0040 } ) ) 
 sphereLight.scale.x = sphereLight.scale.y * 2
-let light1 = new THREE.PointLight( 0xff0040, 4, 50 );
+let light1 = new THREE.PointLight( 0xff0040, 20, 50 );
 light1.position.set(0,0,2.5);
 scene.add( light1 );
 
+
+
+const sphereLight2 = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xffffff } ) ) 
+sphereLight2.scale.x = sphereLight2.scale.y * 2
+let light2 = new THREE.PointLight( 0xffffff, 30, 50 );
+light2.position.set(0,0,2.5);
+scene.add( light2 );
+
+light2.position.x = 3
+light1.position.x = -15
 
 let CanCardRotate = true;
 
@@ -97,8 +107,8 @@ const RotateCard = (event) => {
 
 
 
-        light1.position.x = mouseXUnchanged;
-        light1.position.y = -mouseYUnchanged;
+        // light1.position.x = mouseXUnchanged;
+        // light1.position.y = -mouseYUnchanged;
     }
 }
 
