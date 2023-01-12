@@ -89,7 +89,7 @@ const scrollBlur = () => {
 
 const ImagesSwipeDroite = () => {
   document.getElementById("Ligne-1").style.display = "none";
-  document.getElementById("Ligne-2").style.display = "block";
+  document.getElementById("Ligne-2").style.display = "flex";
 }
 const ImagesSwipeGauche = () => {
   document.getElementById("Ligne-2").style.display = "none";
