@@ -256,7 +256,7 @@ a:active {
   top: 0;
   z-index: 1;
 
-  background-image: url('./Images/BookWallpaperPart1.png');
+  background-image: url('./Images/BookWallpaperPart1.webp');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -270,7 +270,7 @@ a:active {
   top: 0;
   z-index: 2;
 
-  background-image: url('./Images/BookWallpaperPart2.png');
+  background-image: url('./Images/BookWallpaperPart2.webp');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -286,7 +286,7 @@ a:active {
   top: 0;
   z-index: 2;
 
-  background-image: url('./Images/BookWallpaperPart3.png');
+  background-image: url('./Images/BookWallpaperPart3.webp');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -302,7 +302,7 @@ a:active {
   top: 0;
   z-index: 2;
 
-  background-image: url('./Images/BookWallpaperPart4.png');
+  background-image: url('./Images/BookWallpaperPart4.webp');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -372,7 +372,7 @@ a:active {
 }
 
 .logo{
-  background-image: url('./Images/Logo.png');
+  background-image: url('./Images/Logo.webp');
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -924,7 +924,7 @@ a:active {
 
   overflow-y: hidden;
   min-height: 300px;
-  max-height: 700px;
+  max-height: 300px;
 
 
   width: 96%;
@@ -1040,7 +1040,10 @@ a:active {
 }
 #Design3DPart #Ligne-2 {
   display: none;
-  width: 75%;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -1112,7 +1115,7 @@ a:active {
 
 #Design3DPart .Element {
   height: 226px;
-  width: 161px;
+  width: 14%;
   position: relative;
   margin-left:0.5%;
   margin-right: 0.5%;
@@ -1189,7 +1192,7 @@ a:active {
 
 
 .Octane {
-  background-image: url('./Images/3D/la_octane.png');
+  background-image: url('./Images/3D/la_octane.webp');
   border-radius: 10px;
   width:514px;
   height:290px;
@@ -1199,7 +1202,7 @@ a:active {
 
 .Octane:hover{
   transition: all 0.2s linear;
-  background-image: url("./Images/3D/Octane_wire.jpeg")
+  background-image: url("./Images/3D/Octane_wire.webp")
 }
 
 /* #endregion */
