@@ -1,3 +1,0 @@
-- Tp js 1
-- tp js 2
-- tp bonus js
