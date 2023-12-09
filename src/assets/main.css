@@ -1,0 +1,105 @@
+@import './base.css';
+
+#app {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 0;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+ul{
+  padding: none
+}
+li {
+  list-style-type: none;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    max-width: 1200px;
+    width: 100%;
+    
+  }
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 0px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+
+.angles {
+  position: relative;
+
+  --b: 2px; /* thickness of the border */
+  --c: var(--color-border); /* color of the border */
+  --w: 0.75rem; /* width of border */
+  --r: 0.5rem; /* radius */
+  
+  
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  width: 100% !important;
+
+}
+
+
+
+.angles-with-padding{
+  position: relative;
+  --distance: 1;
+  --b: 2px; /* thickness of the border */
+  --c: var(--color-border); /* color of the border */
+  --w: 0.75rem; /* width of border */
+  --r: 0.5rem; /* radius */
+  
+
+  padding: 1rem;
+}
+
+.angles::before, .angles-with-padding::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--c, red);
+  padding: var(--b);
+  border-radius: var(--r);
+  -webkit-mask: linear-gradient( 0deg, #000 calc(2*var(--b)), #0000 0) 50% var(--b)/calc(100% - 2*var(--w)) 100% repeat-y, linear-gradient(-90deg, #000 calc(2*var(--b)), #0000 0) var(--b) 50%/100% calc(100% - 2*var(--w)) repeat-x, linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.angles-intermediaire{
+  box-sizing: border-box;
+}
+
+
+*:focus {
+  outline: none;
+}
