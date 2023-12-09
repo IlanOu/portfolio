@@ -1,6 +1,7 @@
 <template>
     <div class="popup-overlay" @click="closePopup">
         <div class="popup-content" @click.stop>
+            <div class="date-tag">{{ props.project.date }}</div>
             <h2>{{ props.project.projectName }}</h2>
             <div class="columns">
                 <div class="images-gallery">
@@ -10,10 +11,8 @@
                 </div>
                 <div class="description angles-with-padding">
                     <p>{{ props.project.description }}</p>
-                    <p>Date: {{ props.project.date }}</p>
                 </div>
             </div>
-            <!-- Ajoutez d'autres détails si nécessaire -->
         </div>
     </div>
 </template>
@@ -67,6 +66,7 @@
         width: 80%;
         height: 80%;
         overflow: hidden visible;
+        position: relative;
     }
     .gallery-item img {
         width: 100%;
@@ -78,6 +78,19 @@
         position: relative;
         width: 30%;
         text-align: justify;
+        height: fit-content;
+    }
+    .date-tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0.5rem;
+        background-color: var(--color-accentuation);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        color: var(--color-text); /* Utilisez la couleur du texte définie dans votre thème */
+        font-size: 0.8rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
     .columns {
         display: flex;
