@@ -115,7 +115,7 @@ h2 {
 .button{
     width: 40%;
     margin-bottom: 3rem;
-    background-color: var(--color-accentuation-variant) ;
+    background-color: var(--color-accentuation-soft);
     padding: 0.75rem 0.5rem;
     border-radius: 0.5rem;
     border: solid 1px var(--color-border);
@@ -123,6 +123,12 @@ h2 {
     font-size: 0.8rem;
 
     cursor: pointer;
+
+    transition: background-color 0.25s ease-in;
+}
+
+.button:hover{
+    background-color: var(--color-background-mute);
 }
 
 .button.active {
