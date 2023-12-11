@@ -34,8 +34,11 @@
   --color-text: var(--vt-c-text-light-1);
 
   --color-accentuation: rgb(255, 123, 0);
+  --color-accentuation-variant: var(--vt-c-white-mute);
 
   --section-gap: 160px;
+
+  --color-disabled: var(--vt-c-white);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +52,11 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --color-accentuation-variant: var(--vt-c-black-mute);
+
+    --color-disabled: var(--vt-c-black);
+
   }
 }
 

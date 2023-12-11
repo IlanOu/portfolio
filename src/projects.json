@@ -16,6 +16,11 @@
         "https://cdn.pixabay.com/index/2023/11/17/03-16-14-750_1440x550.jpg",
         "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
       ],
+      "videoUrls": [
+        "https://www.youtube.com/embed/ErMSHiQRnc8?si=10PcHHq9pn13CniE",
+        "https://www.youtube.com/embed/lHpYyYtkmrw?si=0KRtSXPP2y3lnbtN",
+        "https://player.vimeo.com/video/744475829?h=490e397fca"
+      ],
       "date": "Date du Projet"
     },
     {
@@ -26,6 +31,8 @@
         "https://pinboard-uploads-production.operacdn.com/images/32ffc669-9bee-4555-ab2e-cd3118bd1b0e/81ad1d4e-9e7c-4949-a86e-aceb82ece923/2469d25b-91d8-4992-b754-61eb11c7c5e4.png",
         "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
       ],
+      "videoUrls": [
+      ],
       "date": "Date du Projet"
     },
     {
@@ -33,8 +40,10 @@
       "projectName": "Portfolio",
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [
-        "https://pinboard-uploads-production.operacdn.com/images/32ffc669-9bee-4555-ab2e-cd3118bd1b0e/81ad1d4e-9e7c-4949-a86e-aceb82ece923/2469d25b-91d8-4992-b754-61eb11c7c5e4.png",
         "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
+      ],
+      "videoUrls": [
+        "https://www.youtube.com/embed/ErMSHiQRnc8?si=10PcHHq9pn13CniE"
       ],
       "date": "31/04/2059"
     },
@@ -46,24 +55,8 @@
         "https://pinboard-uploads-production.operacdn.com/images/32ffc669-9bee-4555-ab2e-cd3118bd1b0e/81ad1d4e-9e7c-4949-a86e-aceb82ece923/2469d25b-91d8-4992-b754-61eb11c7c5e4.png",
         "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
       ],
-      "date": "31/04/2059"
-    },
-    {
-      "projectNumber": 2,
-      "projectName": "Portfolio",
-      "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
-      "imageUrls": [
-        "https://pinboard-uploads-production.operacdn.com/images/32ffc669-9bee-4555-ab2e-cd3118bd1b0e/81ad1d4e-9e7c-4949-a86e-aceb82ece923/2469d25b-91d8-4992-b754-61eb11c7c5e4.png",
-        "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
-      ],
-      "date": "31/04/2059"
-    },
-    {
-      "projectNumber": 2,
-      "projectName": "Portfolio",
-      "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
-      "imageUrls": [
-        "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
+      "videoUrls": [
+        "https://www.youtube.com/embed/ErMSHiQRnc8?si=10PcHHq9pn13CniE"
       ],
       "date": "31/04/2059"
     },
@@ -75,6 +68,21 @@
         "https://pinboard-uploads-production.operacdn.com/images/32ffc669-9bee-4555-ab2e-cd3118bd1b0e/81ad1d4e-9e7c-4949-a86e-aceb82ece923/2469d25b-91d8-4992-b754-61eb11c7c5e4.png",
         "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
       ],
+      "videoUrls": [
+        "https://www.youtube.com/embed/ErMSHiQRnc8?si=10PcHHq9pn13CniE"
+      ],
+      "date": "31/04/2059"
+    },
+    {
+      "projectNumber": 2,
+      "projectName": "Portfolio",
+      "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
+      "imageUrls": [
+        "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
+      ],
+      "videoUrls": [
+        "https://www.youtube.com/embed/ErMSHiQRnc8?si=10PcHHq9pn13CniE"
+      ],
       "date": "31/04/2059"
     },
     {
@@ -85,6 +93,22 @@
         "https://pinboard-uploads-production.operacdn.com/images/32ffc669-9bee-4555-ab2e-cd3118bd1b0e/81ad1d4e-9e7c-4949-a86e-aceb82ece923/2469d25b-91d8-4992-b754-61eb11c7c5e4.png",
         "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
       ],
+      "videoUrls": [
+        "https://www.youtube.com/embed/ErMSHiQRnc8?si=10PcHHq9pn13CniE"
+      ],
+      "date": "31/04/2059"
+    },
+    {
+      "projectNumber": 2,
+      "projectName": "Portfolio",
+      "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
+      "imageUrls": [
+        "https://pinboard-uploads-production.operacdn.com/images/32ffc669-9bee-4555-ab2e-cd3118bd1b0e/81ad1d4e-9e7c-4949-a86e-aceb82ece923/2469d25b-91d8-4992-b754-61eb11c7c5e4.png",
+        "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
+      ],
+      "videoUrls": [
+        "https://www.youtube.com/embed/ErMSHiQRnc8?si=10PcHHq9pn13CniE"
+      ],
       "date": "31/04/2059"
     },
     {
@@ -93,6 +117,9 @@
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [
         "https://i.pinimg.com/236x/85/7b/82/857b82a6e48a33064cbbd5aab9f1da94.jpg"
+      ],
+      "videoUrls": [
+        "https://www.youtube.com/embed/ErMSHiQRnc8?si=10PcHHq9pn13CniE"
       ],
       "date": "31/04/2059"
     }
