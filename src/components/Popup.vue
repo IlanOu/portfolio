@@ -57,8 +57,10 @@ const showImages = () => {
 };
 
 const showVideos = () => {
-    displayImages.value = false;
-    displayVideos.value = true;
+    if (props.project.videoUrls && props.project.videoUrls.length > 0) {
+        displayImages.value = false;
+        displayVideos.value = true;
+    }
 };
 
 </script>
@@ -116,10 +118,9 @@ h2 {
     background-color: var(--color-accentuation-variant) ;
     padding: 0.75rem 0.5rem;
     border-radius: 0.5rem;
-    border: 0px;
+    border: solid 1px var(--color-border);
     color:  var(--color-text) ;
     font-size: 0.8rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
     cursor: pointer;
 }
@@ -147,7 +148,6 @@ h2 {
     aspect-ratio: 16 / 9;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -166,7 +166,6 @@ h2 {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -197,7 +196,6 @@ h2 {
     color: var(--color-text);
     /* Utilisez la couleur du texte définie dans votre thème */
     font-size: 0.8rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1024px) {
