@@ -1,6 +1,7 @@
 <!-- App.vue -->
 <script setup>
 import { ref, onMounted } from 'vue';
+import Navbar from './components/Navbar.vue';
 import Card from './components/Card.vue';
 import Popup from './components/Popup.vue';
 import Light from './components/Light.vue';
@@ -42,6 +43,7 @@ onMounted(async () => {
 <template>
   <Main/>
   <!-- Assurez-vous de passer correctement la propriété projects à SearchBar -->
+  <Navbar/>
   <SearchBar :isSearchEnabled="!isPopupOpen" :projects=projects @searchProjects="updateFilteredProjects" />
 
   <div class="galery">
