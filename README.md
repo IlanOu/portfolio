@@ -1,15 +1,11 @@
-*** 
-# Temp
-
-### Localhost : 
-
-https://cuddly-fiesta-5p75447j54f6wv-5173.app.github.dev
-https://{'CODESPACE_NAME'}-{port}.app.github.dev
-***
-
+# Portfolio
 
 ## To run :
 
 ```bash
 npm run dev
 ```
+
+## Todo list
+
+[ ] - Système de version des projets (voir les anciennes versions : afficher dans le style des branches git)
