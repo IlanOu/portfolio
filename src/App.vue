@@ -69,7 +69,12 @@ onMounted(async () => {
               @searchByWorkplace="() => handleSearch(`workplace:${project.workplace}`)"/>
 
         <p v-if="filteredProjects.length==0">Aucun projet n'a été trouvé...</p>
-        <Popup v-if="isPopupOpen" :project="selectedProject" @closePopup="closePopupHandler" />
+        <Popup  v-if="isPopupOpen" 
+                :project="selectedProject" 
+                @closePopup="closePopupHandler"
+                @searchByTag="() => handleSearch(`type:${selectedProject.type}`)" 
+                @searchByDate="() => handleSearch(`date:${selectedProject.date}`)"
+                @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`)"/>
     </div>
     
     <Light/>

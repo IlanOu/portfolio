@@ -1,11 +1,11 @@
 <template>
     <div class="popup-overlay" @click="closePopup">
         <div class="popup-content" @click.stop>
-
+    
             <div class="tags">
-                <p v-if="props.project.date.length > 0" class="project-date">{{ props.project.date }}</p>
-                <p v-if="props.project.type.length > 0" class="project-type">{{ props.project.type }}</p>
-                <p v-if="props.project.workplace.length > 0" class="project-workplace">{{ props.project.workplace }}</p>
+                <p v-if="props.project.date.length > 0" class="project-date" @click="searchByDate">{{ props.project.date }}</p>
+                <p v-if="props.project.type.length > 0" class="project-type" @click="searchByTag">{{ props.project.type }}</p>
+                <p v-if="props.project.workplace.length > 0" class="project-workplace" @click="searchByWorkplace">{{ props.project.workplace }}</p>
             </div>
             <h2>{{ props.project.projectName }}</h2>
     
@@ -23,7 +23,7 @@
                             <iframe :src="videoEmbed" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
-
+    
                     <!-- Galerie d'images à droite des vidéos -->
                     <div v-if="displayImages" class="images-gallery">
                         <div class="gallery-item" v-for="(imageUrl, index) in props.project.imageUrls" :key="index">
@@ -47,6 +47,18 @@ import { defineProps, defineEmits, ref } from 'vue';
 const props = defineProps(['project']);
 const emits = defineEmits(['closePopup']);
 
+
+const searchByDate = () => {
+    emits('searchByDate', props.project.date);
+};
+const searchByTag = () => {
+    emits('searchByTag', props.project.type);
+};
+const searchByWorkplace = () => {
+    emits('searchByWorkplace', props.project.workplace);
+};
+
+
 const closePopup = () => {
     emits('closePopup');
 };
@@ -67,7 +79,6 @@ const showVideos = () => {
         displayVideos.value = true;
     }
 };
-
 </script>
 
 <style scoped>
@@ -112,42 +123,45 @@ h2 {
     width: 65%;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: space-around;
 }
 
-.button{
+.button {
     width: 40%;
     margin-bottom: 3rem;
     background-color: var(--color-accentuation-soft);
     padding: 0.75rem 0.5rem;
     border-radius: 0.5rem;
     border: solid 1px var(--color-border);
-    color:  var(--color-text) ;
+    color: var(--color-text);
     font-size: 0.8rem;
-
     cursor: pointer;
-
     transition: background-color 0.25s ease-in;
 }
 
-.button:hover{
+.button:hover {
     background-color: var(--color-background-mute);
 }
 
 .button.active {
-    background-color: var(--color-accentuation); /* Couleur active */
-    color: var(--color-text); /* Couleur du texte active */
+    background-color: var(--color-accentuation);
+    /* Couleur active */
+    color: var(--color-text);
+    /* Couleur du texte active */
 }
 
 .button.disabled {
-    background-color: var(--color-disabled); /* Couleur pour le bouton désactivé */
+    background-color: var(--color-disabled);
+    /* Couleur pour le bouton désactivé */
     cursor: not-allowed;
 }
 
 /* -------------------------------------------------------------------------- */
+
 /*                                   Videos                                   */
+
 /* -------------------------------------------------------------------------- */
 
 .videos-gallery {
@@ -162,14 +176,16 @@ h2 {
 }
 
 /* -------------------------------------------------------------------------- */
+
 /*                                   Images                                   */
+
 /* -------------------------------------------------------------------------- */
 
 .images-gallery {
     column-count: 3;
     max-height: 100%;
-   
-    max-height: calc(100% - 2rem); /* Ajuste la hauteur maximale de la galerie d'images */
+    max-height: calc(100% - 2rem);
+    /* Ajuste la hauteur maximale de la galerie d'images */
     overflow-y: auto;
 }
 
@@ -180,7 +196,9 @@ h2 {
 }
 
 /* -------------------------------------------------------------------------- */
+
 /*                                 Description                                */
+
 /* -------------------------------------------------------------------------- */
 
 .description {
@@ -193,7 +211,9 @@ h2 {
 }
 
 /* -------------------------------------------------------------------------- */
+
 /*                                    Date                                    */
+
 /* -------------------------------------------------------------------------- */
 
 .tags {
@@ -211,16 +231,21 @@ h2 {
     background-color: var(--color-accentuation-date);
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
+
 .project-type {
     background-color: var(--color-accentuation-type);
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
+
 .project-workplace {
     background-color: var(--color-accentuation-workplace);
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -233,11 +258,9 @@ h2 {
     .images-gallery {
         column-count: 1;
     }
-
     .videos-gallery {
         column-count: 1;
     }
-
     .description {
         position: relative;
         width: 30%;
