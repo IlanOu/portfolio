@@ -1,7 +1,7 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue';
 
-const props = defineProps(['projectName', 'description', 'imageUrls', 'date']);
+const props = defineProps(['projectName', 'description', 'imageUrls', 'date', 'type']);
 const emits = defineEmits(['openPopup']);
 
 const openPopup = () => {
@@ -19,7 +19,10 @@ const truncateDescription = (description) => {
         <h2>{{ props.projectName }}</h2>
         <img :src="props.imageUrls[0]" alt="Project Image">
         <p class="project-description">{{ truncateDescription(props.description) }}</p>
-        <p class="project-date">{{ props.date }}</p>
+        <div class="tags">
+            <p class="project-date">{{ props.date }}</p>
+            <p class="project-type">{{ props.type }}</p>
+        </div>
     </div>
 </template>
 
@@ -55,12 +58,25 @@ const truncateDescription = (description) => {
         }
     }
 
-    .project-date {
+    .tags{
         position: absolute;
         top: 0;
         right: 0;
         margin: 0.5rem;
-        background-color: var(--color-accentuation);
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 0.25rem;
+    }
+
+    .project-date {
+        background-color: var(--color-accentuation-date);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .project-type {
+        background-color: var(--color-accentuation-type);
         padding: 0.25rem 0.5rem;
         border-radius: 0.5rem;
         font-size: 0.8rem;
@@ -73,9 +89,6 @@ const truncateDescription = (description) => {
         -webkit-line-clamp: 2; /* Ajustez le nombre de lignes souhaité */
         white-space: normal;
     }
-
-
-
 
     body {
         margin: 0;

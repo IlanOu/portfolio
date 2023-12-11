@@ -34,7 +34,8 @@
   --color-text: var(--vt-c-text-light-1);
 
   --color-accentuation: rgb(255, 123, 0);
-  --color-accentuation-variant: var(--vt-c-white-mute);
+  --color-accentuation-date: rgb(255, 123, 0);
+  --color-accentuation-type: rgb(255, 17, 0);
 
   --section-gap: 160px;
 
@@ -53,10 +54,7 @@
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
 
-    --color-accentuation-variant: var(--vt-c-black-mute);
-
     --color-disabled: var(--vt-c-black);
-
   }
 }
 

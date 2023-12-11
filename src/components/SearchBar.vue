@@ -13,7 +13,7 @@ const searchProjects = () => {
   const query = searchQuery.value.toLowerCase();
 
   if (props.projects) {
-    const fieldsToSearch = ['projectName', 'description', 'date'];
+    const fieldsToSearch = ['projectName', 'description', 'date', 'type'];
 
     filteredProjects.value = props.projects.filter((project) => {
       const lowercaseQuery = query.toLowerCase();

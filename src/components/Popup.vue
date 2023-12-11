@@ -196,7 +196,7 @@ h2 {
     top: 0;
     right: 0;
     margin: 0.5rem;
-    background-color: var(--color-accentuation);
+    background-color: var(--color-accentuation-date);
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
     color: var(--color-text);

@@ -1,7 +1,6 @@
 <!-- App.vue -->
 <script setup>
 import { ref, onMounted } from 'vue';
-import Navbar from './components/Navbar.vue';
 import Card from './components/Card.vue';
 import Popup from './components/Popup.vue';
 import Light from './components/Light.vue';
@@ -43,16 +42,16 @@ onMounted(async () => {
 <template>
   <Main/>
   <!-- Assurez-vous de passer correctement la propriété projects à SearchBar -->
-  <Navbar/>
   <SearchBar :isSearchEnabled="!isPopupOpen" :projects=projects @searchProjects="updateFilteredProjects" />
-
+  
   <div class="galery">
     <Card v-for="project in filteredProjects" :key="project.projectNumber"
-          :projectName="project.projectName" 
-          :description="project.description" 
-          :imageUrls="project.imageUrls"
-          :date="project.date" 
-          @openPopup="() => openPopupHandler(project)" 
+    :projectName="project.projectName" 
+    :description="project.description" 
+    :imageUrls="project.imageUrls"
+    :date="project.date"
+    :type="project.type"
+    @openPopup="() => openPopupHandler(project)" 
     />
     <p v-if="filteredProjects.length==0">Aucun projet n'a été trouvé...</p>
     <Popup v-if="isPopupOpen" :project="selectedProject" @closePopup="closePopupHandler" />
