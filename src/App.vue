@@ -11,15 +11,19 @@ const isPopupOpen = ref(false);
 const selectedProject = ref(null);
 const projects = ref([]);
 const filteredProjects = ref([]);
+const bodyOverflow = ref(false);
 
 const openPopupHandler = (project) => {
   isPopupOpen.value = true;
   selectedProject.value = project;
+  document.body.classList.add('no-scroll');
 };
 
 const closePopupHandler = () => {
   isPopupOpen.value = false;
   selectedProject.value = null;
+  bodyOverflow.value = false;
+  document.body.classList.remove('no-scroll');
 };
 
 // Fonction pour mettre à jour les projets filtrés
@@ -38,7 +42,7 @@ onMounted(async () => {
 <template>
   <Main/>
   <!-- Assurez-vous de passer correctement la propriété projects à SearchBar -->
-  <SearchBar :projects=projects @searchProjects="updateFilteredProjects" />
+  <SearchBar :isSearchEnabled="!isPopupOpen" :projects=projects @searchProjects="updateFilteredProjects" />
 
   <div class="galery">
     <Card v-for="project in filteredProjects" :key="project.projectNumber"

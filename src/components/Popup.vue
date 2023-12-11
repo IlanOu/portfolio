@@ -208,8 +208,20 @@ h2 {
         align-items: center;
     }
     .images-gallery {
-        width: 65%;
         column-count: 1;
+    }
+
+    .videos-gallery {
+        column-count: 1;
+    }
+
+    .description {
+        position: relative;
+        width: 30%;
+        text-align: justify;
+        height: fit-content;
+        width: 100%;
+        margin: 1rem;
     }
 }
 </style>

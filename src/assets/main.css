@@ -103,3 +103,8 @@ li {
 *:focus {
   outline: none;
 }
+
+
+.no-scroll {
+  overflow: hidden;
+}
