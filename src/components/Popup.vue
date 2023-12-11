@@ -1,7 +1,12 @@
 <template>
     <div class="popup-overlay" @click="closePopup">
         <div class="popup-content" @click.stop>
-            <div class="date-tag">{{ props.project.date }}</div>
+
+            <div class="tags">
+                <p v-if="props.project.date.length > 0" class="project-date">{{ props.project.date }}</p>
+                <p v-if="props.project.type.length > 0" class="project-type">{{ props.project.type }}</p>
+                <p v-if="props.project.workplace.length > 0" class="project-workplace">{{ props.project.workplace }}</p>
+            </div>
             <h2>{{ props.project.projectName }}</h2>
     
             <div class="columns">
@@ -191,17 +196,31 @@ h2 {
 /*                                    Date                                    */
 /* -------------------------------------------------------------------------- */
 
-.date-tag {
+.tags {
     position: absolute;
     top: 0;
     right: 0;
     margin: 0.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.25rem;
+    font-size: 75%;
+}
+
+.project-date {
     background-color: var(--color-accentuation-date);
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
-    color: var(--color-text);
-    /* Utilisez la couleur du texte définie dans votre thème */
-    font-size: 0.8rem;
+}
+.project-type {
+    background-color: var(--color-accentuation-type);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+}
+.project-workplace {
+    background-color: var(--color-accentuation-workplace);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
 }
 
 @media (max-width: 1024px) {

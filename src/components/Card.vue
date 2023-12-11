@@ -33,8 +33,8 @@ const truncateDescription = (description) => {
         <img :src="props.imageUrls[0]" alt="Project Image">
         <p class="project-description">{{ truncateDescription(props.description) }}</p>
         <div class="tags" @click.stop>
-            <p class="project-date" @click="searchByDate">{{ props.date }}</p>
-            <p class="project-type" @click="searchByTag">{{ props.type }}</p>
+            <p v-if="props.date.length > 0" class="project-date" @click="searchByDate">{{ props.date }}</p>
+            <p v-if="props.type.length > 0" class="project-type" @click="searchByTag">{{ props.type }}</p>
             <p v-if="props.workplace.length > 0" class="project-workplace" @click="searchByWorkplace">{{ props.workplace }}</p>
         </div>
     </div>
