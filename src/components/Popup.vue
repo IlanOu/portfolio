@@ -7,7 +7,7 @@
                 <p v-if="props.project.type.length > 0" class="project-type" @click="searchByTag">{{ props.project.type }}</p>
                 <p v-if="props.project.workplace.length > 0" class="project-workplace" @click="searchByWorkplace">{{ props.project.workplace }}</p>
             </div>
-            <h2 class="projectName">{{ props.project.projectName }}</h2>
+            <h2 class="projectName">{{ props.project.projectName }} - v{{  props.project.version  }}</h2>
 
             <div class="galleries">
                 <!-- Ajout des boutons Images / Videos -->

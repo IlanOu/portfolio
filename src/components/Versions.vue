@@ -26,6 +26,8 @@ const chartData = ref({
 // Référence pour le conteneur du graphique
 const chartContainer = ref(null);
 
+
+
 // Hook onMounted pour initialiser le graphique après le montage du composant
 onMounted(async () => {
     try {
@@ -61,6 +63,8 @@ const initializeChartData = () => {
     });
 };
 
+
+
 // Fonction pour initialiser le graphique
 const initializeChart = () => {
     const ctx = chartContainer.value.getContext('2d');
@@ -68,7 +72,23 @@ const initializeChart = () => {
 
     // Réinitialisation des styles des points
     resetPointStyles();
+
+    const currentProjectData = props.project;
+
+    // Filtrer les versions du projet actuel
+    const versions = data.filter(project => project.projectNumber === currentProjectData.projectNumber);
+
+    // Mettre à jour le style du dernier point
+    if (versions.length > 0) {
+        const lastIndex = chartData.value.labels.lastIndexOf(`${versions[versions.length - 1].projectName} - Version ${versions[versions.length - 1].version}`);
+        if (lastIndex !== -1) {
+            updateSelectedPointStyle(lastIndex);
+        }
+    }
+    myChart.update();
 };
+
+
 
 // Fonction pour obtenir la configuration du graphique
 const getChartConfig = () => {
@@ -88,7 +108,7 @@ const getChartConfig = () => {
                     },
                 },
             },
-            elements: { point: { hitRadius: 20, hoverRadius: 10 } },
+            elements: { point: { hitRadius: 20, hoverRadius: 10} },
             onClick: handleChartClick,
         },
     };
@@ -147,7 +167,6 @@ const findProjectIdByVersion = versionLabel => {
 
 // Fonction pour émettre l'ID du projet
 const emitProjectId = projectId => {
-    console.log(`Project ID to display: ${projectId}`);
     emits('change-interface', `${projectId}`);
 };
 </script>
@@ -183,5 +202,6 @@ const emitProjectId = projectId => {
 
 .graph {
     margin-top: 1.5rem;
+    cursor: pointer;
 }
 </style>
