@@ -1,7 +1,11 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, defineEmits, onBeforeUnmount } from 'vue';
 
 let myChart; // Déclarer la variable myChart en dehors de la fonction pour y accéder lors du démontage
+let data;
+
+const emits = defineEmits(['closePopup']);
+
 const props = defineProps(['project']);
 
 const chartData = ref({
@@ -23,7 +27,7 @@ onMounted(async () => {
     try {
         const currentProjectData = props.project;
         const response = await fetch('./src/projects.json');
-        const data = await response.json();
+        data = await response.json();
 
         data.forEach(project => {
             if (project.projectNumber === currentProjectData.projectNumber){
@@ -82,7 +86,12 @@ const initChart = () => {
             onClick: (event, elements) => {
                 if (elements.length > 0) {
                     const clickedVersion = chartData.value.labels[elements[0].index];
-                    alert(`Version cliquée : ${clickedVersion}`);
+                    const projectId = findProjectIdByVersion(clickedVersion);
+                    
+                    if (projectId !== null) {
+                        // Émettre l'id du projet à afficher
+                        emitProjectId(projectId);
+                    }
                 }
             },
         },
@@ -94,6 +103,30 @@ onBeforeUnmount(() => {
         myChart.destroy();
     }
 });
+
+
+const findProjectIdByVersion = (versionLabel) => {
+    // Extraire l'id du projet à partir du label de la version
+    const versionParts = versionLabel.split(' - ');
+    if (versionParts.length === 2) {
+        const projectName = versionParts[0];
+        const versionNumber = versionParts[1].replace('Version ', '');
+        
+        // Recherche du projet dans les données chargées
+        const project = data.find(proj => {
+            
+            return proj.projectName == projectName && proj.version == versionNumber
+        });
+        return project ? project.projectId : null;
+    }
+    return null;
+};
+
+const emitProjectId = (projectId, context) => {
+    // Émettre l'id du projet
+    console.log(`Id du projet à afficher : ${projectId}`);
+    emits('change-interface', `${projectId}`);
+};
 </script>
 
 

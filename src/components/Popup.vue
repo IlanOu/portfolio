@@ -37,7 +37,7 @@
             </div>
 
             <div class="versions">
-                <Versions :project="props.project"/>
+                <Versions @change-interface="handleChangeInterface" :project="props.project"/>
             </div>
         </div>
     </div>
@@ -80,6 +80,10 @@ const showVideos = () => {
         displayVideos.value = true;
     }
 };
+
+const handleChangeInterface = (id) => {
+    emits('change-interface', `${id}`);
+}
 </script>
 
 <style scoped>

@@ -18,6 +18,33 @@ const bodyOverflow = ref(false);
 const searchBarRef = ref(null);
 
 
+onMounted(async () => {
+    const response = await fetch('/src/projects.json');
+    projects.value = await response.json();
+
+    // Tri du tableau par projectNumber et version
+    const sortedProjects = projects.value.slice().sort((a, b) => {
+        if (a.projectNumber === b.projectNumber) {
+            return b.version - a.version;
+        }
+        return a.projectNumber - b.projectNumber;
+    });
+
+    // Suppression des versions inférieures pour chaque projectNumber
+    const uniqueProjects = [];
+    for (const project of sortedProjects) {
+        const existingProject = uniqueProjects.find(p => p.projectNumber === project.projectNumber);
+        if (!existingProject) {
+            uniqueProjects.push(project);
+        }
+    }
+
+    // Mise à jour des projets avec la liste filtrée
+    // projects.value = uniqueProjects;
+    filteredProjects.value = uniqueProjects;
+});
+
+
 const openPopupHandler = (project) => {
     isPopupOpen.value = true;
     selectedProject.value = project;
@@ -41,12 +68,25 @@ const updateFilteredProjects = (filtered) => {
     filteredProjects.value = filtered;
 };
 
-onMounted(async () => {
-    const response = await fetch('/src/projects.json');
-    projects.value = await response.json();
+const handleChangeInterface = (id) => {
+    const project = findProjectById(id)
+    closePopupHandler()
+    openPopupHandler(project)
+}
 
-    filteredProjects.value = projects.value;
-});
+const findProjectById = (id) => {
+    console.log(projects.value);
+    for (const project of projects.value) {
+        console.log(typeof id, typeof project.projectId); // Log les types d'identifiants
+        if (project.projectId == id) {
+            return project;
+        }
+    }
+    return null;
+};
+
+
+
 </script>
 
 <template>
@@ -74,7 +114,8 @@ onMounted(async () => {
                 @closePopup="closePopupHandler"
                 @searchByTag="() => handleSearch(`type:${selectedProject.type}`)" 
                 @searchByDate="() => handleSearch(`date:${selectedProject.date}`)"
-                @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`)"/>
+                @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`)"
+                @change-interface="handleChangeInterface"/>
     </div>
     
     <Light/>
