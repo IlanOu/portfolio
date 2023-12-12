@@ -1,138 +1,163 @@
 <script setup>
-import { ref, onMounted, defineEmits, onBeforeUnmount } from 'vue';
+import { ref, onMounted, defineEmits, onBeforeUnmount, defineProps } from 'vue';
 
-let myChart; // Déclarer la variable myChart en dehors de la fonction pour y accéder lors du démontage
+// Déclaration des variables globales
+let myChart;
 let data;
 
-const emits = defineEmits(['closePopup']);
-
+// Définition des émissions et propriétés
+const emits = defineEmits(['change-interface']);
 const props = defineProps(['project']);
 
+// Références réactives pour les données du graphique
 const chartData = ref({
     labels: [],
     datasets: [{
         label: "Versions",
         data: [],
-        pointBackgroundColor: 'rgba(75, 192, 192, 1)',
-        borderColor: 'rgba(75, 192, 192, 1)',
+        pointBackgroundColor: 'rgba(84, 39, 102, 1)',
+        borderColor: 'rgba(148, 69, 179, 1)',
         borderWidth: 5,
         pointRadius: 5,
         fill: false,
     }],
 });
 
+// Référence pour le conteneur du graphique
 const chartContainer = ref(null);
 
+// Hook onMounted pour initialiser le graphique après le montage du composant
 onMounted(async () => {
     try {
-        const currentProjectData = props.project;
-        const response = await fetch('./src/projects.json');
-        data = await response.json();
+        // Chargement des données depuis un fichier JSON
+        await loadData();
 
-        data.forEach(project => {
-            if (project.projectNumber === currentProjectData.projectNumber){
-                const versionLabel = `${project.projectName} - Version ${project.version}`;
-                chartData.value.labels.push(versionLabel);
-                chartData.value.datasets[0].data.push(0);
-            }
-        });
+        // Initialisation des données du graphique
+        initializeChartData();
 
-
-        // Initialiser le graphique
-        initChart();
+        // Initialisation du graphique
+        initializeChart();
     } catch (error) {
-        console.error("Erreur lors du chargement des données JSON:", error);
+        console.error("Error loading JSON data:", error);
     }
 });
 
-const initChart = () => {
-    const ctx = chartContainer.value.getContext('2d');
+// Fonction pour charger les données depuis un fichier JSON
+const loadData = async () => {
+    const response = await fetch('./src/projects.json');
+    data = await response.json();
+};
 
-    myChart = new Chart(ctx, {
+// Fonction pour initialiser les données spécifiques du projet pour le graphique
+const initializeChartData = () => {
+    const currentProjectData = props.project;
+
+    data.forEach(project => {
+        if (project.projectNumber === currentProjectData.projectNumber) {
+            const versionLabel = `${project.projectName} - Version ${project.version}`;
+            chartData.value.labels.push(versionLabel);
+            chartData.value.datasets[0].data.push(0);
+        }
+    });
+};
+
+// Fonction pour initialiser le graphique
+const initializeChart = () => {
+    const ctx = chartContainer.value.getContext('2d');
+    myChart = new Chart(ctx, getChartConfig());
+
+    // Réinitialisation des styles des points
+    resetPointStyles();
+};
+
+// Fonction pour obtenir la configuration du graphique
+const getChartConfig = () => {
+    return {
         type: 'line',
         data: chartData.value,
         options: {
             maintainAspectRatio: false,
-            scales: {
-                x: {
-                    display: false,
-                },
-                y: {
-                    display: false,
-                },
-            },
+            scales: { x: { display: false }, y: { display: false } },
             plugins: {
-                legend: {
-                    display: false,
-                },
+                legend: { display: false },
                 tooltip: {
                     enabled: true,
                     callbacks: {
-                        title: function(context) {
-                            return chartData.value.labels[context.dataIndex];
-                        },
-                        label: function() {
-                            return '';
-                        },
+                        title: context => chartData.value.labels[context.dataIndex],
+                        label: () => '',
                     },
                 },
             },
-            elements: {
-                point: {
-                    hitRadius: 20,
-                    hoverRadius: 10,
-                },
-            },
-            onClick: (event, elements) => {
-                if (elements.length > 0) {
-                    const clickedVersion = chartData.value.labels[elements[0].index];
-                    const projectId = findProjectIdByVersion(clickedVersion);
-                    
-                    if (projectId !== null) {
-                        // Émettre l'id du projet à afficher
-                        emitProjectId(projectId);
-                    }
-                }
-            },
+            elements: { point: { hitRadius: 20, hoverRadius: 10 } },
+            onClick: handleChartClick,
         },
-    });
-}
+    };
+};
 
+// Gestionnaire de clic sur le graphique
+const handleChartClick = (event, elements) => {
+    if (elements.length > 0) {
+        const selectedIndex = elements[0].index;
+        const clickedVersion = chartData.value.labels[selectedIndex];
+        const projectId = findProjectIdByVersion(clickedVersion);
+
+        if (projectId !== null) {
+            // Émission de l'ID du projet
+            emitProjectId(projectId);
+        }
+
+        // Réinitialisation des styles des points
+        resetPointStyles();
+        // Mise à jour du style du point sélectionné
+        updateSelectedPointStyle(selectedIndex);
+        myChart.update();
+    }
+};
+
+// Fonction pour réinitialiser les styles des points
+const resetPointStyles = () => {
+    myChart.data.datasets[0].pointBackgroundColor = Array(myChart.data.labels.length).fill('rgba(84, 39, 102, 1)');
+    myChart.data.datasets[0].pointRadius = Array(myChart.data.labels.length).fill(5);
+};
+
+// Fonction pour mettre à jour le style du point sélectionné
+const updateSelectedPointStyle = index => {
+    myChart.data.datasets[0].pointBackgroundColor[index] = 'rgba(84, 39, 102, 1)';
+    myChart.data.datasets[0].pointRadius[index] = 10;
+};
+
+// Hook onBeforeUnmount pour détruire le graphique avant le démontage du composant
 onBeforeUnmount(() => {
     if (myChart) {
         myChart.destroy();
     }
 });
 
-
-const findProjectIdByVersion = (versionLabel) => {
-    // Extraire l'id du projet à partir du label de la version
+// Fonction pour trouver l'ID du projet à partir de l'étiquette de version
+const findProjectIdByVersion = versionLabel => {
     const versionParts = versionLabel.split(' - ');
     if (versionParts.length === 2) {
         const projectName = versionParts[0];
         const versionNumber = versionParts[1].replace('Version ', '');
-        
-        // Recherche du projet dans les données chargées
-        const project = data.find(proj => {
-            
-            return proj.projectName == projectName && proj.version == versionNumber
-        });
+        const project = data.find(proj => proj.projectName == projectName && proj.version == versionNumber);
         return project ? project.projectId : null;
     }
     return null;
 };
 
-const emitProjectId = (projectId, context) => {
-    // Émettre l'id du projet
-    console.log(`Id du projet à afficher : ${projectId}`);
+// Fonction pour émettre l'ID du projet
+const emitProjectId = projectId => {
+    console.log(`Project ID to display: ${projectId}`);
     emits('change-interface', `${projectId}`);
 };
 </script>
 
-
 <template>
+    <!-- Conteneur du graphique -->
     <div class="container">
+        <!-- Titre du graphique -->
         <h3 class="title">Versions</h3>
+        <!-- Canvas pour afficher le graphique -->
         <canvas ref="chartContainer" class="graph" style="width: 100%; height: 100%;"></canvas>
     </div>
 </template>
@@ -140,7 +165,7 @@ const emitProjectId = (projectId, context) => {
 <style scoped>
 .container {
     background-color: var(--color-background-soft);
-    padding: .25rem;
+    padding: 0.25rem;
     border-radius: 8px;
     border: solid 1px var(--color-border);
     color: var(--color-text);

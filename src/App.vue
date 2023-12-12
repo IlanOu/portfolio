@@ -1,50 +1,31 @@
-<!-- App.vue -->
-
 <script setup>
 import { ref, onMounted } from 'vue';
-
 import Card from './components/Card.vue';
 import Popup from './components/Popup.vue';
 import Light from './components/Light.vue';
 import SearchBar from './components/SearchBar.vue';
 import Main from './components/Main.vue';
 
+// État réactif
 const isPopupOpen = ref(false);
 const selectedProject = ref(null);
 const projects = ref([]);
 const filteredProjects = ref([]);
 const bodyOverflow = ref(false);
-
 const searchBarRef = ref(null);
 
-
+// Hook onMounted pour charger les données initiales
 onMounted(async () => {
+    // Chargement des données des projets depuis un fichier JSON
     const response = await fetch('/src/projects.json');
     projects.value = await response.json();
 
-    // Tri du tableau par projectNumber et version
-    const sortedProjects = projects.value.slice().sort((a, b) => {
-        if (a.projectNumber === b.projectNumber) {
-            return b.version - a.version;
-        }
-        return a.projectNumber - b.projectNumber;
-    });
-
-    // Suppression des versions inférieures pour chaque projectNumber
-    const uniqueProjects = [];
-    for (const project of sortedProjects) {
-        const existingProject = uniqueProjects.find(p => p.projectNumber === project.projectNumber);
-        if (!existingProject) {
-            uniqueProjects.push(project);
-        }
-    }
-
-    // Mise à jour des projets avec la liste filtrée
-    // projects.value = uniqueProjects;
+    // Filtrer et trier pour obtenir une liste unique par projectNumber
+    const uniqueProjects = getUniqueProjects(projects.value);
     filteredProjects.value = uniqueProjects;
 });
 
-
+// Handlers et fonctions utilitaires
 const openPopupHandler = (project) => {
     isPopupOpen.value = true;
     selectedProject.value = project;
@@ -59,25 +40,29 @@ const closePopupHandler = () => {
 };
 
 const handleSearch = (text) => {
-  searchBarRef.value.search(text);
-}
+    if (getUniqueProjects(filteredProjects.value).includes(selectedProject.value)) {
+        const latestProjects = getLatestProjects(projects.value);
+        searchBarRef.value.search(text, latestProjects);
+    }
+};
 
+const getLatestProjects = (allProjects) => {
+    const uniqueProjects = getUniqueProjects(allProjects);
+    return uniqueProjects;
+};
 
-// Fonction pour mettre à jour les projets filtrés
 const updateFilteredProjects = (filtered) => {
-    filteredProjects.value = filtered;
+    filteredProjects.value = getUniqueProjects(filtered);
 };
 
 const handleChangeInterface = (id) => {
-    const project = findProjectById(id)
-    closePopupHandler()
-    openPopupHandler(project)
-}
+    const project = findProjectById(id);
+    closePopupHandler();
+    openPopupHandler(project);
+};
 
 const findProjectById = (id) => {
-    console.log(projects.value);
     for (const project of projects.value) {
-        console.log(typeof id, typeof project.projectId); // Log les types d'identifiants
         if (project.projectId == id) {
             return project;
         }
@@ -85,16 +70,36 @@ const findProjectById = (id) => {
     return null;
 };
 
+const getUniqueProjects = (allProjects) => {
+    const sortedProjects = allProjects.slice().sort((a, b) => {
+        if (a.projectNumber === b.projectNumber) {
+            return b.version - a.version;
+        }
+        return a.projectNumber - b.projectNumber;
+    });
 
+    const uniqueProjects = [];
+    for (const project of sortedProjects) {
+        const existingProject = uniqueProjects.find(p => p.projectNumber === project.projectNumber);
+        if (!existingProject) {
+            uniqueProjects.push(project);
+        }
+    }
 
+    return uniqueProjects;
+};
 </script>
 
 <template>
+    <!-- Composant principal -->
     <Main/>
-    <!-- Assurez-vous de passer correctement la propriété projects à SearchBar -->
-    <SearchBar :isSearchEnabled="!isPopupOpen" :projects=projects @searchProjects="updateFilteredProjects" ref="searchBarRef"/>
+
+    <!-- Barre de recherche -->
+    <SearchBar :isSearchEnabled="!isPopupOpen" :projects="getUniqueProjects(projects)" @searchProjects="updateFilteredProjects" ref="searchBarRef"/>
     
-    <div class="galery">
+    <!-- Galerie de projets -->
+    <div class="gallery">
+        <!-- Cartes de projets -->
         <Card v-for="project in filteredProjects" 
               :key="project.projectNumber" 
               :projectName="project.projectName" 
@@ -108,26 +113,29 @@ const findProjectById = (id) => {
               @searchByDate="() => handleSearch(`date:${project.date}`)"
               @searchByWorkplace="() => handleSearch(`workplace:${project.workplace}`)"/>
 
-        <p v-if="filteredProjects.length==0">Aucun projet n'a été trouvé...</p>
-        <Popup  v-if="isPopupOpen" 
-                :project="selectedProject" 
-                @closePopup="closePopupHandler"
-                @searchByTag="() => handleSearch(`type:${selectedProject.type}`)" 
-                @searchByDate="() => handleSearch(`date:${selectedProject.date}`)"
-                @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`)"
-                @change-interface="handleChangeInterface"/>
+        <!-- Message si aucun projet n'est trouvé -->
+        <p v-if="filteredProjects.length === 0">Aucun projet n'a été trouvé...</p>
+        
+        <!-- Popup conditionnel -->
+        <Popup v-if="isPopupOpen" 
+               :project="selectedProject" 
+               @closePopup="closePopupHandler"
+               @searchByTag="() => handleSearch(`type:${selectedProject.type}`)" 
+               @searchByDate="() => handleSearch(`date:${selectedProject.date}`)"
+               @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`)"
+               @change-interface="handleChangeInterface"/>
     </div>
     
+    <!-- Composant Light -->
     <Light/>
 </template>
 
 <style scoped>
-.galery {
+.gallery {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1em;
-    /* Ajout de l'espacement entre les éléments de la grille */
     padding: 0 2rem;
     position: relative;
 }
