@@ -1,41 +1,43 @@
 <template>
     <div class="popup-overlay" @click="closePopup">
         <div class="popup-content" @click.stop>
-    
+
             <div class="tags">
                 <p v-if="props.project.date.length > 0" class="project-date" @click="searchByDate">{{ props.project.date }}</p>
                 <p v-if="props.project.type.length > 0" class="project-type" @click="searchByTag">{{ props.project.type }}</p>
                 <p v-if="props.project.workplace.length > 0" class="project-workplace" @click="searchByWorkplace">{{ props.project.workplace }}</p>
             </div>
-            <h2>{{ props.project.projectName }}</h2>
-    
-            <div class="columns">
-                <div class="galleries">
-                    <!-- Ajout des boutons Images / Videos -->
-                    <div class="buttons">
-                        <button @click="showImages" :class="{ active: displayImages }" class="button">Images</button>
-                        <button @click="showVideos" :class="{ active: displayVideos, disabled: videoListEmpty }" class="button">Vidéos</button>
-                    </div>
-    
-                    <!-- Videos au-dessus des images -->
-                    <div v-if="displayVideos" class="videos-gallery">
-                        <div class="video-item" v-for="(videoEmbed, index) in props.project.videoUrls" :key="'video-' + index">
-                            <iframe :src="videoEmbed" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-    
-                    <!-- Galerie d'images à droite des vidéos -->
-                    <div v-if="displayImages" class="images-gallery">
-                        <div class="gallery-item" v-for="(imageUrl, index) in props.project.imageUrls" :key="index">
-                            <img :src="imageUrl" alt="Project Image">
-                        </div>
+            <h2 class="projectName">{{ props.project.projectName }}</h2>
+
+            <div class="galleries">
+                <!-- Ajout des boutons Images / Videos -->
+                <div class="buttons">
+                    <button @click="showImages" :class="{ active: displayImages }" class="button">Images</button>
+                    <button @click="showVideos" :class="{ active: displayVideos, disabled: videoListEmpty }" class="button">Vidéos</button>
+                </div>
+
+                <!-- Videos au-dessus des images -->
+                <div v-if="displayVideos" class="videos-gallery">
+                    <div class="video-item" v-for="(videoEmbed, index) in props.project.videoUrls" :key="'video-' + index">
+                        <iframe :src="videoEmbed" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
-    
-                <!-- Description à droite des images -->
-                <div class="description angles-with-padding">
-                    <p>{{ props.project.description }}</p>
+
+                <!-- Galerie d'images à droite des vidéos -->
+                <div v-if="displayImages" class="images-gallery">
+                    <div class="gallery-item" v-for="(imageUrl, index) in props.project.imageUrls" :key="index">
+                        <img :src="imageUrl" alt="Project Image">
+                    </div>
                 </div>
+            </div>
+
+            <!-- Description à droite des images -->
+            <div class="description angles-with-padding">
+                <p>{{ props.project.description }}</p>
+            </div>
+
+            <div class="versions">
+                <Versions/>
             </div>
         </div>
     </div>
@@ -43,10 +45,10 @@
 
 <script setup>
 import { defineProps, defineEmits, ref } from 'vue';
+import Versions from './Versions.vue';
 
 const props = defineProps(['project']);
 const emits = defineEmits(['closePopup']);
-
 
 const searchByDate = () => {
     emits('searchByDate', props.project.date);
@@ -57,7 +59,6 @@ const searchByTag = () => {
 const searchByWorkplace = () => {
     emits('searchByWorkplace', props.project.workplace);
 };
-
 
 const closePopup = () => {
     emits('closePopup');
@@ -112,15 +113,37 @@ h2 {
     height: 80%;
     overflow: hidden visible;
     position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "tags tags"
+        "projectName projectName"
+        "galleries description"
+        "versions versions";
+    gap: 1rem;
 }
 
-.columns {
-    display: flex;
-    justify-content: space-evenly;
+.tags {
+    grid-area: tags;
+}
+
+.projectName {
+    grid-area: projectName;
 }
 
 .galleries {
-    width: 65%;
+    grid-area: galleries;
+    width: 100%;
+}
+
+.description {
+    grid-area: description;
+}
+
+.versions {
+    grid-area: versions;
+    justify-self: end;
 }
 
 .buttons {
@@ -147,14 +170,11 @@ h2 {
 
 .button.active {
     background-color: var(--color-accentuation);
-    /* Couleur active */
     color: var(--color-text);
-    /* Couleur du texte active */
 }
 
 .button.disabled {
     background-color: var(--color-disabled);
-    /* Couleur pour le bouton désactivé */
     cursor: not-allowed;
 }
 
@@ -183,9 +203,6 @@ h2 {
 
 .images-gallery {
     column-count: 3;
-    max-height: 100%;
-    max-height: calc(100% - 2rem);
-    /* Ajuste la hauteur maximale de la galerie d'images */
     overflow-y: auto;
 }
 
@@ -204,10 +221,16 @@ h2 {
 .description {
     position: sticky;
     top: 1rem;
-    /* position: relative; */
-    width: 30%;
+    /* width: 30%; */
     text-align: justify;
     height: fit-content;
+    
+}
+
+.versions{
+    position: sticky;
+    bottom: 0;
+    right: 0;
 }
 
 /* -------------------------------------------------------------------------- */
