@@ -86,18 +86,18 @@ img {
 .project-date {
     background-color: var(--color-accentuation-date);
     padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
 }
 
 .project-type {
     background-color: var(--color-accentuation-type);
     padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
 }
 .project-workplace {
     background-color: var(--color-accentuation-workplace);
     padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
 }
 
 .project-description {

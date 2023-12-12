@@ -104,7 +104,7 @@ h2 {
     background-color: var(--color-background-soft);
     color: var(--color-text);
     padding: 1rem;
-    border-radius: 1.5rem;
+    border-radius: 30px;
     border: solid 1px var(--color-border);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-width: 80%;
@@ -156,7 +156,7 @@ h2 {
     margin-bottom: 3rem;
     background-color: var(--color-accentuation-soft);
     padding: 0.75rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     border: solid 1px var(--color-border);
     color: var(--color-text);
     font-size: 0.8rem;
@@ -229,8 +229,9 @@ h2 {
 
 .versions{
     position: sticky;
-    bottom: 0;
-    right: 0;
+    bottom: 0rem;
+    right: 0rem;
+    width: calc(30% + 2rem);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -253,21 +254,21 @@ h2 {
 .project-date {
     background-color: var(--color-accentuation-date);
     padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 .project-type {
     background-color: var(--color-accentuation-type);
     padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 .project-workplace {
     background-color: var(--color-accentuation-workplace);
     padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
 }
 
