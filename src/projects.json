@@ -1,6 +1,7 @@
 [
     {
       "projectNumber": 0,
+      "version": 1,
       "projectName": "Projet n°0",
       "description": "Ceci est une description de projet plus longue que le générique de fin d'un film des années 60, et pourtant, elle n'est pas si longue mais les films de coboys, qu'est ce qu'ils sont longs....",
       "imageUrls": [
@@ -34,7 +35,8 @@
       "workplace": "Ecole"
     },
     {
-      "projectNumber": 1,
+      "projectNumber": 0,
+      "version": 2,
       "projectName": "Projet n°1",
       "description": "Description du Projet",
       "imageUrls": [
@@ -49,6 +51,7 @@
     },
     {
       "projectNumber": 2,
+      "version": 1,
       "projectName": "Portfolio",
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [
@@ -63,6 +66,7 @@
     },
     {
       "projectNumber": 2,
+      "version": 2,
       "projectName": "Portfolio",
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [
@@ -78,6 +82,7 @@
     },
     {
       "projectNumber": 2,
+      "version": 3,
       "projectName": "Portfolio",
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [
@@ -93,6 +98,7 @@
     },
     {
       "projectNumber": 2,
+      "version": 4,
       "projectName": "Portfolio",
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [
@@ -106,7 +112,8 @@
       "workplace": "Ecole"
     },
     {
-      "projectNumber": 2,
+      "projectNumber": 3,
+      "version": 1,
       "projectName": "Portfolio",
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [
@@ -121,7 +128,8 @@
       "workplace": "Ecole"
     },
     {
-      "projectNumber": 2,
+      "projectNumber": 3,
+      "version": 2,
       "projectName": "Portfolio",
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [
@@ -136,7 +144,8 @@
       "workplace": "Ecole"
     },
     {
-      "projectNumber": 2,
+      "projectNumber": 4,
+      "version": 1,
       "projectName": "Portfolio",
       "description": "La vie c'est comme une boîte de chocolat. Moins c'est plus, plus moins que plus.",
       "imageUrls": [

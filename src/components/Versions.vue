@@ -1,31 +1,54 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-const chartData = {
-    labels: ["Version 1", "Version 2"],
+let myChart; // Déclarer la variable myChart en dehors de la fonction pour y accéder lors du démontage
+const props = defineProps(['project']);
+
+const chartData = ref({
+    labels: [],
     datasets: [{
         label: "Versions",
-        data: [0, 0],
+        data: [],
         pointBackgroundColor: 'rgba(75, 192, 192, 1)',
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 5,
         pointRadius: 5,
         fill: false,
     }],
-};
+});
 
 const chartContainer = ref(null);
-let myChart; // Déclarer la variable myChart en dehors de la fonction pour y accéder lors du démontage
 
-onMounted(() => {
+onMounted(async () => {
+    try {
+        const currentProjectData = props.project;
+        const response = await fetch('./src/projects.json');
+        const data = await response.json();
+
+        data.forEach(project => {
+            if (project.projectNumber === currentProjectData.projectNumber){
+                const versionLabel = `${project.projectName} - Version ${project.version}`;
+                chartData.value.labels.push(versionLabel);
+                chartData.value.datasets[0].data.push(0);
+            }
+        });
+
+
+        // Initialiser le graphique
+        initChart();
+    } catch (error) {
+        console.error("Erreur lors du chargement des données JSON:", error);
+    }
+});
+
+const initChart = () => {
     const ctx = chartContainer.value.getContext('2d');
 
     myChart = new Chart(ctx, {
         type: 'line',
-        data: chartData,
+        data: chartData.value,
         options: {
-            maintainAspectRatio: false, // Désactiver le maintien du ratio d'aspect
-            aspectRatio: 0, // Forcer l'aspect ratio à 0 pour prendre la taille de la div
+            maintainAspectRatio: false,
             scales: {
                 x: {
                     display: false,
@@ -42,7 +65,7 @@ onMounted(() => {
                     enabled: true,
                     callbacks: {
                         title: function(context) {
-                            return chartData.labels[context.dataIndex];
+                            return chartData.value.labels[context.dataIndex];
                         },
                         label: function() {
                             return '';
@@ -58,26 +81,26 @@ onMounted(() => {
             },
             onClick: (event, elements) => {
                 if (elements.length > 0) {
-                    const clickedVersion = chartData.labels[elements[0].index];
+                    const clickedVersion = chartData.value.labels[elements[0].index];
                     alert(`Version cliquée : ${clickedVersion}`);
                 }
             },
         },
     });
-});
+}
 
 onBeforeUnmount(() => {
-    // Détruire le graphique lors du démontage du composant pour éviter les fuites de mémoire
     if (myChart) {
         myChart.destroy();
     }
 });
 </script>
 
+
 <template>
     <div class="container">
-        Versions
-        <canvas ref="chartContainer" style="width: 100%; height: 100%;"></canvas>
+        <h3 class="title">Versions</h3>
+        <canvas ref="chartContainer" class="graph" style="width: 100%; height: 100%;"></canvas>
     </div>
 </template>
 
@@ -89,10 +112,18 @@ onBeforeUnmount(() => {
     border: solid 1px var(--color-border);
     color: var(--color-text);
     width: 100%;
-    height: 100px;
+    height: 6rem;
     position: relative;
-    /* Ajout de cette propriété pour permettre de positionner le canvas absolument à l'intérieur */
 }
 
-/* Ajoutez d'autres styles selon vos préférences */
+.title {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.graph {
+    margin-top: 1.5rem;
+}
 </style>

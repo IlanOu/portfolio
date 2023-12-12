@@ -37,7 +37,7 @@
             </div>
 
             <div class="versions">
-                <Versions/>
+                <Versions :project="props.project"/>
             </div>
         </div>
     </div>
