@@ -108,7 +108,7 @@ const getChartConfig = () => {
                     },
                 },
             },
-            elements: { point: { hitRadius: 20, hoverRadius: 10} },
+            elements: { point: { hitRadius: 7, hoverRadius: 10} },
             onClick: handleChartClick,
         },
     };
@@ -175,7 +175,7 @@ const emitProjectId = projectId => {
     <!-- Conteneur du graphique -->
     <div class="container">
         <!-- Titre du graphique -->
-        <h3 class="title">Versions</h3>
+        <h3 class="title">Versions du projet</h3>
         <!-- Canvas pour afficher le graphique -->
         <canvas ref="chartContainer" class="graph" style="width: 100%; height: 100%;"></canvas>
     </div>

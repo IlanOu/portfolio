@@ -39,8 +39,8 @@ const closePopupHandler = () => {
     document.body.classList.remove('no-scroll');
 };
 
-const handleSearch = (text) => {
-    if (getUniqueProjects(filteredProjects.value).includes(selectedProject.value)) {
+const handleSearch = (text, project) => {
+    if (getUniqueProjects(filteredProjects.value).includes(project)) {
         const latestProjects = getLatestProjects(projects.value);
         searchBarRef.value.search(text, latestProjects);
     }
@@ -109,9 +109,9 @@ const getUniqueProjects = (allProjects) => {
               :type="project.type"
               :workplace="project.workplace"
               @openPopup="() => openPopupHandler(project)"
-              @searchByTag="() => handleSearch(`type:${project.type}`)" 
-              @searchByDate="() => handleSearch(`date:${project.date}`)"
-              @searchByWorkplace="() => handleSearch(`workplace:${project.workplace}`)"/>
+              @searchByTag="() => handleSearch(`type:${project.type}`, project)" 
+              @searchByDate="() => handleSearch(`date:${project.date}`, project)"
+              @searchByWorkplace="() => handleSearch(`workplace:${project.workplace}`, project)"/>
 
         <!-- Message si aucun projet n'est trouvé -->
         <p v-if="filteredProjects.length === 0">Aucun projet n'a été trouvé...</p>
@@ -120,9 +120,9 @@ const getUniqueProjects = (allProjects) => {
         <Popup v-if="isPopupOpen" 
                :project="selectedProject" 
                @closePopup="closePopupHandler"
-               @searchByTag="() => handleSearch(`type:${selectedProject.type}`)" 
-               @searchByDate="() => handleSearch(`date:${selectedProject.date}`)"
-               @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`)"
+               @searchByTag="() => handleSearch(`type:${selectedProject.type}`, selectedProject)" 
+               @searchByDate="() => handleSearch(`date:${selectedProject.date}`, selectedProject)"
+               @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`, selectedProject)"
                @change-interface="handleChangeInterface"/>
     </div>
     
