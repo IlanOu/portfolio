@@ -16,6 +16,17 @@
                     <button @click="showVideos" :class="{ active: displayVideos, disabled: videoListEmpty }" class="button">Vidéos</button>
                 </div>
 
+                <div class="sliderContainer">
+                    <input
+                        type="range"
+                        id="columnCount"
+                        min="1"
+                        max="4"
+                        v-model="columnCount"
+                        class="slider"
+                    />
+                </div>
+
                 <!-- Videos au-dessus des images -->
                 <div v-if="displayVideos" class="videos-gallery">
                     <div class="video-item" v-for="(videoEmbed, index) in props.project.videoUrls" :key="'video-' + index">
@@ -44,11 +55,12 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref } from 'vue';
+import { defineProps, defineEmits, ref, onMounted, watchEffect } from 'vue';
 import Versions from './Versions.vue';
 
 const props = defineProps(['project']);
 const emits = defineEmits(['closePopup']);
+const columnCount = ref(3);
 
 const searchByDate = () => {
     emits('searchByDate', props.project.date);
@@ -63,6 +75,11 @@ const searchByWorkplace = () => {
 const closePopup = () => {
     emits('closePopup');
 };
+
+const updateColumnCount = () => {
+    document.documentElement.style.setProperty('--column-count', columnCount.value);
+};
+
 
 // Ajout de la logique pour afficher les images ou les vidéos
 const displayImages = ref(true);
@@ -84,6 +101,16 @@ const showVideos = () => {
 const handleChangeInterface = (id) => {
     emits('change-interface', `${id}`);
 }
+
+// Appeler la méthode lorsque le composant est monté
+onMounted(() => {
+    updateColumnCount();
+});
+
+// Appeler la méthode à chaque fois que columnCount est modifié
+watchEffect(() => {
+    updateColumnCount();
+});
 </script>
 
 <style scoped>
@@ -157,7 +184,7 @@ h2 {
 
 .button {
     width: 40%;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     background-color: var(--color-accentuation-soft);
     padding: 0.75rem 0.5rem;
     border-radius: 8px;
@@ -189,7 +216,7 @@ h2 {
 /* -------------------------------------------------------------------------- */
 
 .videos-gallery {
-    column-count: 2;
+    column-count: var(--column-count);
 }
 
 .video-item iframe {
@@ -206,7 +233,7 @@ h2 {
 /* -------------------------------------------------------------------------- */
 
 .images-gallery {
-    column-count: 3;
+    column-count: var(--column-count);
     overflow-y: auto;
 }
 
@@ -298,4 +325,77 @@ h2 {
         margin: 1rem;
     }
 }
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                            Input range : slider                            */
+/* -------------------------------------------------------------------------- */
+.sliderContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 7rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--color-background);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: var(--color-accentuation);
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: none;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: var(--color-background);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--color-accentuation);
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: none;
+}
+
 </style>

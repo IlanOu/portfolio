@@ -175,7 +175,7 @@ const emitProjectId = projectId => {
     <!-- Conteneur du graphique -->
     <div class="container">
         <!-- Titre du graphique -->
-        <h3 class="title">Versions du projet</h3>
+        <h3 class="title">Voir les versions du projet</h3>
         <!-- Canvas pour afficher le graphique -->
         <canvas ref="chartContainer" class="graph" style="width: 100%; height: 100%;"></canvas>
     </div>
@@ -194,6 +194,7 @@ const emitProjectId = projectId => {
 }
 
 .title {
+width: 100%;
     position: absolute;
     top: 1rem;
     left: 50%;
