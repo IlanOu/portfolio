@@ -10,4 +10,4 @@ npm run dev
 
 [x] ~~- Système de version des projets (voir les anciennes versions : afficher dans le style des branches git)~~
 
-[ ] - Système pour changer le nombre de colonnes dans les popups
+[x] ~~- Système pour changer le nombre de colonnes dans les popups~~
