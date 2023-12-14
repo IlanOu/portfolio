@@ -94,34 +94,41 @@ const getUniqueProjects = (allProjects) => {
 
     <!-- Barre de recherche -->
     <SearchBar :isSearchEnabled="!isPopupOpen" :projects="getUniqueProjects(projects)" @searchProjects="updateFilteredProjects" ref="searchBarRef"/>
-    
+
+
     <!-- Galerie de projets -->
     <div class="gallery">
+
         <!-- Cartes de projets -->
         <Card v-for="project in filteredProjects" 
-              :key="project.projectNumber" 
-              :projectName="project.projectName" 
-              :description="project.description" 
-              :imageUrls="project.imageUrls" 
-              :date="project.date" 
-              :type="project.type"
-              :workplace="project.workplace"
-              @openPopup="() => openPopupHandler(project)"
-              @searchByTag="() => handleSearch(`type:${project.type}`, project)" 
-              @searchByDate="() => handleSearch(`date:${project.date}`, project)"
-              @searchByWorkplace="() => handleSearch(`workplace:${project.workplace}`, project)"/>
+        :key="project.projectNumber" 
+        :projectName="project.projectName" 
+        :description="project.description" 
+        :imageUrls="project.imageUrls" 
+        :date="project.date" 
+        :type="project.type"
+        :workplace="project.workplace"
+        @openPopup="() => openPopupHandler(project)"
+        @searchByTag="() => handleSearch(`type:${project.type}`, project)" 
+        @searchByDate="() => handleSearch(`date:${project.date}`, project)"
+        @searchByWorkplace="() => handleSearch(`workplace:${project.workplace}`, project)"/>
 
         <!-- Message si aucun projet n'est trouvé -->
-        <p v-if="filteredProjects.length === 0">Aucun projet n'a été trouvé...</p>
+        <Transition>
+            <p v-if="filteredProjects.length === 0">Aucun projet n'a été trouvé...</p>
+        </Transition>
         
         <!-- Popup conditionnel -->
-        <Popup v-if="isPopupOpen" 
-               :project="selectedProject" 
-               @closePopup="closePopupHandler"
-               @searchByTag="() => handleSearch(`type:${selectedProject.type}`, selectedProject)" 
-               @searchByDate="() => handleSearch(`date:${selectedProject.date}`, selectedProject)"
-               @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`, selectedProject)"
-               @change-interface="handleChangeInterface"/>
+        <Transition>
+            <Popup v-if="isPopupOpen" 
+                   :project="selectedProject" 
+                   @closePopup="closePopupHandler"
+                   @searchByTag="() => handleSearch(`type:${selectedProject.type}`, selectedProject)" 
+                   @searchByDate="() => handleSearch(`date:${selectedProject.date}`, selectedProject)"
+                   @searchByWorkplace="() => handleSearch(`workplace:${selectedProject.workplace}`, selectedProject)"
+                   @change-interface="handleChangeInterface"/>
+
+        </Transition>
     </div>
     
     <!-- Composant Light -->
@@ -129,6 +136,16 @@ const getUniqueProjects = (allProjects) => {
 </template>
 
 <style scoped>
+
+
+.v-enter-active, .v-leave-active {
+  transition: all 0.25s ease;
+}
+
+.v-enter-from, .v-leave-to {
+  opacity: 0;
+}
+
 .gallery {
     width: 100%;
     display: grid;
