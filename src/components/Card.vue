@@ -69,7 +69,7 @@ img {
 @media (max-width: 1024px) {
     img {
         width: 100%;
-        height: 80%;
+        height: 70%;
     }
     .card {
         height: 30rem;
