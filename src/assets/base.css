@@ -41,6 +41,9 @@
   --section-gap: 160px;
 
   --color-disabled: var(--vt-c-white);
+
+  --border-radius: 10px;
+  --border-radius-large: 20px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -44,7 +44,7 @@ const truncateDescription = (description) => {
 .card {
     background-color: var(--color-background-soft);
     border: solid 1px var(--color-border);
-    border-radius: 1.5rem;
+    border-radius: var(--border-radius-large);
     padding: 1rem;
     transition: background-color 0.25s ease-in;
     position: relative;
@@ -62,13 +62,24 @@ img {
     width: 100%;
     height: 70%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1024px) {
     img {
-        width: 100%
+        width: 100%;
+        height: 80%;
+    }
+    .card {
+        height: 30rem;
+    }
+
+    .tags[data-v-c6c3362a] {
+        position: initial;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
     }
 }
 
@@ -86,18 +97,21 @@ img {
 .project-date {
     background-color: var(--color-accentuation-date);
     padding: 0.25rem 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
+    color: var(--vt-c-text-dark-2);
 }
 
 .project-type {
     background-color: var(--color-accentuation-type);
     padding: 0.25rem 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
+    color: var(--vt-c-text-dark-2);
 }
 .project-workplace {
     background-color: var(--color-accentuation-workplace);
     padding: 0.25rem 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
+    color: var(--vt-c-text-dark-2);
 }
 
 .project-description {

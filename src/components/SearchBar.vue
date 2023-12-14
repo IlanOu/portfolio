@@ -103,4 +103,11 @@ onMounted(() => {
 .search-bar input:focus {
     background-color: var(--color-background-mute);
 }
+
+@media (max-width: 680px) {
+    .search-bar input {
+        width: calc(100% - 0rem);
+        margin: 2rem 0;
+    }
+}
 </style>

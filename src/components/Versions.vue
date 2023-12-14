@@ -185,7 +185,7 @@ const emitProjectId = projectId => {
 .container {
     background-color: var(--color-background-soft);
     padding: 0.25rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     border: solid 1px var(--color-border);
     color: var(--color-text);
     width: 100%;

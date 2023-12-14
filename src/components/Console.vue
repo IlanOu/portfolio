@@ -83,7 +83,7 @@
         height: 10rem;
 
         padding: 1rem;
-        border-radius: 1rem;
+        border-radius: var(--border-radius-large);
         border: var(--color-border) 1px solid;
     }
 
@@ -105,5 +105,11 @@
         display: inline-block;
         position: relative;
         top: -0.14rem;
+    }
+
+    @media (max-width: 1024px) {
+        .console-background{
+            width: 100%;
+        }
     }
 </style>

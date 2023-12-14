@@ -137,4 +137,11 @@ const getUniqueProjects = (allProjects) => {
     padding: 0 2rem;
     position: relative;
 }
+
+@media (max-width: 1024px) {
+    .gallery {
+        padding: 0;
+        grid-gap: 3em;
+    }
+}
 </style>

@@ -59,7 +59,7 @@ import { defineProps, defineEmits, ref, onMounted, watchEffect, onUpdated } from
 import Versions from './Versions.vue';
 
 const props = defineProps(['project']);
-const emits = defineEmits(['closePopup']);
+const emits = defineEmits(['closePopup', 'searchByDate', 'searchByTag', 'searchByWorkplace', 'change-interface']);
 const columnCount = ref(3);
 
 const searchByDate = () => {
@@ -139,7 +139,7 @@ h2 {
     background-color: var(--color-background-soft);
     color: var(--color-text);
     padding: 1rem;
-    border-radius: 30px;
+    border-radius: var(--border-radius-large);
     border: solid 1px var(--color-border);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-width: 80%;
@@ -191,7 +191,7 @@ h2 {
     margin-bottom: 1rem;
     background-color: var(--color-accentuation-soft);
     padding: 0.75rem 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     border: solid 1px var(--color-border);
     color: var(--color-text);
     font-size: 0.8rem;
@@ -227,7 +227,7 @@ h2 {
     width: 100%;
     aspect-ratio: 16 / 9;
     height: auto;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -244,7 +244,7 @@ h2 {
 .gallery-item img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -289,22 +289,25 @@ h2 {
 .project-date {
     background-color: var(--color-accentuation-date);
     padding: 0.25rem 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     cursor: pointer;
+    color: var(--vt-c-text-dark-2);
 }
 
 .project-type {
     background-color: var(--color-accentuation-type);
     padding: 0.25rem 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     cursor: pointer;
+    color: var(--vt-c-text-dark-2);
 }
 
 .project-workplace {
     background-color: var(--color-accentuation-workplace);
     padding: 0.25rem 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     cursor: pointer;
+    color: var(--vt-c-text-dark-2);
 }
 
 @media (max-width: 1024px) {
@@ -320,13 +323,55 @@ h2 {
     .videos-gallery {
         column-count: 1;
     }
+
+    .projectName{
+        margin: 0;
+    }
+
     .description {
-        position: relative;
-        width: 30%;
+        position: initial;
         text-align: justify;
         height: fit-content;
+        width: calc(100% - 2rem);
+        margin: 0;
+    }
+
+    .tags {
+        position: initial;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .versions{
+        position: initial;
         width: 100%;
-        margin: 1rem;
+    }
+
+    .sliderContainer {
+        display: none !important;
+    }
+
+
+    .popup-content[data-v-ac836eac] {
+        max-width: 90%;
+        width: 90%;
+        height: 80%;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "tags"
+            "projectName"
+            "description"
+            "galleries"
+            "versions";
+    }
+
+
+    .images-gallery{
+        display: grid;
+        gap: 1rem;
     }
 }
 
@@ -362,7 +407,7 @@ input[type="range"]:focus {
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: var(--color-background);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-large);
   height: 0.5rem;
 }
 
@@ -372,7 +417,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   margin-top: -4px; /* Centers thumb on the track */
   background-color: var(--color-accentuation);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-large);
   height: 1rem;
   width: 1rem;
 }
@@ -385,7 +430,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
 /* slider track */
 input[type="range"]::-moz-range-track {
   background-color: var(--color-background);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-large);
   height: 0.5rem;
 }
 
@@ -393,7 +438,7 @@ input[type="range"]::-moz-range-track {
 input[type="range"]::-moz-range-thumb {
   background-color: var(--color-accentuation);
   border: none; /*Removes extra border that FF applies*/
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-large);
   height: 1rem;
   width: 1rem;
 }
@@ -401,5 +446,8 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]:focus::-moz-range-thumb{
   outline: none;
 }
+
+
+
 
 </style>
