@@ -11,7 +11,6 @@ const isPopupOpen = ref(false);
 const selectedProject = ref(null);
 const projects = ref([]);
 const filteredProjects = ref([]);
-const bodyOverflow = ref(false);
 const searchBarRef = ref(null);
 
 // Hook onMounted pour charger les données initiales
@@ -35,7 +34,6 @@ const openPopupHandler = (project) => {
 const closePopupHandler = () => {
     isPopupOpen.value = false;
     selectedProject.value = null;
-    bodyOverflow.value = false;
     document.body.classList.remove('no-scroll');
 };
 

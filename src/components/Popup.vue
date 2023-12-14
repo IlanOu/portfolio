@@ -55,7 +55,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref, onMounted, watchEffect } from 'vue';
+import { defineProps, defineEmits, ref, onMounted, watchEffect, onUpdated } from 'vue';
 import Versions from './Versions.vue';
 
 const props = defineProps(['project']);
@@ -84,7 +84,7 @@ const updateColumnCount = () => {
 // Ajout de la logique pour afficher les images ou les vidéos
 const displayImages = ref(true);
 const displayVideos = ref(false);
-const videoListEmpty = ref(props.project.videoUrls.length === 0);
+let videoListEmpty = ref(props.project.videoUrls.length === 0);
 
 const showImages = () => {
     displayImages.value = true;
@@ -106,6 +106,10 @@ const handleChangeInterface = (id) => {
 onMounted(() => {
     updateColumnCount();
 });
+
+onUpdated(()=>{
+    videoListEmpty.value = props.project.videoUrls.length === 0;
+})
 
 // Appeler la méthode à chaque fois que columnCount est modifié
 watchEffect(() => {
