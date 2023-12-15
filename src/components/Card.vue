@@ -33,7 +33,7 @@ const truncateDescription = (description) => {
             <p v-if="props.type.length > 0" class="project-type" @click="searchByTag">{{ props.type }}</p>
             <p v-if="props.workplace.length > 0" class="project-workplace" @click="searchByWorkplace">{{ props.workplace }}</p>
         </div>
-        <h2>{{ props.projectName }}</h2>
+        <h2 class="project-name">{{ props.projectName }}</h2>
         <img :src="props.imageUrls[0]" alt="Project Image">
         <p class="project-description">{{ truncateDescription(props.description) }}</p>
     </div>
@@ -48,7 +48,7 @@ const truncateDescription = (description) => {
     transition: background-color 0.25s ease-in;
     position: relative;
     cursor: pointer;
-    height: 20rem;
+    height: 25rem;
     overflow: hidden;
 }
 
@@ -56,10 +56,14 @@ const truncateDescription = (description) => {
     background-color: var(--color-background-mute);
 }
 
+.project-name{
+    margin: 1rem 0;
+}
+
 img {
     max-width: 100%;
     width: 100%;
-    height: 70%;
+    height: 60%;
     object-fit: cover;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,7 +93,7 @@ img {
     margin: 0.5rem;
     display: flex;
     flex-direction: row-reverse;
-    gap: 0.25rem;
+    gap: 0.5rem;
     font-size: 75%;
 }
 
@@ -120,6 +124,7 @@ img {
     -webkit-line-clamp: 2;
     /* Ajustez le nombre de lignes souhaité */
     white-space: normal;
+    margin: 1rem 0;
 }
 
 body {

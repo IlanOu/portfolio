@@ -7,7 +7,7 @@
                 <p v-if="props.project.type.length > 0" class="project-type" @click="searchByTag">{{ props.project.type }}</p>
                 <p v-if="props.project.workplace.length > 0" class="project-workplace" @click="searchByWorkplace">{{ props.project.workplace }}</p>
             </div>
-            <h2 class="projectName">{{ props.project.projectName }} - v{{  props.project.version  }}</h2>
+            <h1 class="projectName">{{ props.project.projectName }} - v{{  props.project.version  }}</h1>
 
             <div class="galleries">
                 <!-- Ajout des boutons Images / Videos -->
@@ -109,6 +109,8 @@ onMounted(() => {
 
 onUpdated(()=>{
     videoListEmpty.value = props.project.videoUrls.length === 0;
+    console.log("Scroll top")
+    document.querySelector(".popup-content").scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 })
 
 // Appeler la méthode à chaque fois que columnCount est modifié
@@ -118,9 +120,8 @@ watchEffect(() => {
 </script>
 
 <style scoped>
-h2 {
+h1 {
     margin-bottom: 1rem;
-    text-decoration: underline;
 }
 
 .popup-overlay {
@@ -279,7 +280,7 @@ h2 {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 0.5rem;
+    /* margin: 0.5rem; */
     display: flex;
     flex-direction: row-reverse;
     gap: 0.25rem;
