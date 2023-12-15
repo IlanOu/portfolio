@@ -1,7 +1,6 @@
 <!-- Card.vue -->
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps(['projectName', 'description', 'imageUrls', 'date', 'type', 'workplace']);
 const emits = defineEmits(['openPopup', 'searchByTag', 'searchByDate', 'searchByWorkplace']);

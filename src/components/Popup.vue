@@ -55,7 +55,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref, onMounted, watchEffect, onUpdated } from 'vue';
+import { ref, onMounted, watchEffect, onUpdated } from 'vue';
 import Versions from './Versions.vue';
 
 const props = defineProps(['project']);

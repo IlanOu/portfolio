@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, defineEmits, onBeforeUnmount, defineProps } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 // Déclaration des variables globales
 let myChart;

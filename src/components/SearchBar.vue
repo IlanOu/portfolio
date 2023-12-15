@@ -1,7 +1,7 @@
 <!-- SearchBar.vue -->
 
 <script setup>
-import { ref, onMounted, defineProps, defineEmits } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const props = defineProps(['projects', 'isSearchEnabled']);
 const emits = defineEmits();
