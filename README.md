@@ -1,14 +1,14 @@
-# Portfolio
+# Welcome to my GitHub Portfolio! 🚀
 
-## See [here](https://ilanou.github.io/portfolio/) my portfolio !
+Explore my projects and discover my work on [my personal website](https://ilanou.github.io/portfolio/).
 
-## To install :
+## How to setup this project ?
+
+### Download it with git :
 
 ```bash
 git clone https://github.com/IlanOu/portfolio.git
 ```
-
-## To run :
 
 ### Install Vite :
 
@@ -16,11 +16,13 @@ git clone https://github.com/IlanOu/portfolio.git
 npm install vite
 ```
 
+### Run the project :
+
 ```bash
 npm run dev
 ```
 
-## To build :
+## How to build this project ?
 
 ```bash	
 npx vite build
@@ -31,3 +33,5 @@ npx vite build
 ```bash
 npx gh-pages -d dist
 ```
+---
+*Made with ❤ by [IlanOu](https://github.com/IlanOu)*
