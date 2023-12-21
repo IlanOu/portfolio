@@ -2,6 +2,13 @@
 
 ## To run :
 
+### Install Vite :
+
+```bash
+npm install vite
+```
+
+
 ```bash
 npm run dev
 ```
