@@ -25,9 +25,3 @@ npx vite build
 ```bash
 npx gh-pages -d dist
 ```
-
-## Todo list
-
-[x] ~~- Système de version des projets (voir les anciennes versions : afficher dans le style des branches git)~~
-
-[x] ~~- Système pour changer le nombre de colonnes dans les popups~~
