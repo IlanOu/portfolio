@@ -13,7 +13,7 @@
 <script setup>
     
     document.addEventListener('DOMContentLoaded', function() {
-        consoleText(['Hello World', 'Console Text', 'print("Hello world")'], 'text', ['#a5c6c3', 'rebeccapurple', 'lightblue']);
+        consoleText(['Hello World', 'Console Text', 'print("Hello world")'], 'text', ['#8964e8', '#25a6e9', '#ffa23e', '#17b877']);
     });
     
     // function([string1, string2], target id, [color1, color2])    
@@ -75,9 +75,12 @@
 
 <style scoped>
 
+    #text{
+        font-family: JetbrainsRegular, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
 
     .console-background{
-        background-color: rgb(17, 17, 20);
+        background-color: var(--vt-c-black-soft);
         position: relative;
         width: 20rem;
         height: 10rem;

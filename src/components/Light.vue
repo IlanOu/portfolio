@@ -5,13 +5,15 @@
 </template>
 
 
+
 <style scoped>
+
 
 div {
     position: fixed;
-    top: 115%;
-    left: calc(50% - 0.5%);
-    width: 1%;
+    top: 125%;
+    left: calc(50% - 5%);
+    width: 10%;
     height: 0px;
     border-radius: 50%;
     background-color: #fff;

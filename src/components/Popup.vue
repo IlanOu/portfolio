@@ -229,6 +229,8 @@ h1 {
     aspect-ratio: 16 / 9;
     height: auto;
     border-radius: var(--border-radius);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 /* -------------------------------------------------------------------------- */
@@ -246,6 +248,7 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* -------------------------------------------------------------------------- */

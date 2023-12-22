@@ -89,7 +89,7 @@ const getUniqueProjects = (allProjects) => {
 </script>
 
 <template>
-    <!-- Composant principal -->
+    <!-- Composant Page principal -->
     <Main/>
 
     <!-- Barre de recherche -->
