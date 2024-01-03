@@ -5,6 +5,7 @@ import Popup from './components/Popup.vue';
 import Light from './components/Light.vue';
 import SearchBar from './components/SearchBar.vue';
 import Main from './components/Main.vue';
+import ArrowUp from './components/ArrowUp.vue';
 
 // État réactif
 const isPopupOpen = ref(false);
@@ -91,6 +92,7 @@ const getUniqueProjects = (allProjects) => {
 <template>
     <!-- Composant Page principal -->
     <Main/>
+    <ArrowUp/>
 
     <!-- Barre de recherche -->
     <SearchBar :isSearchEnabled="!isPopupOpen" :projects="getUniqueProjects(projects)" @searchProjects="updateFilteredProjects" ref="searchBarRef"/>
