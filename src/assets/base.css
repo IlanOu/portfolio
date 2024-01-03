@@ -1,8 +1,8 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8fafc;
-  --vt-c-white-mute: #f2f4f6;
+  /* --vt-c-white-soft: #f8fafc; */
+  /* --vt-c-white-mute: #f2f4f6; */
 
   --vt-c-black: #10151d;
   --vt-c-black-soft-transparent: #22293560;
@@ -11,13 +11,13 @@
 
   --vt-c-indigo: #2c3e50;
 
-  --vt-c-divider-light-1: rgba(60, 62, 64, 0.29);
-  --vt-c-divider-light-2: rgba(60, 62, 64, 0.12);
+  /* --vt-c-divider-light-1: rgba(60, 62, 64, 0.29); */
+  /* --vt-c-divider-light-2: rgba(60, 62, 64, 0.12); */
   --vt-c-divider-dark-1: rgba(84, 86, 88, 0.651);
   --vt-c-divider-dark-2: rgba(84, 86, 88, 0.48);
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 62, 64, 0.66);
+  /* --vt-c-text-light-1: var(--vt-c-indigo); */
+  /* --vt-c-text-light-2: rgba(60, 62, 64, 0.66); */
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 237, 239, 0.8);
 
@@ -26,7 +26,7 @@
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
+  /* --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
@@ -34,7 +34,19 @@
   --color-border-hover: var(--vt-c-divider-light-1);
 
   --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1); */
+
+  --color-background: var(--vt-c-black);
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
+
+  --color-disabled: var(--vt-c-black);
 
   --color-accentuation: rgb(148, 69, 179);
   --color-tag-accentuation: rgb(79, 33, 117);
@@ -48,13 +60,13 @@
 
   --section-gap: 160px;
 
-  --color-disabled: var(--vt-c-white);
+  /* --color-disabled: var(--vt-c-white); */
 
   --border-radius: 30px; /* 16px */
   --border-radius-large: 24px; /* 20px */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
@@ -68,7 +80,7 @@
 
     --color-disabled: var(--vt-c-black);
   }
-}
+} */
 
 
 @font-face {
