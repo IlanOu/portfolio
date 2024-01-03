@@ -37,9 +37,14 @@
   --color-text: var(--vt-c-text-light-1);
 
   --color-accentuation: rgb(148, 69, 179);
+  --color-tag-accentuation: rgb(79, 33, 117);
+
   --color-accentuation-date: rgb(148, 69, 179);
-  --color-accentuation-type: rgb(125, 53, 153);
-  --color-accentuation-workplace: rgb(79, 33, 117);
+  --color-accentuation-type: rgb(148, 69, 179);
+  --color-accentuation-workplace: rgb(148, 69, 179);
+  
+  /* --color-accentuation-type: rgb(125, 53, 153);
+  --color-accentuation-workplace: rgb(79, 33, 117); */
 
   --section-gap: 160px;
 
