@@ -103,7 +103,8 @@ const messages = [
   "Ce projet est peut-être en train d'être développé, qui sait ? 🙃",
   "C'est pas très clair... 🤔",
   "Je crois que tu as mal écrit...",
-  "Il semblerait que ce projet n'existe pas..."
+  "Il semblerait que ce projet n'existe pas...",
+  "Veuillez réessayer...",
 ];
 
 const getRandomMessage = () => {
