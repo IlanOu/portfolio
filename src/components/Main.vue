@@ -1,6 +1,18 @@
 <script setup>
 import Console from './Console.vue';
+import { onMounted } from 'vue';
 
+onMounted(() => {
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+});
+
+const handleVisibilityChange = () => {
+  if (document.hidden) {
+    document.title = "Hé reviens !";
+  } else {
+    document.title = "Ilan - Portfolio";
+  }
+};
 </script>
 
 <template>

@@ -105,6 +105,7 @@ const messages = [
   "Je crois que tu as mal écrit...",
   "Il semblerait que ce projet n'existe pas...",
   "Veuillez réessayer...",
+  "Erreur 404 : projet non existant"
 ];
 
 const getRandomMessage = () => {
