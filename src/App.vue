@@ -14,6 +14,7 @@ const selectedProject = ref(null);
 const projects = ref([]);
 const filteredProjects = ref([]);
 const searchBarRef = ref(null);
+let randomIndex = ref(0);
 
 // Hook onMounted pour charger les données initiales
 onMounted(async () => {
@@ -53,6 +54,10 @@ const getLatestProjects = (allProjects) => {
 
 const updateFilteredProjects = (filtered) => {
     filteredProjects.value = getUniqueProjects(filtered);
+
+    if (filteredProjects.value.length > 0){
+        randomIndex = Math.floor(Math.random() * messages.length);
+    }
 };
 
 const handleChangeInterface = (id) => {
@@ -88,6 +93,21 @@ const getUniqueProjects = (allProjects) => {
 
     return uniqueProjects;
 };
+
+const messages = [
+  "Aucun projet n'a été trouvé... 😕",
+  "Apparement je n'ai pas encore fais ce projet... ",
+  "Hmm, pas de chance, pas de projets à voir...",
+  "Je ne vois pas de quoi tu parles... 🤔",
+  "Ce n'est pas moi qui est fait ce projet... 😶",
+  "Ce projet est peut-être en train d'être développé, qui sait ? 🙃",
+  "C'est pas très clair... 🤔",
+  "Je crois que tu as mal écrit...",
+];
+
+const getRandomMessage = () => {
+    return messages[randomIndex];
+};
 </script>
 
 <template>
@@ -118,7 +138,7 @@ const getUniqueProjects = (allProjects) => {
 
         <!-- Message si aucun projet n'est trouvé -->
         <Transition>
-            <p v-if="filteredProjects.length === 0">Aucun projet n'a été trouvé...</p>
+            <p v-if="filteredProjects.length === 0">{{ getRandomMessage() }}</p>
         </Transition>
         
         <!-- Popup conditionnel -->

@@ -18,7 +18,7 @@ import Contact from './Contact.vue';
                 </p>
                 <br>
                 <p>
-                    En ce moment, je suis plongé dans ma deuxième année de Bachelor Développement Web à l'école Gobelins. 
+                    En ce moment, je suis plongé dans ma deuxième année de Bachelor en Développement Web à l'école Gobelins. 
                 </p>
                 <p>
                     J'ai également la chance d'être en alternance chez <a href="https://www.hyperfiction.fr" target="_blank" rel="noopener noreferrer">Hyperfiction</a>, où je découvre le monde fascinant de la réalité virtuelle sur <a href="https://unity.com/fr" target="_blank" rel="noopener noreferrer">Unity</a>.
@@ -53,5 +53,10 @@ import Contact from './Contact.vue';
 
 h1 {
     margin: 2rem 0;
+}
+
+.about-me {
+    padding-right: 0.5rem;
+    
 }
 </style>

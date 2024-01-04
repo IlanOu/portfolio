@@ -84,8 +84,13 @@ defineExpose({
 })
 
 const handleWindowKeyDown = (event) => {
-    if (event.key !== 'Shift') {
-        searchInputRef.value.focus();
+    if (event.key !== 'Shift' && 
+        event.key !== 'Escape' && 
+        event.key !== 'Control' &&
+        !(event.key === 'c' && event.ctrlKey)) {
+            searchInputRef.value.focus();
+    }else if (event.key === 'Escape'){
+        searchInputRef.value.blur();
     }
 };
 
