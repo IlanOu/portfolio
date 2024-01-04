@@ -6,6 +6,7 @@ import Light from './components/Light.vue';
 import SearchBar from './components/SearchBar.vue';
 import Main from './components/Main.vue';
 import ArrowUp from './components/ArrowUp.vue';
+import Contact from './components/Contact.vue';
 
 // État réactif
 const isPopupOpen = ref(false);
@@ -135,6 +136,8 @@ const getUniqueProjects = (allProjects) => {
     
     <!-- Composant Light -->
     <Light/>
+
+    <Contact/>
 </template>
 
 <style scoped>
