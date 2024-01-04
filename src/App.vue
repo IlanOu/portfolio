@@ -6,7 +6,7 @@ import Light from './components/Light.vue';
 import SearchBar from './components/SearchBar.vue';
 import Main from './components/Main.vue';
 import ArrowUp from './components/ArrowUp.vue';
-import Contact from './components/Contact.vue';
+import About from './components/About.vue';
 
 // État réactif
 const isPopupOpen = ref(false);
@@ -134,10 +134,14 @@ const getUniqueProjects = (allProjects) => {
         </Transition>
     </div>
     
+    
+    <hr>
+    <About/>
+    
+    
+    
     <!-- Composant Light -->
     <Light/>
-
-    <Contact/>
 </template>
 
 <style scoped>
@@ -165,5 +169,11 @@ const getUniqueProjects = (allProjects) => {
         padding: 0;
         grid-gap: 3em;
     }
+}
+
+hr {
+    margin: 4rem 2rem;
+    border: none;
+    border-top: 1px solid var(--color-border);
 }
 </style>
