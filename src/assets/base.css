@@ -1,29 +1,32 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  /* --vt-c-white-soft: #f8fafc; */
+  /* --vt-c-white-mute: #f2f4f6; */
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  --vt-c-black: #10151d;
+  --vt-c-black-soft-transparent: #22293560;
+  --vt-c-black-soft: #171c26;
+  --vt-c-black-mute: #1e2733b7;
 
   --vt-c-indigo: #2c3e50;
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  /* --vt-c-divider-light-1: rgba(60, 62, 64, 0.29); */
+  /* --vt-c-divider-light-2: rgba(60, 62, 64, 0.12); */
+  --vt-c-divider-dark-1: rgba(84, 86, 88, 0.651);
+  --vt-c-divider-dark-2: rgba(84, 86, 88, 0.48);
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  /* --vt-c-text-light-1: var(--vt-c-indigo); */
+  /* --vt-c-text-light-2: rgba(60, 62, 64, 0.66); */
   --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-text-dark-2: rgba(235, 237, 239, 0.8);
+
+  --background-point-space: 50px;
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
+  /* --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
@@ -31,22 +34,39 @@
   --color-border-hover: var(--vt-c-divider-light-1);
 
   --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1); */
+
+  --color-background: var(--vt-c-black);
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
+
+  --color-disabled: var(--vt-c-black);
 
   --color-accentuation: rgb(148, 69, 179);
+  --color-tag-accentuation: rgb(79, 33, 117);
+
   --color-accentuation-date: rgb(148, 69, 179);
-  --color-accentuation-type: rgb(125, 53, 153);
-  --color-accentuation-workplace: rgb(79, 33, 117);
+  --color-accentuation-type: rgb(148, 69, 179);
+  --color-accentuation-workplace: rgb(148, 69, 179);
+  
+  /* --color-accentuation-type: rgb(125, 53, 153);
+  --color-accentuation-workplace: rgb(79, 33, 117); */
 
   --section-gap: 160px;
 
-  --color-disabled: var(--vt-c-white);
+  /* --color-disabled: var(--vt-c-white); */
 
-  --border-radius: 16px;
-  --border-radius-large: 20px;
+  --border-radius: 30px; /* 16px */
+  --border-radius-large: 24px; /* 20px */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
@@ -60,6 +80,12 @@
 
     --color-disabled: var(--vt-c-black);
   }
+} */
+
+
+@font-face {
+  font-family: JetbrainsRegular;
+  src: url("fonts/Jetbrains/JetBrainsMono-Regular.ttf");
 }
 
 *,
@@ -97,12 +123,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 
-  background-image:  radial-gradient(var(--color-background-mute) 0.85px, transparent 0.85px), radial-gradient(var(--color-background-mute) 0.85px, var(--color-background) 0.85px);
-  background-size: 50px 50px;
-  background-position: 0 0,25px 25px;
+  background-image:  radial-gradient(var(--color-background-mute) 1px, transparent 1px), radial-gradient(var(--color-background-mute) 1px, var(--color-background) 1px);
+  background-size: calc(var(--background-point-space) * 2) calc(var(--background-point-space) * 2);
+  background-position: 0 0,var(--background-point-space) var(--background-point-space);
 
   /*margin: 10rem 0;*/
   margin-bottom: 10rem;
+
+  animation: movePoints 10s linear infinite;
 }
 
+@keyframes movePoints {
+  from {
+    background-position: 0 0, var(--background-point-space) var(--background-point-space);
+  }
+  to {
+    background-position: 0px calc(var(--background-point-space) * -2), var(--background-point-space) calc(var(--background-point-space) * -1);
+  }
+}
 

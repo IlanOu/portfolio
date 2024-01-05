@@ -5,6 +5,9 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 let myChart;
 let data;
 
+const hasMultipleVersions = ref(true);
+
+
 // Définition des émissions et propriétés
 const emits = defineEmits(['change-interface']);
 const props = defineProps(['project']);
@@ -54,6 +57,9 @@ const loadData = async () => {
 const initializeChartData = () => {
     const currentProjectData = props.project;
 
+    chartData.value.labels = [];
+    chartData.value.datasets[0].data = [];
+
     data.forEach(project => {
         if (project.projectNumber === currentProjectData.projectNumber) {
             const versionLabel = `${project.projectName} - Version ${project.version}`;
@@ -61,6 +67,8 @@ const initializeChartData = () => {
             chartData.value.datasets[0].data.push(0);
         }
     });
+    
+    hasMultipleVersions.value = chartData.value.labels.length > 1;
 };
 
 
@@ -173,7 +181,7 @@ const emitProjectId = projectId => {
 
 <template>
     <!-- Conteneur du graphique -->
-    <div class="container">
+    <div class="container" v-if="hasMultipleVersions">
         <!-- Titre du graphique -->
         <h3 class="title">Voir les versions du projet</h3>
         <!-- Canvas pour afficher le graphique -->

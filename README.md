@@ -27,5 +27,11 @@ npm run dev
 ```bash	
 npx vite build
 ```
+
+## To deploy on github on the [gh-pages](https://github.com/IlanOu/portfolio/tree/gh-pages) branch :
+
+```bash
+npx gh-pages -d dist
+```
 ---
 *Made with ❤ by [IlanOu](https://github.com/IlanOu)*

@@ -16,6 +16,8 @@ const searchProjects = () => {
     if (props.projects) {
         const fieldsToSearch = ['projectName', 'description', 'date', 'type', 'workplace'];
 
+        resetTagColors(fieldsToSearch)
+
         filteredProjects.value = props.projects.filter((project) => {
             const lowercaseQuery = query.toLowerCase();
 
@@ -25,10 +27,19 @@ const searchProjects = () => {
             // Vérifie que chaque mot de recherche est présent dans au moins l'un des champs
             return searchWords.every(word =>
                 fieldsToSearch.some(field => {
+                    
                     if (word.includes(':')) {
                         const [fieldKey, fieldValue] = word.split(':');
+                        
+                        if (field == fieldKey){
+                            document.querySelector(":root").style.setProperty(
+                                "--color-accentuation-" + field, 
+                                getComputedStyle(document.documentElement).getPropertyValue("--color-tag-accentuation")
+                            );
+                        }
                         return field === fieldKey && project[field].toLowerCase().includes(fieldValue);
                     } else {
+                        
                         const fieldSearch = ['projectName', 'description'];
                         if (fieldSearch.includes(field)){
                           const value = project[field].toLowerCase();
@@ -47,6 +58,21 @@ const searchProjects = () => {
     emits('searchProjects', filteredProjects.value);
 };
 
+const resetTagColors = (fieldsToSearch) => {
+    fieldsToSearch.forEach(field => {
+        try{
+            document.querySelector(":root").style.setProperty(
+                "--color-accentuation-" + field, 
+                document.querySelector(":root").style.getPropertyValue("--color-accentuation")
+            );
+        }catch{
+            
+        }
+
+        
+    });
+}
+
 const search = (text) => {
     searchQuery.value = text
     searchInputRef.value.focus();
@@ -58,8 +84,13 @@ defineExpose({
 })
 
 const handleWindowKeyDown = (event) => {
-    if (event.key !== 'Shift') {
-        searchInputRef.value.focus();
+    if (event.key !== 'Shift' && 
+        event.key !== 'Escape' && 
+        event.key !== 'Control' &&
+        !(event.key === 'c' && event.ctrlKey)) {
+            searchInputRef.value.focus();
+    }else if (event.key === 'Escape'){
+        searchInputRef.value.blur();
     }
 };
 

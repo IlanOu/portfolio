@@ -41,7 +41,7 @@ const truncateDescription = (description) => {
 
 <style scoped>
 .card {
-    background-color: var(--color-background-soft);
+    background-color: var(--vt-c-black-soft-transparent);
     border: solid 1px var(--color-border);
     border-radius: var(--border-radius-large);
     padding: 1rem;
@@ -66,7 +66,8 @@ img {
     height: 60%;
     object-fit: cover;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 @media (max-width: 1024px) {
@@ -127,9 +128,4 @@ img {
     margin: 1rem 0;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background: black;
-}
 </style>
