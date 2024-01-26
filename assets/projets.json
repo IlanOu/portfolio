@@ -88,9 +88,9 @@
     "projectName": "Merry Chrismas",
     "description": "Nous avons eu trois exercices à faire en cours de JavaScript. Le premier exercice consistait à créer une grille contenant un intrus. Le joueur dispose d'un nombre limité d'actions. J'ai ajouté un thème de Noël à ce TP.",
     "imageUrls": [
-      "https://ilanou.github.io/portfolio/assets/images/MerryChrismas-1.webp",
-      "https://ilanou.github.io/portfolio/assets/images/MerryChrismas-2.webp",
-      "https://ilanou.github.io/portfolio/assets/images/MerryChrismas-3.webp"
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-1.webp",
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-2.webp",
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-3.webp"
     ],
     "videoUrls": [],
     "urls": ["https://ilanou.github.io/games/Merry%20Chrismas/"],
