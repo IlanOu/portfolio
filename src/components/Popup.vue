@@ -43,8 +43,15 @@
             </div>
 
             <!-- Description à droite des images -->
-            <div class="description angles-with-padding">
-                <p>{{ props.project.description }}</p>
+            
+            <div class="description"> 
+                <div class="angles-with-padding">
+                    <p>{{ props.project.description }}</p>
+                </div>
+                
+                <div v-for="url in props.project.urls">
+                    <a :href=url target="_blank" rel="noopener noreferrer">{{ url }}</a>
+                </div>
             </div>
 
             <div class="versions">
