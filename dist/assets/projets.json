@@ -36,8 +36,8 @@
     "projectName": "Portfolio",
     "description": "Voici la troisième version web de mon portfolio ! Ce portfolio à été fais à moitié chez moi et à moitié en cours. On peut voir l'évolution qu'il y a eu avec les versions précédentes, j'ai ajouté de la 3D avec Three.js et ai ajouté plus de personnalité.",
     "imageUrls": [
-      "https://ilanou.github.io/portfolio/images/portfolio-v3.webp",
-      "https://ilanou.github.io/portfolio/images/portfolio-v3-2.webp"
+      "https://ilanou.github.io/portfolio/assets/images/portfolio-v3.webp",
+      "https://ilanou.github.io/portfolio/assets/images/portfolio-v3-2.webp"
     ],
     "videoUrls": [],
     "urls": ["https://ilanou.github.io/book/portfolio-v3/"],
@@ -88,9 +88,9 @@
     "projectName": "Merry Chrismas",
     "description": "Nous avons eu trois exercices à faire en cours de JavaScript. Le premier exercice consistait à créer une grille contenant un intrus. Le joueur dispose d'un nombre limité d'actions. J'ai ajouté un thème de Noël à ce TP.",
     "imageUrls": [
-      "https://ilanou.github.io/portfolio/images/MerryChrismas-1.webp",
-      "https://ilanou.github.io/portfolio/images/MerryChrismas-2.webp",
-      "https://ilanou.github.io/portfolio/images/MerryChrismas-3.webp"
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-1.webp",
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-2.webp",
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-3.webp"
     ],
     "videoUrls": [],
     "urls": ["https://ilanou.github.io/games/Merry%20Chrismas/"],
@@ -141,8 +141,8 @@
     "projectName": "Kelna",
     "description": "Pour conclure notre première année à l'école, notre projet de fin d'année était un jeu vidéo. Nous avions pour consigne de créer un jeu en 2D, utilisant deux moteurs de vue différents. Nous disposions d'environ 5 mois pour le réaliser.",
     "imageUrls": [
-      "https://ilanou.github.io/portfolio/images/Tchunk-1-2.webp",
-      "https://ilanou.github.io/portfolio/images/Yvo-animations.webp"
+      "https://ilanou.github.io/portfolio/assets/images/Tchunk-1-2.webp",
+      "https://ilanou.github.io/portfolio/assets/images/Yvo-animations.webp"
     ],
     "videoUrls": [
                   "https://www.youtube.com/embed/lg2jKY5BJls?si=kAcO-KzA2w-I_9aV", 
@@ -163,9 +163,9 @@
     "projectName": "Polar Dash",
     "description": "Notre premier projet en B2, est un jeu. Le sujet était \"Collecter et représenter les données du mouvement\". Nous avons donc imaginé un système de tracking du mouvement qui permet de contrôler le personnage. Deux joueurs ont chacun un mouvement, le but est d'aller le plus loin possible.",
     "imageUrls": [
-      "https://ilanou.github.io/portfolio/images/PolarDashLogo.webp",
-      "https://ilanou.github.io/portfolio/images/polarDash.webp",
-      "https://ilanou.github.io/portfolio/images/affiche-data_1.webp"
+      "https://ilanou.github.io/portfolio/assets/images/PolarDashLogo.webp",
+      "https://ilanou.github.io/portfolio/assets/images/polarDash.webp",
+      "https://ilanou.github.io/portfolio/assets/images/affiche-data_1.webp"
     ],
     "videoUrls": [
                   "https://www.youtube.com/embed/o-S_vyU9mR0?si=w3R1Ajt_HUyYdagx",
