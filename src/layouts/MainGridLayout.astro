@@ -1,21 +1,20 @@
 ---
-import Layout from "./Layout.astro";
-import Navbar from "@components/Navbar.astro";
-import SideBar from "@components/widget/SideBar.astro";
-import {pathsEqual} from "@utils/url-utils";
-import Footer from "@components/Footer.astro";
-import BackToTop from "@components/control/BackToTop.astro";
-import {siteConfig} from "@/config";
+import { siteConfig } from '@/config'
+import Footer from '@components/Footer.astro'
+import Navbar from '@components/Navbar.astro'
+import BackToTop from '@components/control/BackToTop.astro'
+import SideBar from '@components/widget/SideBar.astro'
+import { pathsEqual } from '@utils/url-utils'
+import Layout from './Layout.astro'
 
 interface Props {
-    title: string;
-    banner?: string;
+  title: string
+  banner?: string
 }
 
 const { title, banner } = Astro.props
 const isHomePage = pathsEqual(Astro.url.pathname, '/')
 const enableBanner = siteConfig.banner.enable
-
 ---
 
 <Layout title={title} banner={banner}>
@@ -26,6 +25,9 @@ const enableBanner = siteConfig.banner.enable
         <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--card-bg)] transition"></div> <!-- used for onload animation -->
         <Navbar></Navbar>
     </div>
+
+    <!--<--<--<--<--<--<--<--<-- TODO HERE -->
+
     <SideBar class="row-start-3 row-end-4 col-span-2 lg:row-start-2 lg:row-end-3 lg:col-span-1 lg:max-w-[17.5rem] onload-animation"></SideBar>
 
     <div id="content-wrapper" class="row-start-2 row-end-3 col-span-2 lg:col-span-1 overflow-hidden onload-animation">
@@ -35,6 +37,9 @@ const enableBanner = siteConfig.banner.enable
         </main>
 
     </div>
+
+    <!--<--<--<--<--<--<--<--<-- TO HERE -->
+
 
     <div id="footer" class="grid-rows-3 col-span-2 mt-4 onload-animation">
         <Footer></Footer>
