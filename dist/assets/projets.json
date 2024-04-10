@@ -1,0 +1,179 @@
+[
+  {
+    "projectId":0,
+    "projectNumber": 0,
+    "version": 1,
+    "projectName": "Portfolio",
+    "description": "Je te présente la première version web de mon portfolio !\nOn y retrouve mes anciens projets, souvent fais en autodidacte.",
+    "imageUrls": [
+      "https://ilanou.github.io/book/portfolio-v3/Images/Html/AncienBook.webp"
+    ],
+    "videoUrls": [],
+    "urls": ["https://ilanou.github.io/book/ancien_book"],
+    "date": "13/09/2021",
+    "type": "Web",
+    "workplace": "Maison"
+  },
+  {
+    "projectId":1,
+    "projectNumber": 0,
+    "version": 2,
+    "projectName": "Portfolio",
+    "description": "Voici la deuxième version web de mon portfolio.\nPar rapport à la première version, j'ai essayé de simplifier la navigation.",
+    "imageUrls": [
+      "https://ilanou.github.io/book/portfolio-v3/Images/Html/MoyenAncienBook.webp"
+    ],
+    "videoUrls": [],
+    "urls": ["https://ilanou.github.io/book/"],
+    "date": "28/06/2022",
+    "type": "Web",
+    "workplace": "Maison"
+  },
+  {
+    "projectId":2,
+    "projectNumber": 0,
+    "version": 3,
+    "projectName": "Portfolio",
+    "description": "Voici la troisième version web de mon portfolio ! Ce portfolio à été fais à moitié chez moi et à moitié en cours. On peut voir l'évolution qu'il y a eu avec les versions précédentes, j'ai ajouté de la 3D avec Three.js et ai ajouté plus de personnalité.",
+    "imageUrls": [
+      "https://ilanou.github.io/portfolio/assets/images/portfolio-v3.webp",
+      "https://ilanou.github.io/portfolio/assets/images/portfolio-v3-2.webp"
+    ],
+    "videoUrls": [],
+    "urls": ["https://ilanou.github.io/book/portfolio-v3/"],
+    "date": "18/01/2023",
+    "type": "Web",
+    "workplace": "Maison"
+  },
+  
+  
+  {
+    "projectId":3,
+    "projectNumber": 1,
+    "version": 1,
+    "projectName": "'Recette'",
+    "description": "Ce projet était un exercice en cours. L'objectif était de présenter un sujet et faire sa mise en page en html.",
+    "imageUrls": [
+      "https://ilanou.github.io/book/portfolio-v3/Images/Html/Recette.webp"
+    ],
+    "videoUrls": [],
+    "urls": [],
+    "date": "30/09/2022",
+    "type": "Web",
+    "workplace": "Ecole"
+  },
+  
+  
+  {
+    "projectId":4,
+    "projectNumber": 2,
+    "version": 1,
+    "projectName": "Workshop",
+    "description": "L'objectif était de créer un site web en une semaine avec deux graphistes. En tant que développeur, nous devions concevoir un site pour chaque graphiste en respectant leur style.",
+    "imageUrls": [
+      "https://ilanou.github.io/book/portfolio-v3/Images/Html/StreamSwitch.webp"
+    ],
+    "videoUrls": [],
+    "urls": ["https://ilanou.github.io/book/workshop/"],
+    "date": "21/10/2022",
+    "type": "Web",
+    "workplace": "Ecole"
+  },
+  
+  
+  {
+    "projectId":5,
+    "projectNumber": 3,
+    "version": 1,
+    "projectName": "Merry Chrismas",
+    "description": "Nous avons eu trois exercices à faire en cours de JavaScript. Le premier exercice consistait à créer une grille contenant un intrus. Le joueur dispose d'un nombre limité d'actions. J'ai ajouté un thème de Noël à ce TP.",
+    "imageUrls": [
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-1.webp",
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-2.webp",
+      "https://ilanou.github.io/portfolio/assets/images/merry-chrismas-3.webp"
+    ],
+    "videoUrls": [],
+    "urls": ["https://ilanou.github.io/games/Merry%20Chrismas/"],
+    "date": "30/11/2022",
+    "type": "Web",
+    "workplace": "Ecole"
+  },
+  
+  
+  {
+    "projectId":6,
+    "projectNumber": 4,
+    "version": 1,
+    "projectName": "Rockets",
+    "description": "Le deuxième exercice consistait à créer un jeu pour deux joueurs où celui qui clique le plus rapidement gagne. Cette fois-ci, j'ai choisi un thème spatial avec des fusées.",
+    "imageUrls": [
+      "https://ilanou.github.io/book/portfolio-v3/Images/Html/Rockets.webp"
+    ],
+    "videoUrls": [],
+    "urls": ["https://ilanou.github.io/games/Rockets/"],
+    "date": "30/11/2022",
+    "type": "Web",
+    "workplace": "Ecole"
+  },
+  
+  
+  {
+    "projectId":7,
+    "projectNumber": 5,
+    "version": 1,
+    "projectName": "Athome",
+    "description": "Le troisième exercice avait pour objectif d'utiliser une API. Celle-ci contenait des informations sur des films, et l'objectif était de mettre en forme une plateforme de répertoire de films, dans le style d'AlloCiné.",
+    "imageUrls": [
+      "https://ilanou.github.io/book/portfolio-v3/Images/Html/Athome.webp"
+    ],
+    "videoUrls": [],
+    "urls": ["https://ilanou.github.io/Athome/"],
+    "date": "23/12/2022",
+    "type": "Web",
+    "workplace": "Ecole"
+  },
+  
+  
+  {
+    "projectId":8,
+    "projectNumber": 6,
+    "version": 1,
+    "projectName": "Kelna",
+    "description": "Pour conclure notre première année à l'école, notre projet de fin d'année était un jeu vidéo. Nous avions pour consigne de créer un jeu en 2D, utilisant deux moteurs de vue différents. Nous disposions d'environ 5 mois pour le réaliser.",
+    "imageUrls": [
+      "https://ilanou.github.io/portfolio/assets/images/Tchunk-1-2.webp",
+      "https://ilanou.github.io/portfolio/assets/images/Yvo-animations.webp"
+    ],
+    "videoUrls": [
+                  "https://www.youtube.com/embed/lg2jKY5BJls?si=kAcO-KzA2w-I_9aV", 
+                  "https://www.youtube.com/embed/6jvi4068oqk?si=Mujt1BvxWPsZ4mzh",
+                  "https://www.youtube.com/embed/djsEfCWjKXI?si=7Ez04MZ1rRp0WpWr"
+                ],
+    "urls": ["https://readymag.com/u2730643025/4237179/"],
+    "date": "03/05/2023",
+    "type": "Web",
+    "workplace": "Ecole"
+  },
+  
+  
+  {
+    "projectId":9,
+    "projectNumber": 7,
+    "version": 1,
+    "projectName": "Polar Dash",
+    "description": "Notre premier projet en B2, est un jeu. Le sujet était \"Collecter et représenter les données du mouvement\". Nous avons donc imaginé un système de tracking du mouvement qui permet de contrôler le personnage. Deux joueurs ont chacun un mouvement, le but est d'aller le plus loin possible.",
+    "imageUrls": [
+      "https://ilanou.github.io/portfolio/assets/images/PolarDashLogo.webp",
+      "https://ilanou.github.io/portfolio/assets/images/polarDash.webp",
+      "https://ilanou.github.io/portfolio/assets/images/affiche-data_1.webp"
+    ],
+    "videoUrls": [
+                  "https://www.youtube.com/embed/o-S_vyU9mR0?si=w3R1Ajt_HUyYdagx",
+                  "https://www.youtube.com/embed/PstXxSYD7fo?si=xbIZZh-5AMTQMiTw"
+                ],
+    "urls": ["https://github.com/IlanOu/Polar-Dash"],
+    "date": "08/12/2023",
+    "type": "Jeu",
+    "workplace": "Ecole"
+  }
+]

@@ -49,7 +49,7 @@ onMounted(async () => {
 
 // Fonction pour charger les données depuis un fichier JSON
 const loadData = async () => {
-    const response = await fetch('./src/projects.json');
+    const response = await fetch('./src/projets.json');
     data = await response.json();
 };
 
