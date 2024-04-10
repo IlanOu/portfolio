@@ -32,12 +32,12 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
   avatar: 'assets/images/demo-avatar.png',
-  name: 'Lorem Ipsum',
+  name: 'Ilan Outhier',
   bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   links: [
     {
       name: 'Twitter',
-      icon: 'fa6-brands:twitter',
+      icon: 'fa6-brands:linkedin',
       url: 'https://twitter.com',
     },
     {
@@ -54,7 +54,7 @@ export const profileConfig: ProfileConfig = {
 }
 
 export const licenseConfig: LicenseConfig = {
-  enable: false,
+  enable: true,
   name: 'CC BY-NC-SA 4.0',
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 }
