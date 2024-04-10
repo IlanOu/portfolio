@@ -19,7 +19,7 @@ let randomIndex = ref(0);
 // Hook onMounted pour charger les données initiales
 onMounted(async () => {
     // Chargement des données des projets depuis un fichier JSON
-    const response = await fetch('/src/projets.json');
+    const response = await fetch('./src/projects.json');
     projects.value = await response.json();
 
     // Filtrer et trier pour obtenir une liste unique par projectNumber
