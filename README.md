@@ -53,3 +53,8 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm new-post <filename>`          | Create a new post                                |
 | `pnpm astro ...`                    | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro --help`                 | Get help using the Astro CLI                     |
+
+
+`npm install -g pnpm`
+`pnpm install`
+`pnpm add sharp`
