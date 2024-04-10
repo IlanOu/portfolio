@@ -8,6 +8,8 @@ You can find my work on my [portfolio](https://ilanou.github.io/portfolio)
 
 ## Quick launch
 
+### Initialization
+
 ```bash
 npm install -g pnpm
 ```
@@ -24,5 +26,24 @@ pnpm add sharp
 pnpm install astro
 ```
 
+### To run the project
+
 ```bash
 npm run dev
+```
+
+### To build and preview the project
+
+```bash
+npm run build
+```
+
+```bash
+npm run preview
+```
+
+### To deploy the project on gh-pages-v3
+
+```bash
+npm run deploy
+```
