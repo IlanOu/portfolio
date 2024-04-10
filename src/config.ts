@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
   themeHue: 250,
   banner: {
     enable: true,
-    src: 'assets/images/demo-banner.png',
+    src: 'assets/images/beautiful-sky.png',
   },
 }
 
@@ -31,19 +31,14 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/demo-avatar.png',
+  avatar: 'assets/images/avatar-bird.png',
   name: 'Ilan Outhier',
   bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   links: [
     {
-      name: 'Twitter',
+      name: 'Linkedin',
       icon: 'fa6-brands:linkedin',
-      url: 'https://twitter.com',
-    },
-    {
-      name: 'Steam',
-      icon: 'fa6-brands:steam',
-      url: 'https://store.steampowered.com',
+      url: 'https://www.linkedin.com/in/ilan-outhier/',
     },
     {
       name: 'GitHub',
@@ -54,7 +49,7 @@ export const profileConfig: ProfileConfig = {
 }
 
 export const licenseConfig: LicenseConfig = {
-  enable: true,
+  enable: false,
   name: 'CC BY-NC-SA 4.0',
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 }

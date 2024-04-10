@@ -11,7 +11,7 @@ draft: false
 
 Paragraphs are separated by a blank line.
 
-2nd paragraph. _Italic_, **bold**, and `monospace`. Itemized lists
+2nd paragraph. _Italic_, **bold**, and `monospace`. ~~Itemized~~ lists
 look like:
 
 - this one
@@ -48,7 +48,7 @@ from the left side). Here's a code sample:
 As you probably guessed, indented 4 spaces. By the way, instead of
 indenting the block, you can use delimited blocks, if you like:
 
-```
+```js
 define foobar() {
     print "Welcome to flavor country!";
 }

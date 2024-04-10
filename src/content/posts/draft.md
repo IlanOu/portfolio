@@ -1,6 +1,6 @@
 ---
 title: Draft Example
-published: 2022-07-01
+published: 2024-07-01
 tags: [Markdown, Blogging, Demo]
 category: Examples
 draft: true
@@ -20,3 +20,4 @@ tags: [Markdown, Blogging, Demo]
 category: Examples
 draft: false
 ---
+```
