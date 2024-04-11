@@ -41,9 +41,10 @@ npm run build
 ```bash
 npm run preview
 ```
-
+<!-- 
 ### To deploy the project on gh-pages-v3
 
 ```bash
 npm run deploy
 ```
+ -->
