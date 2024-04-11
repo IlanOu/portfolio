@@ -22,8 +22,10 @@ const oklchToHex = str => {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://IlanOu.github.io/',
-  base: '/',
+  output: 'static',
+  site: 'https://ilanou.github.io',
+  base: '/portfolio',
+  trailingSlash: 'always',
   integrations: [
     tailwind(),
     swup({
@@ -86,5 +88,23 @@ export default defineConfig({
         },
       },
     },
+    build: {
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'assets/[name]-[hash].js',
+          entryFileNames: 'assets/[name]-[hash].js',
+          assetFileNames: 'assets/[name]-[hash][extname]',
+        },
+      },
+      outDir: 'dist',
+      assetsPrefix: './',
+      assetsDir: 'assets',
+      emptyOutDir: true,
+    },
   },
+  build: {
+    assetsPrefix: './',
+  },
+
+  format: 'file',
 })

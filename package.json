@@ -1,7 +1,7 @@
 {
-  "name": "fuwari",
+  "name": "portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "3.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,10 +11,11 @@
     "new-post": "node scripts/new-post.js",
     "format": "biome format --write ./src",
     "lint": "biome check --apply ./src",
-    "deploy": "gh-pages -d dist -b gh-pages-v3"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",
+    "@astrojs/node": "^8.2.5",
     "@astrojs/svelte": "^5.2.0",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/jetbrains-mono": "^5.0.20",
