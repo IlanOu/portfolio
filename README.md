@@ -20,6 +20,8 @@ pnpm install
 
 ```bash
 pnpm add sharp
+# or, if not working : 
+pnpm add -f sharp
 ```
 
 ```bash

@@ -23,9 +23,9 @@ const oklchToHex = str => {
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://ilanou.github.io',
-  base: '/portfolio',
-  trailingSlash: 'always',
+  site: 'https://ilanou.github.io/',
+  base: '/',
+  // trailingSlash: 'always',
   integrations: [
     tailwind(),
     swup({
