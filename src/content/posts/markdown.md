@@ -164,3 +164,11 @@ $$I = \int \rho R^{2} dV$$
 
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
+
+### Tableau
+
+| 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|
+| A | B | C | B | A |
+| B | A | B | A | B |
+| C | B | A | B | C |

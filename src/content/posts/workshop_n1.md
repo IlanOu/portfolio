@@ -1,5 +1,5 @@
 ---
-title: Workshop n1
+title: Workshop n°1
 published: 2022-10-21
 description: A simple example of a Markdown blog post.
 tags: [HTML, CSS]
