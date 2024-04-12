@@ -10,6 +10,8 @@ import rehypeSlug from 'rehype-slug'
 import remarkMath from 'remark-math'
 import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
 
+import remarkExternalLinks from 'remark-external-links'
+
 const oklchToHex = str => {
   const DEFAULT_HUE = 250
   const regex = /-?\d+(\.\d+)?/g
@@ -49,7 +51,17 @@ export default defineConfig({
     svelte(),
   ],
   markdown: {
-    remarkPlugins: [remarkMath, remarkReadingTime],
+    remarkPlugins: [
+      remarkMath,
+      remarkReadingTime,
+      [
+        remarkExternalLinks,
+        {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        },
+      ],
+    ],
     rehypePlugins: [
       rehypeKatex,
       rehypeSlug,
