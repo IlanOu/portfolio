@@ -2,6 +2,7 @@
 title: Kelna
 published: 2023-05-04
 description: Le projet de fin de ma première année de bachelor !
+image: "./kelna_cover.png"
 tags: [p5js, JS]
 category: Jeu vidéo
 draft: false

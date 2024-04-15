@@ -2,6 +2,7 @@
 title: Polar Dash
 published: 2023-12-08
 description: L'indomptable penguin des glaces
+image: "./polar_dash_cover.png"
 tags: [HTML, CSS, JS]
 category: Web
 draft: false
