@@ -1,7 +1,7 @@
 ---
 title: Portfolio v2
 published: 2024-01-05
-description: A simple example of a Markdown blog post.
+description: Épisode 3 - La réactivité contre-attaque
 tags: [Vue, JS]
 category: Web
 draft: false

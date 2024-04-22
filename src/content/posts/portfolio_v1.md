@@ -1,7 +1,7 @@
 ---
 title: Portfolio v1
 published: 2023-01-18
-description: La première version de mon portfolio !
+description: Épisode 2 - L'Assaut Statique
 tags: [HTML, CSS]
 category: Web
 draft: false

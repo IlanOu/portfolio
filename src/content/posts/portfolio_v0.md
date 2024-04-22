@@ -1,7 +1,7 @@
 ---
 title: Portfolio v0
 published: 2021-09-13
-description: La toute première version de mon portfolio (la vraie)
+description: Épisode 1 - La Genèse
 tags: [HTML, CSS]
 category: Web
 draft: false
