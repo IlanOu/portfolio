@@ -33,7 +33,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
   avatar: 'assets/images/avatar-bird.png',
   name: 'Ilan Outhier',
-  bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  bio: '',
   links: [
     {
       name: 'Linkedin',
