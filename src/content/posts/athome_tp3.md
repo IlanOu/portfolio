@@ -9,6 +9,18 @@ draft: false
 
 # Athome
 
-Nous devions faire un site pour notre TP 3 dans le style d'Allo Ciné où sont répertoriés des films.
+## Description
 
-On doit pouvoir aimer un film, faire des recherches, trier les films...
+Pour notre troisième TP en cours de JavaScript, nous devions utiliser une API pour récupérer des films, les afficher et mettre à jour sur l'API les modifications de l'utilisateur.
+
+## Consigne
+
+L'utilisateur doit pouvoir :
+
+> Aimer un film
+> Rechercher un film
+> Trier les films
+> Filtrer les films
+> Voir les films aimés
+
+Le tout doit interagir avec l'API
