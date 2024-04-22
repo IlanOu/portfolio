@@ -10,6 +10,8 @@ You can find my work on my [portfolio](https://ilanou.github.io/portfolio)
 
 ### Initialization
 
+`pnpm` init
+
 ```bash
 npm install -g pnpm
 ```
@@ -18,14 +20,24 @@ npm install -g pnpm
 pnpm install
 ```
 
+Sharp
+
 ```bash
 pnpm add sharp
 # or, if not working : 
 pnpm add -f sharp
 ```
 
+Astro
+
 ```bash
 pnpm install astro
+```
+
+Vercel Analytics
+
+```bash
+pnpm i @vercel/analytics
 ```
 
 ### To run the project

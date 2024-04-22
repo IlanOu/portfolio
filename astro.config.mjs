@@ -12,8 +12,6 @@ import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
 
 import remarkExternalLinks from 'remark-external-links'
 
-import vercel from '@astrojs/vercel/serverless'
-
 const oklchToHex = str => {
   const DEFAULT_HUE = 250
   const regex = /-?\d+(\.\d+)?/g
@@ -26,11 +24,8 @@ const oklchToHex = str => {
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  adapter: vercel({
-    webAnalytics: { enabled: true },
-  }),
-  site: 'https://ilanou.github.io/',
+  output: 'static',
+  site: 'https://ilan-outhier.fr/',
   base: '/',
   // trailingSlash: 'always',
   integrations: [
