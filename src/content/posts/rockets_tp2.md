@@ -9,12 +9,16 @@ draft: false
 
 # Rockets
 
-En cours de Javascript, nous avons eu ce TP à faire.
+## Description
+
+Voilà notre deuxième TP à réaliser en cours de Javascript.
+
+## Consigne
 
 La demande était de créer un jeu pour deux joueurs :
-<br/>
-Chacun tape sur une touche du clavier et une jauge augmente.
-<br/>
-Le premier à 100 points gagne. Si l'un des joueurs arrête de taper sur sa touche, la jauge redescend.
-<br>
-Il fallait aussi ajouter du style à ce projet !
+
+> Chaque joueur tape sur une touche du clavier <br/>
+> Une jauge augmente.<br/>
+> Le premier à 100 points gagne. <br/>
+> Si l'un des joueurs arrête de taper sur sa touche, la jauge redescend. <br>
+> Ajouter du style ! <br/>

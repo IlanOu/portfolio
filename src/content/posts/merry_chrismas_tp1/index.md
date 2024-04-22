@@ -10,4 +10,14 @@ draft: false
 
 # Merry Chrismas
 
-On a eu en cours de JS deux TP à faire, voici ici le premier. Le but est de retrouver l'intrus qui se cache dans la grille.
+## Description
+
+En cours de Javascript, nous avons eu trois TP à réaliser. Voici le premier.
+
+## Consigne
+
+> Sur une grille de 8x8, mettre 1 intrus que le joueur doit trouver.<br/>
+> Lors d'un clic sur une case, la case affiche ce qu'elle contient.<br/>
+> Toutes les n secondes, l'intrus change de place.<br/>
+> Le joueur a n chances pour trouver l'intrus.<br/>
+> Ajouter du style.<br/>
