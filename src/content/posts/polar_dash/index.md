@@ -23,3 +23,12 @@ Comme premier projet de deuxième année de bachelor, nous avions comme consigne
 >Ces commandes évoluent au fur et à mesure du jeu.<br/>
 >Les points sont comptabilisés en fonction du temps passé avant l'échec.
 >Il faut rester le plus longtemps possible.
+
+## Description
+
+Avec mon collègue développeur [Emmanuel Moulin](https://github.com/Kibishi47), nous avons décidé pour ce projet de jeu de le faire sur Unity, pour ses nombreux avantages techniques.
+
+Le problème était de savoir comment récupérer les données de mouvement du joueur sur Unity ?<br/>
+`Spoiler alert :` On ne peut pas...<br/>
+
+Alors notre idée a été de créer un système de détection de mouvement des joueurs en Python. Pas le jeu lui-même, mais ce système de détection : il capte les mouvements, les analyse, les transforme pour qu'Unity puisse les comprendre, puis les envoie en websocket. Tout cela, en boucle, toutes les n millisecondes.
