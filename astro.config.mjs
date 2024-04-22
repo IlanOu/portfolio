@@ -101,22 +101,22 @@ export default defineConfig({
       },
     },
     build: {
-      rollupOptions: {
-        output: {
-          chunkFileNames: 'assets/[name]-[hash].js',
-          entryFileNames: 'assets/[name]-[hash].js',
-          assetFileNames: 'assets/[name]-[hash][extname]',
-        },
-      },
+      // rollupOptions: {
+      //   output: {
+      //     chunkFileNames: 'assets/[name]-[hash].js',
+      //     entryFileNames: 'assets/[name]-[hash].js',
+      //     assetFileNames: 'assets/[name]-[hash][extname]',
+      //   },
+      // },
       outDir: 'dist',
-      assetsPrefix: './',
+      // assetsPrefix: './',
       assetsDir: 'assets',
       emptyOutDir: true,
     },
   },
-  build: {
-    assetsPrefix: './',
-  },
+  // build: {
+  //   assetsPrefix: './',
+  // },
 
   format: 'file',
 })
