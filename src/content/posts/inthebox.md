@@ -2,12 +2,12 @@
 title: InTheBox
 published: 2023-06-23
 description: Mon stage de première anéne !
-tags: [Blender, Python]
+tags: [Blender, Python, 3D]
 category: Contrat
 draft: false
 ---
 
-# InTheBox
+<!-- # InTheBox -->
 
 Le 9 mai 2023, j'ai commencé mon stage de 7 semaines chez [InTheBox](https://inthebox.pro), une entreprise connue à Annecy car elle participe au [Festival international du film d'animation d'Annecy](https://www.annecyfestival.com).
 

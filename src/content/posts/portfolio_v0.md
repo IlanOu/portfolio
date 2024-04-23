@@ -7,7 +7,7 @@ category: Web
 draft: false
 ---
 
-# Portfolio v0
+<!-- # Portfolio v0 -->
 
 Ah, ce vieux portfolio ! Une véritable relique du temps où je n'étais qu'un jeune padawan dans le vaste univers du développement web.
 
