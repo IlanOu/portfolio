@@ -3,12 +3,14 @@ title: Polar Dash
 published: 2023-12-08
 description: L'indomptable penguin des glaces
 image: "./polar_dash_cover.png"
-tags: [HTML, CSS, JS]
+tags: [Unity, Python, Game, 2D]
 category: Jeu vidéo
 draft: false
 ---
 
-# Polar Dash
+<!-- # Polar Dash -->
+
+## Github
 
 Lien vers le dépôt Github : [Polar Dash](https://github.com/IlanOu/Polar-Dash)
 

@@ -2,12 +2,12 @@
 title: Portfolio v2
 published: 2024-01-05
 description: Épisode 3 - La réactivité contre-attaque
-tags: [HTML, CSS, Vue, JS]
+tags: [HTML, CSS, Vue, JS, 3D]
 category: Web
 draft: false
 ---
 
-# Portfolio v2
+<!-- # Portfolio v2 -->
 
 Pour cette deuxième version de mon portfolio, j'ai voulu quelque chose de plus simple, à la fois visuellement et techniquement. Jusqu'ici, ajouter ou retirer des projets était assez laborieux. Je voulais faciliter cette tâche.
 

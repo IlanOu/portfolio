@@ -7,7 +7,7 @@ category: Web
 draft: false
 ---
 
-# Workshop n°1
+<!-- # Workshop n°1 -->
 
 ## Description
 
