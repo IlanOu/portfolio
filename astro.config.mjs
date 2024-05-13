@@ -118,5 +118,6 @@ export default defineConfig({
   //   assetsPrefix: './',
   // },
 
+
   format: 'file',
 })

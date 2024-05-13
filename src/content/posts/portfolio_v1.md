@@ -7,7 +7,7 @@ category: Web
 draft: false
 ---
 
-# Portfolio v1
+<!-- # Portfolio v1 -->
 
 Après la version initiale de mon portfolio, il était temps de passer à l'étape supérieure. J'ai commencé par travailler dessus chez moi, avec l'idée d'avoir quelque chose de plus épuré et visuellement plus soigné pour présenter mes projets.
 
