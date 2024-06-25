@@ -20,8 +20,8 @@ export const fr: Translation = {
   [Key.wordsCount]: 'mots',
   [Key.minuteCount]: 'minute',
   [Key.minutesCount]: 'minutes',
-  [Key.postCount]: 'post',
-  [Key.postsCount]: 'posts',
+  [Key.postCount]: 'page',
+  [Key.postsCount]: 'pages',
 
   [Key.themeColor]: 'Thème de couleur',
 
