@@ -1,7 +1,7 @@
 ---
 title: Athome
 published: 2022-12-30
-description: A simple example of a Markdown blog post.
+description: Et de trois !
 tags: [HTML, CSS, JS]
 category: Web
 draft: false
