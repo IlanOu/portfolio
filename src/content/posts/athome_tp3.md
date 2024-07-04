@@ -1,5 +1,5 @@
 ---
-title: Athome
+title: TP 3 - JS | Athome
 published: 2022-12-30
 description: Et de trois !
 tags: [HTML, CSS, JS]
