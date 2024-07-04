@@ -1,5 +1,5 @@
 ---
-title: Merry Chrismas
+title: TP 1 - JS | Merry Chrismas
 published: 2022-11-30
 description: Un TP Javascript, un !
 image: "./santa_claus.png"
