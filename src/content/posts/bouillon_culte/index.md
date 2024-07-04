@@ -32,19 +32,19 @@ La demande était la suivante :
 
 Et l'objectif était de concevoir un **objet connecté** !
 
-Pour répondre à cette demande, nous sommes allé voir [La Fondation du Parmelant](https://fondationduparmelan.org/) qui est l'EHPAD avec qui nous avons travaillé tout le long de notre projet.
+Pour répondre à cette demande, nous sommes allés voir [La Fondation du Parmelan](https://fondationduparmelan.org/) qui est l'EHPAD avec qui nous avons travaillé tout au long de notre projet.
 
 Durant nos entretiens avec les personnes âgées, nous avons pu remarquer qu'elles passaient du temps à jouer aux jeux de société ou aux cartes.
 <br>
-Nous avons aussi remarqué que plusieurs résidents avaient des troubles de la mémoire, ils oubliaient des choses, d'autres avaient peur que l'EHPAD accueil trop de monde et qu'il n'y aurait plus vraiment de liens entre les résidents.
+Nous avons aussi remarqué que plusieurs résidents avaient des troubles de la mémoire, ils oubliaient des choses, d'autres avaient peur que l'EHPAD accueille trop de monde et qu'il n'y aurait plus vraiment de liens entre les résidents.
 
-Alors nous avons réfléchi à un objet pour à la fois, lier les résidents entre eux et leur faire travailler la mémoire sur un sujet qu'ils aiment !
+Alors nous avons réfléchi à un objet pour à la fois lier les résidents entre eux et leur faire travailler la mémoire sur un sujet qu'ils aiment !
 <br>
-C'est comme ça qu'est né l'idée du Bouillon Culte !
+C'est comme ça qu'est née l'idée du Bouillon Culte !
 <br>
 C'est un jeu de société qui demande aux joueurs d'avoir des connaissances sur chaque région de France dans les années 1960 à 1980.
 
-C'est comme ça que nous avons imaginé notre nom ! Pour faire référence à l'émissions TV "Bouillon de culture" mais aussi pour exprimer un mélange de connaissances et pour faire un jeu de mot sur "le bouillon cube".
+C'est comme ça que nous avons imaginé notre nom ! Pour faire référence à l'émission TV "Bouillon de culture" mais aussi pour exprimer un mélange de connaissances et pour faire un jeu de mots sur "le bouillon cube".
 
 Notre jeu de société pose des questions de culture générale aux joueurs sous différentes formes :
 
@@ -52,12 +52,12 @@ Notre jeu de société pose des questions de culture générale aux joueurs sous
 - "Où c'est ?" : il faut retrouver un lieu à partir d'une description
 - "Devine la suite" : Une musique est passée, il faut trouver la suite des paroles
 - "Qui suis-je ?" : Avec une description, retrouver le bon personnage historique
-- "Culture générale": Des questions de cultures générale
+- "Culture générale" : Des questions de culture générale
 - "Trois images" : quelle recette peut-on faire avec les 3 ingrédients des images ou alors, avec les 3 images, il faut retrouver le bon endroit
 
 Le jeu se présente de la façon suivante :
 <br>
-Sur la première partie de l'objet, à gauche, il y a une carte de France avec les régions creusé pour pouvoir placer le pion dessus.
+Sur la première partie de l'objet, à gauche, il y a une carte de France avec les régions creusées pour pouvoir placer le pion dessus.
 <br>
 À droite, il y a 1 bouton rouge pour faire tourner la roue, et 4 boutons pour répondre aux questions.
 
@@ -69,7 +69,7 @@ Voilà une représentation de l'objet "parfait" qu'on aurait aimé pouvoir faire
 
 ![3D de l'objet](LBC_3D_ouvert.png)
 
-Tout le long du jeu, il y a un présentateur qui accompagne les joueurs.
+Tout au long du jeu, il y a un présentateur qui accompagne les joueurs.
 
 Le parcours est le suivant :
 
@@ -92,3 +92,57 @@ Le parcours est le suivant :
 .
 
 ## Parcours (du côté du développement)
+
+Pour commencer, on a réfléchi aux technologies dont on aurait besoin.
+<br>
+On s'est vite aperçu que tous les capteurs RFID et les boutons qu'on voulait utiliser risquaient de surcharger le Raspberry Pi.
+Du coup, on a opté pour l'ajout d'ESP32 pour épauler le Raspberry et éviter qu'il ne soit débordé.
+<br>
+Après ça, nous avons testé l'ajout de certaines fonctionnalités qu'on voulait intégrer.
+<br>
+Par exemple, on a travaillé sur les boutons, les capteurs RFID, etc.
+<br>
+Anthony s'est concentré sur les tests avec un ESP32, pendant que je m'occupais des tests sur le Raspberry Pi.
+
+> Mise en place Raspberry Pi : Check ✔ <br>
+> Mise en place ESP32 : Check ✔ <br>
+> Réception des données des capteurs : Check ✔ <br>
+
+Une fois qu'on a réussi à recevoir les données des capteurs, on s'est attaqués au traitement de ces infos et à la conception du parcours utilisateur.
+<br>
+On a alors branché un écran et développé le système d'affichage.
+Pour faciliter la partie design plus tard, on a opté pour un affichage sur une page web.
+<br>
+On a aussi ajouté une enceinte et fait un système pour lire les fichiers audio.
+
+> Affichage : Check ✔ <br>
+> Lecture audio : Check ✔ <br>
+
+Ensuite, il fallait pouvoir afficher les différentes questions et réponses de notre jeu, alors nous avons créé un système qui lit des fichiers Json et les affiche sur l'écran.
+<br>
+*(D'ailleurs merci à Théotime qui a énormément aidé pour le remplissage des fichiers Json, il y avait environ 60 questions contenant chacune : des réponses + des descriptions + des images + des audios... Il est très courageux et patient !)*
+
+Nous avons dû faire 6 systèmes car nous avions 6 mini-jeux différents.
+
+> Système de questions/réponses : Check ✔ <br>
+> 6 mini-jeux : Check ✔ <br>
+
+Par la suite, en testant et en faisant tester notre objet, nous avons remarqué plusieurs choses :
+
+- L'idée est très cool, elle plaît à beaucoup de gens
+- Mais les joueurs ne répondent qu'à une question, ensuite ils s'en vont (surtout les personnes âgées)
+
+Alors on a réfléchi encore une fois, à une façon de donner envie aux joueurs de rejouer.
+<br>
+On a donc fait un système de points et un nombre de questions à répondre pour finir une partie, ça permet de challenger les joueurs !
+
+> Donner envie aux joueurs de rejouer : Check ✔ <br>
+
+Et voilà ! C'est en gros notre parcours du côté des devs (au niveau du code) ! <br>
+Il y a plusieurs tâches que nous avons faites en plus mais que je n'ai pas expliquées ici pour ne parler que des points clés du développement (comme par exemple un système de mise en veille de l'objet)
+
+## Conclusion
+
+Pour finir, on aurait aimé pouvoir avoir un meilleur rendu de l'objet mais par faute de temps et de moyens nous n'avons pu faire qu'un prototype (ce qui était aussi la demande initiale) mais ous sommes quand même très fier du résultat !
+
+Ce projet m'a personnellement permit d'apprendre la POO, c'est un concept qui était un peu flou au début mais qui maintenant est clair !
