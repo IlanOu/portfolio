@@ -1,7 +1,7 @@
 ---
 title: Merry Chrismas
 published: 2022-11-30
-description: A simple example of a Markdown blog post.
+description: Un TP Javascript, un !
 image: "./santa_claus.png"
 tags: [HTML, CSS, JS, Game, 2D]
 category: Web

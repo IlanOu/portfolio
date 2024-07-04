@@ -1,10 +1,10 @@
 ---
 title: Workspace
 published: 2024-01-07
-description: Premier projet avec la Yey-Team
+description: La Yey-team débarque !
 tags: [Vue, JS, TS]
 category: Web
-draft: false
+draft: true
 ---
 
 <!-- # Workspace -->

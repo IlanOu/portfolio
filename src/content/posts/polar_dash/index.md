@@ -1,7 +1,7 @@
 ---
 title: Polar Dash
 published: 2023-12-08
-description: L'indomptable penguin des glaces
+description: Il court, il court le penguin
 image: "./polar_dash_cover.png"
 tags: [Unity, Python, Game, 2D]
 category: Jeu vidéo

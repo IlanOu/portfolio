@@ -1,7 +1,7 @@
 ---
 title: Portfolio v2
 published: 2024-01-05
-description: Épisode 3 - La réactivité contre-attaque
+description: Encore une nouvelle version ?
 tags: [HTML, CSS, Vue, JS, 3D]
 category: Web
 draft: false

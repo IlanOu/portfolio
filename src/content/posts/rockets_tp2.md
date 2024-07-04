@@ -1,7 +1,7 @@
 ---
 title: Rockets
 published: 2022-12-23
-description: A simple example of a Markdown blog post.
+description: Et de deux !
 tags: [HTML, CSS, JS, Game, 2D]
 category: Web
 draft: false

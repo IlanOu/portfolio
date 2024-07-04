@@ -1,7 +1,7 @@
 ---
 title: Portfolio v1
 published: 2023-01-18
-description: Épisode 2 - L'Assaut Statique
+description: Génial, des améliorations !
 tags: [HTML, CSS]
 category: Web
 draft: false

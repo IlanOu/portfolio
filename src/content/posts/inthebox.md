@@ -1,7 +1,7 @@
 ---
 title: InTheBox
 published: 2023-06-23
-description: Mon stage de première anéne !
+description: Un nouveau stage !
 tags: [Blender, Python, 3D]
 category: Contrat
 draft: false
