@@ -12,7 +12,9 @@ draft: false
 
 ## Liens
 
-Lien vers le dépôt Github : [Le Bouillon Culte](https://github.com/IlanOu/Le_Bouillon_Culte)
+Retrouvez le repo Github :
+
+::github{repo="IlanOu/Le_Bouillon_Culte"}
 
 ## Équipe
 
