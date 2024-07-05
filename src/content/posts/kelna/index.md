@@ -12,8 +12,11 @@ draft: false
 
 ## Liens
 
-Lien vers le dépôt Github : [Kelna](https://github.com/IlanOu/Kelna)
-Lien vers notre site du projet : [Site web](https://readymag.website/u2730643025/4237179/)
+Retrouvez le repo Github de Kelna : 
+
+::github{repo="IlanOu/Kelna"}
+
+Nous avons aussi fait un site web du projet : [retrouvez-le ici](https://readymag.website/u2730643025/4237179/)
 
 ## Équipe
 

@@ -4,14 +4,14 @@ published: 2023-10-01
 description: A simple example of a Markdown blog post.
 tags: [Markdown, Blogging, Demo]
 category: Examples
-draft: true
+draft: false
 ---
 
 # An h1 header
 
 Paragraphs are separated by a blank line.
 
-2nd paragraph. _Italic_, **bold**, and `monospace`. ~~Itemized~~ lists
+2nd paragraph. _Italic_, **bold**, and `monospace`. Itemized lists
 look like:
 
 - this one
@@ -48,7 +48,7 @@ from the left side). Here's a code sample:
 As you probably guessed, indented 4 spaces. By the way, instead of
 indenting the block, you can use delimited blocks, if you like:
 
-```js
+```
 define foobar() {
     print "Welcome to flavor country!";
 }
@@ -164,11 +164,3 @@ $$I = \int \rho R^{2} dV$$
 
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
-
-### Tableau
-
-| 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|
-| A | B | C | B | A |
-| B | A | B | A | B |
-| C | B | A | B | C |

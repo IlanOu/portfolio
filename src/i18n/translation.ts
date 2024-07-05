@@ -20,8 +20,8 @@ const map: { [key: string]: Translation } = {
   zh_cn: zh_CN,
   zh_tw: zh_TW,
   ja: ja,
-  fr: fr,
   ja_jp: ja,
+  fr: fr,
 }
 
 export function getTranslation(lang: string): Translation {

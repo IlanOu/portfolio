@@ -12,7 +12,9 @@ draft: false
 
 ## Github
 
-Lien vers le dépôt Github : [Polar Dash](https://github.com/IlanOu/Polar-Dash)
+Retrouvez le repo Github :
+
+::github{repo="IlanOu/Polar-Dash"}
 
 ## Consignes
 

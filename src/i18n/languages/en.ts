@@ -5,6 +5,7 @@ export const en: Translation = {
   [Key.home]: 'Home',
   [Key.about]: 'About',
   [Key.archive]: 'Archive',
+  [Key.search]: 'Search',
 
   [Key.tags]: 'Tags',
   [Key.categories]: 'Categories',
@@ -20,10 +21,14 @@ export const en: Translation = {
   [Key.wordsCount]: 'words',
   [Key.minuteCount]: 'minute',
   [Key.minutesCount]: 'minutes',
-  [Key.postCount]: 'page',
-  [Key.postsCount]: 'pages',
+  [Key.postCount]: 'post',
+  [Key.postsCount]: 'posts',
 
   [Key.themeColor]: 'Theme Color',
+
+  [Key.lightMode]: 'Light',
+  [Key.darkMode]: 'Dark',
+  [Key.systemMode]: 'System',
 
   [Key.more]: 'More',
 

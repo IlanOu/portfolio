@@ -5,6 +5,7 @@ export const fr: Translation = {
   [Key.home]: 'Accueil',
   [Key.about]: 'À propos de moi',
   [Key.archive]: 'Archive',
+  [Key.search]: 'Rechercher',
 
   [Key.tags]: 'Tags',
   [Key.categories]: 'Catégories',
@@ -25,9 +26,13 @@ export const fr: Translation = {
 
   [Key.themeColor]: 'Thème de couleur',
 
+  [Key.lightMode]: 'Clair',
+  [Key.darkMode]: 'Sombre',
+  [Key.systemMode]: 'Système',
+
   [Key.more]: 'Plus',
 
   [Key.author]: 'Auteur',
   [Key.publishedAt]: 'Publié le',
-  [Key.license]: 'License',
+  [Key.license]: 'Licence',
 }
