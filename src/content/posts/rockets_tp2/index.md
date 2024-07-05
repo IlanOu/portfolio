@@ -2,6 +2,7 @@
 title: TP 2 - JS | Rockets
 published: 2022-12-23
 description: Et de deux !
+image: "./cover.png"
 tags: [HTML, CSS, JS, Game, 2D]
 category: Web
 draft: false
@@ -26,3 +27,5 @@ La demande était de créer un jeu pour deux joueurs :
 > - Le premier à 100 points gagne. <br/>
 > - Si l'un des joueurs arrête de taper sur sa touche, la jauge redescend. <br>
 > - Ajouter du style ! <br/>
+
+![photo de l'objet](rockets-gameplay.gif)

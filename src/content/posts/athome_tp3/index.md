@@ -2,6 +2,7 @@
 title: TP 3 - JS | Athome
 published: 2022-12-30
 description: Et de trois !
+image: "./cover-2.png"
 tags: [HTML, CSS, JS]
 category: Web
 draft: false
@@ -33,3 +34,7 @@ L'utilisateur doit pouvoir :
 Le tout doit interagir avec l'API.
 
 S'il n'y a pas d'accès à internet, faire une version "offline" qui permet aux utilisateurs de voir des films dans une quantité limitée.
+
+
+![photo de l'objet](athome-main.png)
+![photo de l'objet](athome-movies.png)
