@@ -1,3 +1,4 @@
+<!--
 # 🍥Fuwari
 
 A static blog template built with [Astro](https://astro.build).
@@ -39,6 +40,15 @@ category: Front-end
 draft: false
 ---
 ```
+-->
+
+# 🚀 Portfolio
+
+Welcome to my portfolio !
+
+My name is Ilan Outhier, I'm a web developer but I also do a lot of other cool stuff!
+
+You can find my work on my [portfolio](https://ilan-outhier.fr)
 
 ## 🧞 Commands
 
