@@ -10,11 +10,19 @@ draft: false
 
 <!-- # Polar Dash -->
 
-## Github
+## Liens
 
 Retrouvez le repo Github :
 
 ::github{repo="IlanOu/Polar-Dash"}
+
+## Équipe
+
+- [Elsa FREPPAZ](https://studiomeraki.fr/) (graphiste)
+- Théotime NOBLET (graphiste)
+- Ugo MOLLIER-BILLET (graphiste)
+- Emmanuel MOULIN (Développeur)
+- [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
 
 ## Consignes
 

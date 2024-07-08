@@ -12,6 +12,7 @@ import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs"
 import remarkDirective from "remark-directive" /* Handle directives */
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
+import remarkExternalLinks from 'remark-external-links';
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
 import svelte from "@astrojs/svelte"
 import swup from '@swup/astro';
@@ -60,7 +61,7 @@ export default defineConfig({
     sitemap(),
   ],
   markdown: {
-    remarkPlugins: [remarkMath, remarkReadingTime, remarkGithubAdmonitionsToDirectives, remarkDirective, parseDirectiveNode],
+    remarkPlugins: [remarkMath, remarkReadingTime, remarkGithubAdmonitionsToDirectives, remarkDirective, parseDirectiveNode, [remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }]],
     rehypePlugins: [
       rehypeKatex,
       rehypeSlug,

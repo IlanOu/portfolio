@@ -18,9 +18,9 @@ Retrouvez le repo Github :
 
 ## Équipe
 
-- Elsa FREPPAZ (graphiste)
+- [Elsa FREPPAZ](https://studiomeraki.fr/) (graphiste)
 - Jeremy BERTHET (graphiste)
-- Billie Lou AZZANO (graphiste)
+- [Billie Lou AZZANO](http://www.linkedin.com/in/billie-lou-azzano-066330258) (graphiste)
 - Théotime NOBLET (graphiste)
 - [Anthony PELAZ](https://github.com/anthony74742) (Développeur)
 - [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
