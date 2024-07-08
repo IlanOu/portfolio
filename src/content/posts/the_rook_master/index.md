@@ -1,7 +1,8 @@
 ---
 title: The Rook Master
 published: 2019-10-23
-description: La cause de mon passage vers le côté obscur...
+description: Mon premier pas dans le monde du développement
+image: "./cover.png"
 tags: [Blender, Unity, Game, 3D]
 category: Jeu vidéo
 draft: false

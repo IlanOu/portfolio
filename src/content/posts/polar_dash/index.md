@@ -1,7 +1,7 @@
 ---
-title: Polar Dash
+title: Projet | Polar Dash
 published: 2023-12-08
-description: Il court, il court le penguin
+description: Reconnaissance de mouvements et Unity 2D
 image: "./polar_dash_cover.png"
 tags: [Unity, Python, Game, 2D]
 category: Jeu vidéo

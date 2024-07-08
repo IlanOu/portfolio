@@ -1,7 +1,7 @@
 ---
 title: InTheBox
 published: 2023-06-23
-description: Un nouveau stage !
+description: Mon premier stage !
 tags: [Blender, Python, 3D]
 category: Contrat
 draft: false

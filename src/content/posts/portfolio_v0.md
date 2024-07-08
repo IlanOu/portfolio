@@ -1,7 +1,7 @@
 ---
-title: Portfolio v0
+title: v1.0.0 | Portfolio
 published: 2021-09-13
-description: Cool, un nouveau portfolio !
+description: La toute première version de mon portfolio
 tags: [HTML, CSS]
 category: Web
 draft: false

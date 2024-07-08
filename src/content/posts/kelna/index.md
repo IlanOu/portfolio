@@ -1,7 +1,7 @@
 ---
-title: Kelna
+title: Projet | Kelna
 published: 2023-05-04
-description: Mon projet final pour valider ma première année de bachelor !
+description: Un jeu vidéo avec Ivo, un courageux aventurier !
 image: "./kelna_cover.png"
 tags: [p5js, JS, Game, 2D]
 category: Jeu vidéo
