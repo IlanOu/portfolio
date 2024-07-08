@@ -12,7 +12,7 @@ draft: false
 
 ---
 
-:::note[TL;DR]
+:::important[TL;DR]
 <br>
 <details>
 <summary> Pour résumer </summary> 
@@ -81,12 +81,18 @@ C'est comme ça que nous avons imaginé notre nom ! Pour faire référence à l'
 
 Notre jeu de société pose des questions de culture générale aux joueurs sous différentes formes :
 
-- "Quelle est cette musique ?" -> un blind test : l'objectif est de retrouver la bonne musique qui a été passée.
-- "Où c'est ?" : il faut retrouver un lieu à partir d'une description
-- "Devine la suite" : Une musique est passée, il faut trouver la suite des paroles
-- "Qui suis-je ?" : Avec une description, retrouver le bon personnage historique
-- "Culture générale" : Des questions de culture générale
-- "Trois images" : quelle recette peut-on faire avec les 3 ingrédients des images ou alors, avec les 3 images, il faut retrouver le bon endroit
+- **"Quelle est cette musique ?"** 
+  <br>C'est un blind test : l'objectif est de retrouver la bonne musique qui a été passée.
+- **"Où c'est ?"**
+  <br>Il faut retrouver un lieu à partir d'une description
+- **"Devine la suite"**
+  <br>Une musique est passée, il faut trouver la suite des paroles
+- **"Qui suis-je ?"**
+  <br>Avec une description, retrouver le bon personnage historique
+- **"Culture générale"**
+  <br>Des questions de culture générale
+- **"Trois images"**
+  <br>Quelle recette peut-on faire avec les 3 ingrédients des images ou alors, avec les 3 images, il faut retrouver le bon endroit
 
 Le jeu se présente de la façon suivante :
 <br>
