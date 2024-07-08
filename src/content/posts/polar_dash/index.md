@@ -21,7 +21,7 @@ Retrouvez le repo Github :
 - [Elsa FREPPAZ](https://studiomeraki.fr/) (graphiste)
 - Théotime NOBLET (graphiste)
 - Ugo MOLLIER-BILLET (graphiste)
-- Emmanuel MOULIN (Développeur)
+- [Emmanuel MOULIN](https://github.com/Kibishi47) (Développeur)
 - [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
 
 ## Consignes

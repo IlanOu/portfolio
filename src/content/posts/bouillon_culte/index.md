@@ -1,14 +1,45 @@
 ---
 title: Projet | Le Bouillon Culte
 published: 2024-06-13
-description: Jeu de société connecté
+description: Jeu de société connecté sur la culture française pour une Ehpad
 image: "./bouillon_culte_cover.png"
-tags: [Game, Python, HTML, CSS, Javascript]
+tags: [Game, Python, Raspi, Javascript]
 category: Jeu vidéo
 draft: false
 ---
 
 <!-- # Le Bouillon Culte -->
+
+---
+
+:::note[TL;DR]
+<br>
+<details>
+<summary> Pour résumer </summary> 
+
+### Description
+
+"Le Bouillon Culte", notre projet de fin d'année, est un objet connecté conçu pour faciliter le quotidien des personnes âgées en EHPAD. En collaborant avec [La Fondation du Parmelan](https://fondationduparmelan.org/), nous avons créé un jeu de société qui renforce les liens entre les résidents et stimule leur mémoire.
+
+Le jeu pose des questions de culture générale sous différentes formes et se présente avec une carte de France interactive, des boutons de réponse et un écran avec une enceinte.
+
+![photo de l'objet](LBC_photo_ouvert.png)
+
+### Parcours (du côté du développement)
+
+Nous avons opté pour l'utilisation d'un Raspberry Pi et d'un ESP32 pour gérer les capteurs RFID et les boutons. Après avoir réussi à recevoir les données des capteurs, nous avons développé le système d'affichage et la lecture audio.
+
+Ensuite, nous avons créé un système pour afficher les questions et les réponses à partir de fichiers Json. Nous avons également développé 6 mini-jeux différents.
+
+Pour encourager les joueurs à rejouer, nous avons mis en place un système de points et un nombre de questions à répondre pour finir une partie.
+
+### Conclusion
+
+Bien que nous aurions aimé avoir un meilleur rendu de l'objet, nous sommes fiers du prototype que nous avons créé. Ce projet m'a personnellement permis d'apprendre la POO et de clarifier ce concept.
+</details>
+:::
+
+---
 
 ## Liens
 
