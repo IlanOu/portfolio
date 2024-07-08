@@ -1,7 +1,7 @@
 ---
-title: TP 2 - JS | Rockets
+title: TP | Rockets
 published: 2022-12-23
-description: Et de deux !
+description: Clicker game avec des fusées !
 image: "./cover.png"
 tags: [HTML, CSS, JS, Game, 2D]
 category: Web

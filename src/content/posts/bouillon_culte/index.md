@@ -1,9 +1,9 @@
 ---
-title: Le Bouillon Culte
+title: Projet | Le Bouillon Culte
 published: 2024-06-13
-description: Mon projet final de ma deuxième année de bachelor !
+description: Jeu de société connecté
 image: "./bouillon_culte_cover.png"
-tags: [p5js, JS, Game, 2D]
+tags: [Game, Python, HTML, CSS, Javascript]
 category: Jeu vidéo
 draft: false
 ---

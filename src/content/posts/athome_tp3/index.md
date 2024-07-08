@@ -1,7 +1,7 @@
 ---
-title: TP 3 - JS | Athome
+title: TP | Athome
 published: 2022-12-30
-description: Et de trois !
+description: Une bibliothèque de film
 image: "./cover-2.png"
 tags: [HTML, CSS, JS]
 category: Web
