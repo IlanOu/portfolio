@@ -1,14 +1,45 @@
 ---
 title: Projet | Le Bouillon Culte
 published: 2024-06-13
-description: Jeu de société connecté
+description: Jeu de société connecté sur la culture française pour une Ehpad
 image: "./bouillon_culte_cover.png"
-tags: [Game, Python, HTML, CSS, Javascript]
+tags: [Game, Python, Raspi, Javascript]
 category: Jeu vidéo
 draft: false
 ---
 
 <!-- # Le Bouillon Culte -->
+
+---
+
+:::important[TL;DR]
+<br>
+<details>
+<summary> Pour résumer </summary> 
+
+### Description
+
+"Le Bouillon Culte", notre projet de fin d'année, est un objet connecté conçu pour faciliter le quotidien des personnes âgées en EHPAD. En collaborant avec [La Fondation du Parmelan](https://fondationduparmelan.org/), nous avons créé un jeu de société qui renforce les liens entre les résidents et stimule leur mémoire.
+
+Le jeu pose des questions de culture générale sous différentes formes et se présente avec une carte de France interactive, des boutons de réponse et un écran avec une enceinte.
+
+![photo de l'objet](LBC_photo_ouvert.png)
+
+### Parcours (du côté du développement)
+
+Nous avons opté pour l'utilisation d'un Raspberry Pi et d'un ESP32 pour gérer les capteurs RFID et les boutons. Après avoir réussi à recevoir les données des capteurs, nous avons développé le système d'affichage et la lecture audio.
+
+Ensuite, nous avons créé un système pour afficher les questions et les réponses à partir de fichiers Json. Nous avons également développé 6 mini-jeux différents.
+
+Pour encourager les joueurs à rejouer, nous avons mis en place un système de points et un nombre de questions à répondre pour finir une partie.
+
+### Conclusion
+
+Bien que nous aurions aimé avoir un meilleur rendu de l'objet, nous sommes fiers du prototype que nous avons créé. Ce projet m'a personnellement permis d'apprendre la POO et de clarifier ce concept.
+</details>
+:::
+
+---
 
 ## Liens
 
@@ -18,9 +49,9 @@ Retrouvez le repo Github :
 
 ## Équipe
 
-- Elsa FREPPAZ (graphiste)
+- [Elsa FREPPAZ](https://studiomeraki.fr/) (graphiste)
 - Jeremy BERTHET (graphiste)
-- Billie Lou AZZANO (graphiste)
+- [Billie Lou AZZANO](http://www.linkedin.com/in/billie-lou-azzano-066330258) (graphiste)
 - Théotime NOBLET (graphiste)
 - [Anthony PELAZ](https://github.com/anthony74742) (Développeur)
 - [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
@@ -50,12 +81,18 @@ C'est comme ça que nous avons imaginé notre nom ! Pour faire référence à l'
 
 Notre jeu de société pose des questions de culture générale aux joueurs sous différentes formes :
 
-- "Quelle est cette musique ?" -> un blind test : l'objectif est de retrouver la bonne musique qui a été passée.
-- "Où c'est ?" : il faut retrouver un lieu à partir d'une description
-- "Devine la suite" : Une musique est passée, il faut trouver la suite des paroles
-- "Qui suis-je ?" : Avec une description, retrouver le bon personnage historique
-- "Culture générale" : Des questions de culture générale
-- "Trois images" : quelle recette peut-on faire avec les 3 ingrédients des images ou alors, avec les 3 images, il faut retrouver le bon endroit
+- **"Quelle est cette musique ?"** 
+  <br>C'est un blind test : l'objectif est de retrouver la bonne musique qui a été passée.
+- **"Où c'est ?"**
+  <br>Il faut retrouver un lieu à partir d'une description
+- **"Devine la suite"**
+  <br>Une musique est passée, il faut trouver la suite des paroles
+- **"Qui suis-je ?"**
+  <br>Avec une description, retrouver le bon personnage historique
+- **"Culture générale"**
+  <br>Des questions de culture générale
+- **"Trois images"**
+  <br>Quelle recette peut-on faire avec les 3 ingrédients des images ou alors, avec les 3 images, il faut retrouver le bon endroit
 
 Le jeu se présente de la façon suivante :
 <br>

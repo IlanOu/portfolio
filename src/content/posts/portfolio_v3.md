@@ -1,20 +1,22 @@
 ---
 title: v3.0.0 | Portfolio
-published: 2024-04-11
-description: Une nouvelle version à la fois plus simple et plus élégante
-tags: [Astro, JS, TS, Tailwind]
+published: 2024-01-05
+description: Une version plus simple
+tags: [HTML, CSS, Vue, JS]
 category: Web
 draft: false
 ---
 
-<!-- # Portfolio v3 -->
+<!-- # Portfolio v2 -->
 
-Pour cette troisième version de mon portfolio, j'ai voulu encore plus de simplicité. Jusqu'ici, même si ajouter ou retirer des projets était devenu plus facile, cela restait une tâche à part entière. Je voulais la rendre encore plus transparente.
+Pour cette troisième version de mon portfolio, j'ai voulu quelque chose de plus simple, à la fois visuellement et techniquement. Jusqu'ici, ajouter ou retirer des projets était assez laborieux. Je voulais faciliter cette tâche.
 
-J'ai découvert le travail de [saicaca](https://github.com/saicaca) qui a créé un modèle de blog [Fuwari](https://github.com/saicaca/fuwari). Son style graphique m'a beaucoup plu, mais surtout, il a utilisé le Framework Astro.js. Une technologie que je ne connaissais pas, mais qui permet de créer des pages directement en markdown.
+J'ai donc créé ce nouveau portfolio avec Vue.js[^1], une bibliothèque permettant d'avoir un site réactif. Et pour gérer le contenu, j'ai utilisé un fichier JSON[^2]. Ainsi, pour mettre à jour mes projets, il me suffisait de modifier ce fichier JSON, sans avoir à toucher au code.
 
-C'est la solution idéale pour mon portfolio. Désormais, pour ajouter ou supprimer un projet, il me suffit de modifier les fichiers markdown correspondants. Plus besoin de passer par un fichier JSON ou de toucher au code.
+C'était un bon moyen de gagner en simplicité et en maintenabilité. Cette version marquait une nouvelle étape vers un portfolio à la fois fonctionnel et facile à faire évoluer.
 
-Cette version marque une nouvelle étape vers un portfolio à la fois élégant, fonctionnel et surtout, extrêmement simple à faire évoluer. Un réel gain en productivité qui me permettra de me concentrer sur l'essentiel : mes projets.
+Enfait, j'avais essayé d'utiliser du SQL mais c'était un peu trop *overkill* pour un portfolio... À la limite, j'aurais pu utiliser SQLite mais j'ai préféré utiliser du JSON pour garder quelque chose de simple.
 
-En plus de ça, avoir un modèle de blog pour un portfolio est assez original et ça me plaît !
+[^1]: Vue.js : un framework JavaScript qui permet de créer des interfaces utilisateur incroyables, sans perdre la tête dans le code !
+
+[^2]: JSON (JavaScript Object Notation) : le langage de données qui permet de stocker et d'échanger des informations comme un pro, pas dans un simple fichier texte !

@@ -20,11 +20,11 @@ Nous avons aussi fait un site web du projet : [retrouvez-le ici](https://readyma
 
 ## Équipe
 
-- Alice (graphiste)
-- Matias (graphiste)
-- Ugo (graphiste)
-- [Raphaël](https://github.com/raphaelmakaryan) (Développeur)
-- [Ilan](https://github.com/IlanOu) (Développeur)(Moi)
+- Alice MELAN (graphiste)
+- Matias LA CORTE (graphiste)
+- Ugo MOLLIER-BILLET (graphiste)
+- [Raphaël MAKARYAN](https://github.com/raphaelmakaryan) (Développeur)
+- [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
 
 ## Description
 

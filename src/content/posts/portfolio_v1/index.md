@@ -19,3 +19,5 @@ Bien que modeste, ce portfolio représente les premiers pas d'un voyage passionn
 
 En regardant ce portfolio, je ne peux m'empêcher d'être fier du chemin parcouru depuis ces premiers pas.
 Bien que je sois encore loin d'être un développeur accompli, ce modeste début représente les prémices d'un voyage passionnant dans l'univers du code et du design.
+
+![](main.png)

@@ -1,11 +1,11 @@
 ---
-import '@fontsource-variable/jetbrains-mono';
-import '@fontsource-variable/jetbrains-mono/wght-italic.css';
+import '@fontsource-variable/jetbrains-mono'
+import '@fontsource-variable/jetbrains-mono/wght-italic.css'
 
 interface Props {
-    class: string;
+  class: string
 }
-const className = Astro.props.class;
+const className = Astro.props.class
 ---
 <div data-pagefind-body class=`prose dark:prose-invert prose-base max-w-none custom-md ${className}`>
     <!--<div class="prose dark:prose-invert max-w-none custom-md">-->
@@ -150,6 +150,105 @@ const className = Astro.props.class;
       &:active
         background: var(--link-active)
         text-decoration-color: var(--link-active)
+        a:not(.no-styling)
+        position: relative
+        background: none
+        margin: -0.25rem
+        padding: 0.25rem
+        border-radius: 0.375rem
+        font-weight: 500
+        color: var(--primary)
+        text-decoration-line: underline
+        text-decoration-color: var(--link-underline)
+        text-decoration-thickness: 0.125rem
+        text-decoration-style: dashed
+        text-underline-offset: 0.25rem
+        /*&:after*/
+        /*  content: ''*/
+        /*  position: absolute*/
+        /*  left: 2px*/
+        /*  right: 2px*/
+        /*  bottom: 4px*/
+        /*  height: 6px*/
+        /*  border-radius: 3px*/
+        /*  background: var(--link-hover)*/
+        /*  transition: background 0.15s ease-in-out;*/
+        /*  z-index: -1;*/
+  
+        &:hover
+          background: var(--link-hover)
+          text-decoration-color: var(--link-hover)
+  
+        &:active
+          background: var(--link-active)
+          text-decoration-color: var(--link-active)
+    
+
+    details summary:not(.no-styling)
+      position: relative
+      background: none
+      margin: -0.25rem
+      padding: 0.25rem
+      border-radius: 0.375rem
+      font-weight: 500
+      color: var(--primary)
+      text-decoration-line: underline
+      text-decoration-color: var(--link-underline)
+      text-decoration-thickness: 0.125rem
+      text-decoration-style: dashed
+      text-underline-offset: 0.25rem
+      cursor: pointer
+      /*&:after*/
+      /*  content: ''*/
+      /*  position: absolute*/
+      /*  left: 2px*/
+      /*  right: 2px*/
+      /*  bottom: 4px*/
+      /*  height: 6px*/
+      /*  border-radius: 3px*/
+      /*  background: var(--link-hover)*/
+      /*  transition: background 0.15s ease-in-out;*/
+      /*  z-index: -1;*/
+    
+      &:hover
+        background: var(--link-hover)
+        text-decoration-color: var(--link-hover)
+
+      &:active
+        background: var(--link-active)
+        text-decoration-color: var(--link-active)
+        a:not(.no-styling)
+        position: relative
+        background: none
+        margin: -0.25rem
+        padding: 0.25rem
+        border-radius: 0.375rem
+        font-weight: 500
+        color: var(--primary)
+        text-decoration-line: underline
+        text-decoration-color: var(--link-underline)
+        text-decoration-thickness: 0.125rem
+        text-decoration-style: dashed
+        text-underline-offset: 0.25rem
+        /*&:after*/
+        /*  content: ''*/
+        /*  position: absolute*/
+        /*  left: 2px*/
+        /*  right: 2px*/
+        /*  bottom: 4px*/
+        /*  height: 6px*/
+        /*  border-radius: 3px*/
+        /*  background: var(--link-hover)*/
+        /*  transition: background 0.15s ease-in-out;*/
+        /*  z-index: -1;*/
+  
+        &:hover
+          background: var(--link-hover)
+          text-decoration-color: var(--link-hover)
+  
+        &:active
+          background: var(--link-active)
+          text-decoration-color: var(--link-active)
 
     code
       font-family: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace

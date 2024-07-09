@@ -1,3 +1,4 @@
+<!--
 # 🍥Fuwari
 
 A static blog template built with [Astro](https://astro.build).
@@ -53,3 +54,17 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm new-post <filename>`          | Create a new post                                |
 | `pnpm astro ...`                    | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro --help`                 | Get help using the Astro CLI                     |
+
+-->
+
+# 🚀 Portfolio
+
+Welcome to my portfolio !
+
+My name is Ilan Outhier, I'm a web developer but I also do a lot of other cool stuff!
+
+You can find my work on my [portfolio](https://ilan-outhier.fr)
+
+## Acknowledgements
+
+Thanks to [Saicaca](https://github.com/saicaca) for making his repository [Fuwari](https://github.com/saicaca/fuwari) available, on which I based my portfolio. 
