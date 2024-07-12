@@ -10,7 +10,7 @@ draft: false
 
 <!-- # Athome -->
 
-## Description
+## Description du projet
 
 Pour le troisième TP du cours de JavaScript, nous avons expérimenté les API.
 L'objectif de ce projet était de faire un "Allo Ciné".
@@ -19,7 +19,7 @@ Donc l'idée c'était de créer une plateforme où sont répertoriées des affic
 
 Ce projet était un réel défi pour moi parce qu'il y avait beaucoup de [consignes](#consignes).
 
-## Consignes
+## Qu'est-ce que que devais faire ?
 
 L'utilisateur doit pouvoir :
 
@@ -36,5 +36,5 @@ Le tout doit interagir avec l'API.
 S'il n'y a pas d'accès à internet, faire une version "offline" qui permet aux utilisateurs de voir des films dans une quantité limitée.
 
 
-![photo de l'objet](athome-main.png)
-![photo de l'objet](athome-movies.png)
+![](athome-main.png)
+![](athome-movies.png)
