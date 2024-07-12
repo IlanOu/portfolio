@@ -28,12 +28,17 @@ Nous avons aussi fait un site web du projet : [retrouvez-le ici](https://readyma
 
 ## Description
 
-Ce jeu fais en p5.js, sans l'aide de librairie, est notre projet de fin de première année de bachelor.
-L'objectif était de créer un jeu vidéo en 2D, avec p5.js, sans librairie et avec deux modes de vue différents dans le jeu.
+Kelna, un jeu vidéo en 2D entièrement réalisé en p5.js, sans l'aide d'aucune librairie externe, a été notre projet de fin de première année de bachelor.
 
-Avec mon équipe, nous avons imaginé Kelna comme étant un platformer (comme Mario Bros) avec donc de la gravité, des ennemis, une barre de vie, des items, des échanges, des PNJ, des pièges...
+Le défi était de créer un jeu vidéo en 2D avec p5.js, sans l'appui de librairies externes, et en y intégrant deux modes de vue distincts.
 
-Nous avons aussi demandé de l'aide à [Pierre-Alain de Garrigues (PADG)](https://fr.wikipedia.org/wiki/Pierre-Alain_de_Garrigues) pour faire une introduction et des voix pour notre jeu (il a accepté, ça rendait super bien).
+Mon équipe et moi avons donné vie à Kelna, un platformer (comme Mario Bros), avec donc de la gravité, des ennemis, une barre de vie, des items, des échanges, des PNJ, des pièges...
+
+**Des voix et une intro pour une expérience immersive**
+
+Nous avons sollicité l'aide de [Pierre-Alain de Garrigues (PADG)](https://fr.wikipedia.org/wiki/Pierre-Alain_de_Garrigues) pour faire l'introduction de notre jeu et il a accepté de faire en plus des voix pour le sound design (par exemple lorsqu'on meurt, il dit "Vous êtes morts").
+<br>
+Un ajout qui rend meilleure l'expérience de jeu de Kelna !
 
 ## Pitch du jeu
 

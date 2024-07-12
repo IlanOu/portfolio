@@ -7,17 +7,16 @@ category: Web
 draft: false
 ---
 
-<!-- # Portfolio v0 -->
+Et voilà mon premier portfolio, celui qui m'a permit d'entrer à l'École By CCI, anciennement Gobelins !
 
-Ah, ce vieux portfolio ! Une véritable relique du temps où je n'étais qu'un jeune padawan dans le vaste univers du développement web.
+Lorsque je travaillais sur ce portfolio, j'avais davantage des compétences pour la création graphique que pour la programmation, on voit d'ailleurs qu'il y a plus de projets orienté graphisme que developpement... 
+<br>D'ailleurs même à mon entretien pour entrer à l'école, on m'a demandé si j'étais sûr de vouloir faire développeur et pas graphiste 😅
+<br>J'avais déjà pas mal de projets (pas très qualitatifs mais c'était un bon début) en 3D, avec des illustrations, des petits programmes Python (d'ailleurs je m'interessais déjà à l'intelligence artificielle), du C# et du Web (uniquement HTML CSS).
 
-Avant même d'entamer ma formation, j'avais un penchant prononcé pour le graphisme et le design. Ce premier portfolio en témoigne avec ses projets en 3D, ses dessins et seulement quelques petites réalisations en Python, C# et Web (Html, CSS).
+J'étais déjà très curieux, je voulais apprendre plein de choses sur des thèmes bien différents ! (et c'est toujours le cas aujourd'hui)
 
-Je n'étais peut-être pas encore un as du HTML, du CSS ou du JavaScript, mais j'étais déjà animé par une curiosité insatiable pour tout ce qui touchait au numérique et à la création. Créer des choses nouvelles et attrayantes, c'était déjà mon moteur à ce moment là.
+Cet aspect artistique est toujours présent dans mon parcours, puisque je m'interesse aux outils et aux techniques des designers mais c'est surtout un accompagnement du developpement, et pas l'inverse. 
 
-Bien que modeste, ce portfolio représente les premiers pas d'un voyage passionnant. C'est à partir de cette base que j'ai pu développer mes compétences techniques tout en conservant un œil affûté pour le design.
-
-En regardant ce portfolio, je ne peux m'empêcher d'être fier du chemin parcouru depuis ces premiers pas.
-Bien que je sois encore loin d'être un développeur accompli, ce modeste début représente les prémices d'un voyage passionnant dans l'univers du code et du design.
+Je suis fier de mon parcours depuis ce portfolio qui était ma première étape !
 
 ![](main.png)
