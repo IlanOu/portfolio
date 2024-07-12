@@ -9,7 +9,7 @@ En ce moment, je suis en deuxième année de Bachelor en Développement Web à l
 <br/>
 En parallèle, j'ai la chance d'effectuer mon alternance chez Hyperfiction, où je découvre le monde passionnant de la réalité virtuelle sur Unity.
 
-uand je ne suis pas plongé dans le code (que ce soit à l'école ou chez Hyperfiction), vous me trouverez probablement avec un casque vissé sur les oreilles en train d'écouter ma playlist préférée en bidouillant sur un de mes projets personnels liés à l'intelligence artificielle, un domaine qui me fascine depuis toujours !
+Quand je ne suis pas plongé dans le code (que ce soit à l'école ou chez Hyperfiction), vous me trouverez probablement avec un casque vissé sur les oreilles en train d'écouter ma playlist préférée en bidouillant sur un de mes projets personnels liés à l'intelligence artificielle, un domaine qui me fascine depuis toujours !
 <br/>
 Je suis quelqu'un de curieux qui adore explorer les nouvelles technologies.
 
