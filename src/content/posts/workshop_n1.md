@@ -9,11 +9,11 @@ draft: false
 
 <!-- # Workshop n°1 -->
 
-## Description
+## Description du projet
 
-À l'école, un workshop est un projet d'une semaine. C'est très rapide, mais c'est aussi une excellente occasion d'apprendre et de travailler en équipe.
+À l'école, un **workshop** est un projet d'une semaine. C'est très rapide, mais c'est aussi une excellente occasion d'apprendre et de travailler en équipe.
 
-Pour cette semaine intense, j'ai travaillé en collaboration avec deux autres étudiants en design (Matias La Corte et Pablo Delcloy) pour créer un double site web. Le concept était simple : en cliquant sur le logo, le style de la page change.
+Pour cette semaine intense, j'ai travaillé en collaboration avec deux autres étudiants en design (Matias LA CORTE et Pablo DELCLOY) pour créer un double site web. Le concept était simple : en cliquant sur le logo, le style de la page change.
 
 La difficulté était que nous avons passé une semaine à travailler ensemble, mais au tout début de notre première année !
 <br/>
@@ -22,7 +22,7 @@ Nous ne nous connaissions pas du tout !
 Alors, il a fallu se créer des règles rapidement pour pouvoir être efficaces.
 Ce n'était pas facile, mais nous avons relevé le défi.
 
-## Consigne
+## Qu'est-ce qu'on devait faire ?
 
 La consigne était la suivante :
 

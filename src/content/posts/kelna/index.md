@@ -10,7 +10,7 @@ draft: false
 
 <!-- # Kelna -->
 
-## Liens
+## Liens du projet
 
 Retrouvez le repo Github de Kelna : 
 
@@ -18,7 +18,7 @@ Retrouvez le repo Github de Kelna :
 
 Nous avons aussi fait un site web du projet : [retrouvez-le ici](https://readymag.website/u2730643025/4237179/)
 
-## Équipe
+## Notre équipe
 
 - Alice MELAN (graphiste)
 - Matias LA CORTE (graphiste)
@@ -26,11 +26,13 @@ Nous avons aussi fait un site web du projet : [retrouvez-le ici](https://readyma
 - [Raphaël MAKARYAN](https://github.com/raphaelmakaryan) (Développeur)
 - [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
 
-## Description
+## Qu'est-ce qu'on devait faire ?
 
 Kelna, un jeu vidéo en 2D entièrement réalisé en p5.js, sans l'aide d'aucune librairie externe, a été notre projet de fin de première année de bachelor.
 
 Le défi était de créer un jeu vidéo en 2D avec p5.js, sans l'appui de librairies externes, et en y intégrant deux modes de vue distincts.
+
+## Qu'est-ce qu'on a fait ?
 
 Mon équipe et moi avons donné vie à Kelna, un platformer (comme Mario Bros), avec donc de la gravité, des ennemis, une barre de vie, des items, des échanges, des PNJ, des pièges...
 
@@ -51,7 +53,7 @@ Un ajout qui rend meilleure l'expérience de jeu de Kelna !
 
 .
 
-## Parcours (du côté du développement)
+## Parcours des développeurs
 
 On a commencé par créer les mouvements du personnage, donc comme on faisait un plateformer, il fallait faire un système de gravité.
 > Gravité : Check ✔

@@ -10,7 +10,7 @@ draft: false
 
 <!-- # Rockets -->
 
-## Description
+## Description du projet
 
 Ce deuxième TP de Javascript est un jeu à faire à deux.
 
@@ -18,7 +18,7 @@ Il y a deux fusées, une par joueur, une bleu et une rouge, la première à arri
 À chaque manche remportée, le joueur vainqueur gagne des supporters (qui sont des bananes qui dancent, *évidemment, quoi de plus normal*) et gagne aussi un point.
 Il n'y a pas de limite de points, le jeu est infini.
 
-## Consigne
+## qu'est-ce que je devais faire ?
 
 La demande était de créer un jeu pour deux joueurs :
 

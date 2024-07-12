@@ -17,7 +17,7 @@ draft: false
 <details>
 <summary> Pour résumer </summary> 
 
-### Description
+### Qu'est-ce qu'on devait faire ?
 
 "Le Bouillon Culte", notre projet de fin d'année, est un objet connecté conçu pour faciliter le quotidien des personnes âgées en EHPAD. En collaborant avec [La Fondation du Parmelan](https://fondationduparmelan.org/), nous avons créé un jeu de société qui renforce les liens entre les résidents et stimule leur mémoire.
 
@@ -25,7 +25,7 @@ Le jeu pose des questions de culture générale sous différentes formes et se p
 
 ![photo de l'objet](LBC_photo_ouvert.png)
 
-### Parcours (du côté du développement)
+### Le parcours des développeurs
 
 Nous avons opté pour l'utilisation d'un Raspberry Pi et d'un ESP32 pour gérer les capteurs RFID et les boutons. Après avoir réussi à recevoir les données des capteurs, nous avons développé le système d'affichage et la lecture audio.
 
@@ -33,7 +33,7 @@ Ensuite, nous avons créé un système pour afficher les questions et les répon
 
 Pour encourager les joueurs à rejouer, nous avons mis en place un système de points et un nombre de questions à répondre pour finir une partie.
 
-### Conclusion
+### Pour conclure
 
 Bien que nous aurions aimé avoir un meilleur rendu de l'objet, nous sommes fiers du prototype que nous avons créé. Ce projet m'a personnellement permis d'apprendre la POO et de clarifier ce concept.
 </details>
@@ -41,13 +41,11 @@ Bien que nous aurions aimé avoir un meilleur rendu de l'objet, nous sommes fier
 
 ---
 
-## Liens
-
-Retrouvez le repo Github :
+## Retrouvez le repo Github
 
 ::github{repo="IlanOu/Le_Bouillon_Culte"}
 
-## Équipe
+## Notre équipe
 
 - [Elsa FREPPAZ](https://studiomeraki.fr/) (graphiste)
 - Jeremy BERTHET (graphiste)
@@ -56,7 +54,7 @@ Retrouvez le repo Github :
 - [Anthony PELAZ](https://github.com/anthony74742) (Développeur)
 - [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
 
-## Description
+## C'était quoi l'objectif ?
 
 Durant la deuxième partie de notre deuxième année de bachelor, nous avons travaillé sur "Le Bouillon Culte", notre projet de fin d'année.
 <br>
@@ -64,6 +62,8 @@ La demande était la suivante :
 > Comment faciliter le quotidien des personnes âgées en EHPAD ?
 
 Et l'objectif était de concevoir un **objet connecté** !
+
+## Et qu'est-ce qu'on a fait ?
 
 Pour répondre à cette demande, nous sommes allés voir [La Fondation du Parmelan](https://fondationduparmelan.org/) qui est l'EHPAD avec qui nous avons travaillé tout au long de notre projet.
 
@@ -130,7 +130,7 @@ Le parcours est le suivant :
 
 .
 
-## Parcours (du côté du développement)
+## Le parcours des développeurs
 
 Pour commencer, on a réfléchi aux technologies dont on aurait besoin.
 <br>
@@ -180,7 +180,7 @@ On a donc fait un système de points et un nombre de questions à répondre pour
 Et voilà ! C'est en gros notre parcours du côté des devs (au niveau du code) ! <br>
 Il y a plusieurs tâches que nous avons faites en plus mais que je n'ai pas expliquées ici pour ne parler que des points clés du développement (comme par exemple un système de mise en veille de l'objet)
 
-## Conclusion
+## Pour conclure
 
 Pour finir, on aurait aimé pouvoir avoir un meilleur rendu de l'objet mais par faute de temps et de moyens nous n'avons pu faire qu'un prototype (ce qui était aussi la demande initiale) mais ous sommes quand même très fier du résultat !
 
