@@ -7,15 +7,15 @@ category: Web
 draft: false
 ---
 
-Et voilà mon premier portfolio, celui qui m'a permit d'entrer à l'École By CCI !
+Et voilà mon premier portfolio, celui qui m'a permit d'entrer à l'École By CCI, anciennement Gobelins !
 
-Quand je faisais ce portfolio, j'avais plus un côté graphiste que développeur, on le voit d'ailleurs dans ce portfolio qui présente plus de projet de graphistes que de devs... 
+Lorsque je travaillais sur ce portfolio, j'avais davantage des compétences pour la création graphique que pour la programmation, on voit d'ailleurs qu'il y a plus de projets orienté graphisme que developpement... 
 <br>D'ailleurs même à mon entretien pour entrer à l'école, on m'a demandé si j'étais sûr de vouloir faire développeur et pas graphiste 😅
-<br>J'avais déjà pas mal de projets (pas très qualitatifs mais c'était un bon début) en 3D, avec des dessins, des petits projets Python (d'ailleurs je m'interessais déjà à l'IA), du C# et du Web (uniquement HTML CSS).
+<br>J'avais déjà pas mal de projets (pas très qualitatifs mais c'était un bon début) en 3D, avec des illustrations, des petits programmes Python (d'ailleurs je m'interessais déjà à l'intelligence artificielle), du C# et du Web (uniquement HTML CSS).
 
-J'étais déjà très curieux, je voulais apprendre plein de choses sur des thèmes bien différents ! (c'est d'ailleurs toujours le cas)
+J'étais déjà très curieux, je voulais apprendre plein de choses sur des thèmes bien différents ! (et c'est toujours le cas aujourd'hui)
 
-Ce côté graphiste est toujours présent aujourd'hui puisque je m'interesse encore aux outils et techniques des designers mais c'est surtout un accompagnement du developpement, et pas l'inverse.
+Cet aspect artistique est toujours présent dans mon parcours, puisque je m'interesse aux outils et aux techniques des designers mais c'est surtout un accompagnement du developpement, et pas l'inverse. 
 
 Je suis fier de mon parcours depuis ce portfolio qui était ma première étape !
 
