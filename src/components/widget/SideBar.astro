@@ -5,7 +5,7 @@ import Tag from './Tags.astro'
 
 const className = Astro.props.class
 ---
-<div id="sidebar" class:list={[className, "w-full"]}>
+<div id="sidebar" class:list={[className, "w-full transition animation-delay: calc(var(--content-delay) + 200ms"]}>
     <div class="flex flex-col w-full gap-4 mb-4">
         <Profile></Profile>
     </div>
@@ -14,3 +14,34 @@ const className = Astro.props.class
         <Tag class="onload-animation" style="animation-delay: 200ms"></Tag>
     </div>
 </div>
+
+<script>
+    function updateSidebarVisibility() {
+        const sidebar = document.getElementById('sidebar');
+        const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
+        if (window.innerWidth < 768) { // Ajustez cette valeur selon votre breakpoint mobile
+            sidebar.style.display = isHomePage ? 'block' : 'none';
+        } else {
+            sidebar.style.display = 'block';
+        }
+    }
+
+    // Fonction pour observer les changements d'URL
+    function observeUrlChanges() {
+        let lastUrl = location.href; 
+        new MutationObserver(() => {
+            const url = location.href;
+            if (url !== lastUrl) {
+                lastUrl = url;
+                updateSidebarVisibility();
+            }
+        }).observe(document, {subtree: true, childList: true});
+    }
+
+    window.addEventListener('resize', updateSidebarVisibility);
+    window.addEventListener('load', () => {
+        updateSidebarVisibility();
+        observeUrlChanges();
+    });
+    document.addEventListener('astro:after-swap', updateSidebarVisibility);
+</script>
