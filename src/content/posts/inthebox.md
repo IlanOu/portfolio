@@ -3,7 +3,7 @@ title: InTheBox
 published: 2023-06-23
 description: Mon premier stage !
 tags: [Blender, Python, 3D]
-category: Experience Pro.
+category: Experiences Pro.
 draft: false
 ---
 
