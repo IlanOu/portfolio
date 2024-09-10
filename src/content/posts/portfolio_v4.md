@@ -8,9 +8,7 @@ draft: false
 version: 4.0.0
 ---
 
-<!-- # Portfolio v3 -->
-
-Pour cette troisième version de mon portfolio, j'ai voulu encore plus de simplicité. Jusqu'ici, même si ajouter ou retirer des projets était devenu plus facile, cela restait une tâche à part entière. Je voulais la rendre encore plus transparente.
+Pour cette quatrième version de mon portfolio, j'ai voulu encore plus de simplicité. Jusqu'ici, même si ajouter ou retirer des projets était devenu plus facile, cela restait une tâche à part entière. Je voulais la rendre encore plus transparente.
 
 J'ai découvert le travail de [saicaca](https://github.com/saicaca) qui a créé un modèle de blog [Fuwari](https://github.com/saicaca/fuwari). Son style graphique m'a beaucoup plu, mais surtout, il a utilisé le Framework Astro.js. Une technologie que je ne connaissais pas, mais qui permet de créer des pages directement en markdown.
 

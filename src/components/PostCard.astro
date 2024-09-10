@@ -42,7 +42,7 @@ const { remarkPluginFrontmatter } = await entry.render();
         before:absolute before:top-[35px] before:left-[18px] before:hidden md:before:block
         ">
             {title} 
-            {version && <span class="transition text-[var(--primary)] font-medium text-xl">v{version}</span>}
+            {version && <span class="small-text transition text-[var(--primary)] font-medium text-xl">v{version}</span>}
             <Icon class="inline text-[var(--primary)] md:hidden translate-y-0.5 absolute" name="material-symbols:chevron-right-rounded" size="2rem" ></Icon>
             <Icon class="text-[var(--primary)] transition hidden md:inline absolute translate-y-0.5 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0" name="material-symbols:chevron-right-rounded" size="2rem" ></Icon>
         </a>
