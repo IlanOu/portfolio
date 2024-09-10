@@ -4,7 +4,7 @@ published: 2023-09-04
 description: Mon arrivé chez Hyperfiction !
 image: "./hyperfiction_cover.png"
 tags: [Unity, VR, 3D]
-category: Contrat
+category: Experience Pro.
 draft: false
 ---
 

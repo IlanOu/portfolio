@@ -1,9 +1,9 @@
 ---
-title: TP | Athome
+title: Athome
 published: 2022-12-30
 description: Une bibliothèque de film
 image: "./cover-2.png"
-tags: [HTML, CSS, JS]
+tags: [TP, HTML, CSS, JS]
 category: Web
 draft: false
 ---

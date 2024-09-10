@@ -1,10 +1,11 @@
 ---
-title: v3.0.0 | Portfolio
+title: Portfolio
 published: 2024-01-05
 description: Une version plus simple
 tags: [HTML, CSS, Vue, JS]
 category: Web
 draft: false
+version: 3.0.0
 ---
 
 <!-- # Portfolio v2 -->

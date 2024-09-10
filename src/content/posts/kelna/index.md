@@ -1,9 +1,9 @@
 ---
-title: Projet | Kelna
+title: Kelna
 published: 2023-05-04
 description: Un jeu vidéo avec Ivo, un courageux aventurier !
-image: "./kelna_cover.png"
-tags: [p5js, JS, Game, 2D]
+image: "./kelna_cover.webp"
+tags: [Projet de cours, p5js, JS, Game, 2D]
 category: Jeu vidéo
 draft: false
 ---

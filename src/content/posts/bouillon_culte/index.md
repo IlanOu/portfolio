@@ -1,9 +1,9 @@
 ---
-title: Projet | Le Bouillon Culte
+title: Le Bouillon Culte
 published: 2024-06-13
 description: Jeu de société connecté sur la culture française pour une Ehpad
 image: "./bouillon_culte_cover.png"
-tags: [Game, Python, Raspi, Javascript]
+tags: [Projet de cours, Game, Python, Raspi, Javascript]
 category: Jeu vidéo
 draft: false
 ---

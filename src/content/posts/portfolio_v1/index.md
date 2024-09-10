@@ -1,10 +1,11 @@
 ---
-title: v1.0.0 | Portfolio
+title: Portfolio
 published: 2021-09-13
 description: La toute première version de mon portfolio
 tags: [HTML, CSS]
 category: Web
 draft: false
+version: 1.0.0
 ---
 
 Et voilà mon premier portfolio, celui qui m'a permit d'entrer à l'École By CCI, anciennement Gobelins !
