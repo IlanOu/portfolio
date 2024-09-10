@@ -1,10 +1,11 @@
 ---
-title: v4.0.0 | Portfolio
+title: Portfolio
 published: 2024-04-11
 description: Une nouvelle version à la fois plus simple et plus élégante
 tags: [Astro, JS, TS, Tailwind]
 category: Web
 draft: false
+version: 4.0.0
 ---
 
 <!-- # Portfolio v3 -->

@@ -98,6 +98,8 @@ function formatTag(tag: string[]) {
                                 text-75 pr-8 whitespace-nowrap overflow-ellipsis overflow-hidden"
                             >
                                     {post.data.title}
+                                    
+                                    {post.data.version && <span class="text-50 text-sm font-medium">v{post.data.version}</span>}
                             </div>
                             <!-- tag list -->
                             <div class="hidden md:block md:w-[15%] text-left text-sm transition

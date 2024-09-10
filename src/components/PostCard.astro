@@ -1,11 +1,11 @@
 ---
 import path from "path";
+import { Icon } from 'astro-icon/components';
+import I18nKey from "../i18n/i18nKey";
+import {i18n} from "../i18n/translation";
+import {getDir} from "../utils/url-utils";
 import PostMetadata from "./PostMeta.astro";
 import ImageWrapper from "./misc/ImageWrapper.astro";
-import { Icon } from 'astro-icon/components';
-import {i18n} from "../i18n/translation";
-import I18nKey from "../i18n/i18nKey";
-import {getDir} from "../utils/url-utils";
 
 interface Props {
     class: string;
@@ -20,8 +20,9 @@ interface Props {
     words: number;
     draft: boolean;
     style: string;
+    version: string;
 }
-const { entry, title, url, published, tags, category, image, description, words, style } = Astro.props;
+const { entry, title, url, published, tags, category, image, description, words, style, version } = Astro.props;
 const className = Astro.props.class;
 
 const hasCover = image !== undefined && image !== null && image !== '';
@@ -40,13 +41,14 @@ const { remarkPluginFrontmatter } = await entry.render();
         before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
         before:absolute before:top-[35px] before:left-[18px] before:hidden md:before:block
         ">
-            {title}
+            {title} 
+            {version && <span class="transition text-[var(--primary)] font-medium text-xl">v{version}</span>}
             <Icon class="inline text-[var(--primary)] md:hidden translate-y-0.5 absolute" name="material-symbols:chevron-right-rounded" size="2rem" ></Icon>
             <Icon class="text-[var(--primary)] transition hidden md:inline absolute translate-y-0.5 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0" name="material-symbols:chevron-right-rounded" size="2rem" ></Icon>
         </a>
 
         <!-- metadata -->
-        <PostMetadata published={published} tags={tags} category={category} hideTagsForMobile={true} class="mb-4"></PostMetadata>
+        <PostMetadata published={published} tags={tags} category={category} hideTagsForMobile={true} version={version} class="mb-4"></PostMetadata>
 
         <!-- description -->
         <div class="transition text-75 mb-3.5 pr-4">

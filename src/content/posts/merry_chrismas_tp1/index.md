@@ -1,9 +1,9 @@
 ---
-title: TP | Merry Chrismas
+title: Merry Chrismas
 published: 2022-11-30
 description: Un TP Javascript, un !
 image: "./santa_claus.png"
-tags: [HTML, CSS, JS, Game, 2D]
+tags: [TP, HTML, CSS, JS, Game, 2D]
 category: Web
 draft: false
 ---

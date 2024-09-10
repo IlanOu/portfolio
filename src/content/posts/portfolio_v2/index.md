@@ -1,10 +1,11 @@
 ---
-title: v2.0.0 | Portfolio
+title: Portfolio
 published: 2023-01-18
 description: Une nouvelle version un peu mieux pensée
 tags: [HTML, CSS, JS, 3D]
 category: Web
 draft: false
+version: 2.0.0
 ---
 
 <!-- # Portfolio v1 -->

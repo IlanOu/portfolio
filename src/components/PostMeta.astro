@@ -1,22 +1,37 @@
 ---
-import {formatDateToYYYYMMDD} from "../utils/date-utils";
-import { Icon } from 'astro-icon/components';
-import {i18n} from "../i18n/translation";
-import I18nKey from "../i18n/i18nKey";
-import {url} from "../utils/url-utils";
+import { Icon } from 'astro-icon/components'
+import I18nKey from '../i18n/i18nKey'
+import { i18n } from '../i18n/translation'
+import { formatDateToYYYYMMDD } from '../utils/date-utils'
+import { url } from '../utils/url-utils'
 
 interface Props {
-    class: string;
-    published: Date;
-    tags: string[];
-    category: string;
-    hideTagsForMobile: boolean;
+  class: string
+  published: Date
+  tags: string[]
+  category: string
+  hideTagsForMobile: boolean
+  version: string
 }
-const {published, tags, category, hideTagsForMobile} = Astro.props;
-const className = Astro.props.class;
----
+const { published, tags, category, hideTagsForMobile, version } = Astro.props
+const className = Astro.props.class
 
+function isEmpty(value: string | null | undefined) {
+  return value === null || value === undefined || value.trim() === ''
+}
+---
 <div class:list={["flex flex-wrap text-neutral-500 dark:text-neutral-400 items-center gap-4 gap-x-4 gap-y-2", className]}>
+    <!-- version -->
+    <!-- {!isEmpty(version) && (
+        <div class="flex items-center">
+          <div class="meta-icon">
+            <Icon name="material-symbols:folder-copy-outline-rounded" class="text-xl"></Icon>
+          </div>
+          <span class="text-50   
+     text-sm font-medium">v{version}</span>
+        </div>
+      )} -->
+    
     <!-- publish date -->
     <div class="flex items-center">
         <div class="meta-icon"
