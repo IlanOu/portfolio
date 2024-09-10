@@ -3,8 +3,8 @@ title: Kelna
 published: 2023-05-04
 description: Un jeu vidéo avec Ivo, un courageux aventurier !
 image: "./kelna_cover.webp"
-tags: [Projet de cours, p5js, JS, Game, 2D]
-category: Jeu vidéo
+tags: [p5js, JS, Jeu Vidéo, 2D]
+category: Projets Scolaires
 draft: false
 ---
 
@@ -23,8 +23,8 @@ Nous avons aussi fait un site web du projet : [retrouvez-le ici](https://readyma
 - Alice MELAN (graphiste)
 - Matias LA CORTE (graphiste)
 - Ugo MOLLIER-BILLET (graphiste)
-- [Raphaël MAKARYAN](https://github.com/raphaelmakaryan) (Développeur)
-- [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
+- [Raphaël MAKARYAN](https://github.com/raphaelmakaryan) (développeur)
+- [Ilan OUTHIER](https://github.com/IlanOu) (développeur)(moi)
 
 ## Qu'est-ce qu'on devait faire ?
 

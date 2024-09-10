@@ -3,7 +3,7 @@ title: Portfolio
 published: 2024-01-05
 description: Une version plus simple
 tags: [HTML, CSS, Vue, JS]
-category: Web
+category: Projets Personnels
 draft: false
 version: 3.0.0
 ---

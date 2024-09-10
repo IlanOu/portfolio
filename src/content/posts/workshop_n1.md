@@ -3,7 +3,7 @@ title: Workshop n°1
 published: 2022-10-21
 description: C'est quoi ça un "Workshop" ?
 tags: [HTML, CSS]
-category: Web
+category: Projets Scolaires
 draft: false
 ---
 

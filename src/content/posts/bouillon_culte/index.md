@@ -3,8 +3,8 @@ title: Le Bouillon Culte
 published: 2024-06-13
 description: Jeu de société connecté sur la culture française pour une Ehpad
 image: "./bouillon_culte_cover.png"
-tags: [Projet de cours, Game, Python, Raspi, Javascript]
-category: Jeu vidéo
+tags: [Jeu Vidéo, Python, Raspberry PI, JS]
+category: Projets Scolaires
 draft: false
 ---
 
@@ -51,8 +51,8 @@ Bien que nous aurions aimé avoir un meilleur rendu de l'objet, nous sommes fier
 - Jeremy BERTHET (graphiste)
 - [Billie Lou AZZANO](http://www.linkedin.com/in/billie-lou-azzano-066330258) (graphiste)
 - Théotime NOBLET (graphiste)
-- [Anthony PELAZ](https://github.com/anthony74742) (Développeur)
-- [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
+- [Anthony PELAZ](https://github.com/anthony74742) (développeur)
+- [Ilan OUTHIER](https://github.com/IlanOu) (développeur)(moi)
 
 ## C'était quoi l'objectif ?
 
