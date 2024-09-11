@@ -13,7 +13,7 @@ import Markdown from "@components/misc/Markdown.astro";
 import path from "path";
 import {profileConfig} from "../../config";
 import {formatDateToYYYYMMDD} from "../../utils/date-utils";
-import NotificationManager from '../../components/widget/NotificationManager.astro';
+import NotificationManager from '../../components/widget/notifications/NotificationManager.astro';
 
 
 export async function getStaticPaths() {
@@ -46,6 +46,7 @@ const jsonLd = {
     // TODO include cover image here
 }
 
+// import '../../utils/url-tracker.ts';
 ---
 
 <MainGridLayout banner={entry.data.image} title={entry.data.title} description={entry.data.description}>
@@ -133,6 +134,11 @@ const jsonLd = {
             </div>}
         </a>
     </div>
+
+    <script type="module">
+        import { initUrlTracking } from '/src/utils/url-tracker.ts';
+        initUrlTracking();
+      </script>
 
 </MainGridLayout>
 <NotificationManager />

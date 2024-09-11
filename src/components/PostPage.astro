@@ -12,7 +12,7 @@ const interval = 50
 <div class="transition flex flex-col rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 md:py-0 md:bg-transparent md:gap-4 mb-4">
     
     <!-- <pre>{JSON.stringify(page.data, null, 2)}</pre> -->
-
+    
     {page.data.map((entry: { data: { draft: boolean; title: string; tags: string[]; category: string; published: Date; image: string; description: string; version: string;}; slug: string; }) => {
         return (
             <PostCard
