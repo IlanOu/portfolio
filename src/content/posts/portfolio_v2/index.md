@@ -3,7 +3,7 @@ title: Portfolio
 published: 2023-01-18
 description: Une nouvelle version un peu mieux pensée
 tags: [HTML, CSS, JS, 3D]
-category: Web
+category: Projets Personnels
 draft: false
 version: 2.0.0
 ---

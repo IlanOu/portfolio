@@ -3,8 +3,8 @@ title: Polar Dash
 published: 2023-12-08
 description: Reconnaissance de mouvements et Unity 2D
 image: "./polar_dash_cover.png"
-tags: [Projet de cours, Unity, Python, Game, 2D]
-category: Jeu vidéo
+tags: [Unity, Python, Jeu Vidéo, 2D]
+category: Projets Scolaires
 draft: false
 ---
 
@@ -19,8 +19,8 @@ draft: false
 - [Elsa FREPPAZ](https://studiomeraki.fr/) (graphiste)
 - Théotime NOBLET (graphiste)
 - Ugo MOLLIER-BILLET (graphiste)
-- [Emmanuel MOULIN](https://github.com/Kibishi47) (Développeur)
-- [Ilan OUTHIER](https://github.com/IlanOu) (Développeur)(Moi)
+- [Emmanuel MOULIN](https://github.com/Kibishi47) (développeur)
+- [Ilan OUTHIER](https://github.com/IlanOu) (développeur)(moi)
 
 ## C'était quoi l'objectif ?
 

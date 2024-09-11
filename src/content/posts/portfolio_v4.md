@@ -2,11 +2,17 @@
 title: Portfolio
 published: 2024-04-11
 description: Une nouvelle version à la fois plus simple et plus élégante
-tags: [Astro, JS, TS, Tailwind]
-category: Web
+tags: [Astro, Svelte, TS, Tailwind]
+category: Projets Personnels
 draft: false
 version: 4.0.0
 ---
+
+## Retrouvez le repo Github
+
+::github{repo="IlanOu/portfolio"}
+
+## Description
 
 Pour cette quatrième version de mon portfolio, j'ai voulu encore plus de simplicité. Jusqu'ici, même si ajouter ou retirer des projets était devenu plus facile, cela restait une tâche à part entière. Je voulais la rendre encore plus transparente.
 

@@ -3,8 +3,8 @@ title: Rockets
 published: 2022-12-23
 description: Clicker game avec des fusées !
 image: "./cover.png"
-tags: [TP, HTML, CSS, JS, Game, 2D]
-category: Web
+tags: [HTML, CSS, JS, Jeu Vidéo, 2D]
+category: Projets Scolaires
 draft: false
 ---
 
