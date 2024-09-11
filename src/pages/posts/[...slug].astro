@@ -13,6 +13,8 @@ import Markdown from "@components/misc/Markdown.astro";
 import path from "path";
 import {profileConfig} from "../../config";
 import {formatDateToYYYYMMDD} from "../../utils/date-utils";
+import NotificationManager from '../../components/widget/NotificationManager.astro';
+
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection('posts', ({ data }) => {
@@ -45,6 +47,7 @@ const jsonLd = {
 }
 
 ---
+
 
 <MainGridLayout banner={entry.data.image} title={entry.data.title} description={entry.data.description}>
     <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
@@ -133,6 +136,7 @@ const jsonLd = {
     </div>
 
 </MainGridLayout>
+<NotificationManager />
 
 <style is:global>
 #post-container :nth-child(1) { animation-delay: calc(var(--content-delay) + 0ms) }

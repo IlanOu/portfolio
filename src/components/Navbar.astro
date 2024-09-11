@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import DisplaySettings from "./widget/DisplaySettings.svelte";
+
 import {LinkPreset, NavBarLink} from "../types/config";
 import {navBarConfig, siteConfig} from "../config";
 import NavMenuPanel from "./widget/NavMenuPanel.astro";
@@ -8,6 +9,8 @@ import Search from "./Search.svelte";
 import {LinkPresets} from "../constants/link-presets";
 import LightDarkSwitch from "./LightDarkSwitch.svelte";
 import {url} from "../utils/url-utils";
+
+
 const className = Astro.props.class;
 
 let links: NavBarLink[] = navBarConfig.links.map((item: NavBarLink | LinkPreset): NavBarLink => {
@@ -57,11 +60,20 @@ let links: NavBarLink[] = navBarConfig.links.map((item: NavBarLink | LinkPreset)
             <Icon name="material-symbols:menu-rounded" size={"1.25rem"}></Icon>
         </button>
     </div>
+
+
+    <button onclick="showNotification('Ceci est une notification!', 'warning', 3000, 'material-symbols:menu-rounded')">
+        Afficher une notification
+    </button>
+
+
     <NavMenuPanel links={links}></NavMenuPanel>
     <DisplaySettings client:only="svelte">
         <Icon slot="restore-icon" name="fa6-solid:arrow-rotate-left" size={"0.875rem"} class=""></Icon>
     </DisplaySettings>
 </div>
+
+
 
 <style lang="stylus">
 </style>

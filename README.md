@@ -68,3 +68,24 @@ You can find my work on my [portfolio](https://ilan-outhier.fr)
 ## Acknowledgements
 
 Thanks to [Saicaca](https://github.com/saicaca) for making his repository [Fuwari](https://github.com/saicaca/fuwari) available, on which I based my portfolio. 
+
+<!-- 
+
+## Todo List
+
+- [ ] add projects :
+  - [ ] methil-more-ores
+  - [ ] Les Minis Aventuriers
+  - [ ] figma designs of the Workspace
+  - [ ] lab part :
+    - [ ] solar war
+    - [ ] langue inventée
+  - [ ] les projets avec Hyperfiction
+    - [ ] Outil de formation rennové
+      - [ ] interfaces
+      - [ ] systèmes mis à jour
+      - [ ] oculus -> pico
+    - [ ] Popups
+- [ ] Add success system
+
+ -->
