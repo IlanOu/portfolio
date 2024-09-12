@@ -13,7 +13,7 @@ const interval = 50
     
     <!-- <pre>{JSON.stringify(page.data, null, 2)}</pre> -->
     
-    {page.data.map((entry: { data: { draft: boolean; title: string; tags: string[]; category: string; published: Date; image: string; description: string; version: string;}; slug: string; }) => {
+    {page.data.map((entry: { data: { draft: boolean; title: string; tags: string[]; category: string; published: Date; image: string; description: string; version: string; lab: boolean}; slug: string; }) => {
         return (
             <PostCard
                     entry={entry}
@@ -28,6 +28,7 @@ const interval = 50
                     class:list="onload-animation"
                     style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
                     version={entry.data.version}
+                    lab={entry.data.lab}
                 ></PostCard>
         );
     })}
