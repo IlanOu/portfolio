@@ -75,12 +75,12 @@ Thanks to [Saicaca](https://github.com/saicaca) for making his repository [Fuwar
 ## Todo List
 
 - [ ] add projects :
-  - [ ] methil-more-ores
   - [ ] Les Minis Aventuriers
   - [ ] figma designs of the Workspace
   - [ ] lab part :
-    - [ ] solar war
-    - [ ] langue inventée
+    - [ ] methil-more-ores
+    - [x] reset
+    - [x] kigisa
   - [ ] les projets avec Hyperfiction
     - [ ] Outil de formation rennové
       - [ ] interfaces
