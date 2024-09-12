@@ -1,4 +1,4 @@
-import {getSortedPosts} from "@utils/content-utils";
+import {getAllSortedPosts} from "@utils/content-utils";
 
 
 // Déclaration du type global pour TypeScript
@@ -9,7 +9,7 @@ declare global {
   }
 
 async function getTotalPostCount() {
-    const allPosts = await getSortedPosts();
+    const allPosts = await getAllSortedPosts();
     return allPosts.length;
   }
 
