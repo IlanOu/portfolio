@@ -2,8 +2,8 @@
 title: Reset
 published: 2024-08-05
 description: J'écris une histoire !
-tags: []
-category: test
+tags: ["Histoire"]
+category: Projets Personnels
 draft: false
 lab: true
 ---
