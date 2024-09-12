@@ -10,7 +10,7 @@ lab: true
 
 ## Qu'est-ce que c'est ?
 
-"Reset" est une histoire que je développe petit à petit. C'est un projet personnel, et c'est nouveau pour moi. C'est la première fois que j'écris une histoire, alors j'expérimente...
+**Reset** est une histoire que je développe petit à petit. C'est un projet personnel, et c'est nouveau pour moi. C'est la première fois que j'écris une histoire, alors j'expérimente...
 <br/>
 Je sais que ce n'est pas forcément inutile, je pourrais en faire quelque chose un jour.
 
@@ -53,6 +53,8 @@ Après le Reset, le monde est méconnaissable. La nature a repris ses droits sur
 
 Un nouvel écosystème s'est formé, avec des espèces adaptées aux conditions post-apocalyptiques. L'humanité survit dans des communautés dispersées, tentant de préserver les connaissances du passé tout en s'adaptant à ce nouveau monde.
 
+Le style à ce moment là sera dans le Solarpunk, avec une technologie propre, inspirée et en harmonie avec la nature.
+
 ### Les Protagonistes
 
 L'histoire suit plusieurs personnages à travers différentes époques : certains sont nés avant le Reset, d'autres pendant, d'autres après, et certains, étrangement, à toutes ces époques à la fois.
@@ -73,4 +75,3 @@ L'histoire explore des thèmes tels que :
 - La mémoire collective et les leçons de l'histoire, transmises notamment à travers les croyances.
 - L'équilibre entre progrès et préservation de la nature.
 :::
-
