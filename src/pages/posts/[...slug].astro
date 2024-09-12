@@ -18,7 +18,7 @@ import NotificationManager from '../../components/widget/notifications/Notificat
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection('posts', ({ data }) => {
-        return import.meta.env.PROD ? data.draft !== true && data.lab !== true : true;
+        return import.meta.env.PROD ? data.draft !== true : true;
     });
     return blogEntries.map(entry => ({
         params: { slug: entry.slug }, props: { entry },
