@@ -26,7 +26,7 @@ export async function getSortedPosts() {
 
 export async function getSortedLabPosts() {
   const allBlogPosts = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.lab === true : true;
+    return import.meta.env.PROD ? data.draft !== true && data.lab === true : true;
   });
   const sorted = allBlogPosts.sort((a, b) => {
     const dateA = new Date(a.data.published)
