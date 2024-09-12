@@ -1,19 +1,22 @@
 ---
-import {getPostUrlBySlug} from "@utils/url-utils";
-import PostCard from "./PostCard.astro";
+import { getCollection, getEntry } from "astro:content";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import {i18n} from "@i18n/translation";
+import I18nKey from "@i18n/i18nKey";
+import Pagination from "../components/control/Pagination.astro";
+import {getPostUrlBySlug} from "../utils/url-utils";
+import {getSortedLabPosts} from "../utils/content-utils";
+import PostCard from "@/components/PostCard.astro";
 
-const {page} = Astro.props;
+let posts = await getSortedLabPosts()
 
 let delay = 0
 const interval = 50
 ---
 
+<MainGridLayout title={i18n(I18nKey.lab)}>
 
-<div class="transition flex flex-col rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 md:py-0 md:bg-transparent md:gap-4 mb-4">
-    
-    <!-- <pre>{JSON.stringify(page.data, null, 2)}</pre> -->
-    
-    {page.data.map((entry: { data: { draft: boolean; title: string; tags: string[]; category: string; published: Date; image: string; description: string; version: string; lab: boolean}; slug: string; }) => {
+    {posts.map((entry: { data: { draft: boolean; title: string; tags: string[]; category: string; published: Date; image: string; description: string; version: string; lab: boolean; }; slug: string; }) => {
         return (
             <PostCard
                     entry={entry}
@@ -32,4 +35,6 @@ const interval = 50
                 ></PostCard>
         );
     })}
-</div>
+
+</MainGridLayout>
+

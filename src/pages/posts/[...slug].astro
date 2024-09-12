@@ -13,10 +13,12 @@ import Markdown from "@components/misc/Markdown.astro";
 import path from "path";
 import {profileConfig} from "../../config";
 import {formatDateToYYYYMMDD} from "../../utils/date-utils";
+import NotificationManager from '../../components/widget/notifications/NotificationManager.astro';
+
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection('posts', ({ data }) => {
-        return import.meta.env.PROD ? data.draft !== true : true;
+        return import.meta.env.PROD ? data.draft !== true && data.lab !== true : true;
     });
     return blogEntries.map(entry => ({
         params: { slug: entry.slug }, props: { entry },
@@ -44,6 +46,7 @@ const jsonLd = {
     // TODO include cover image here
 }
 
+// import '../../utils/url-tracker.ts';
 ---
 
 <MainGridLayout banner={entry.data.image} title={entry.data.title} description={entry.data.description}>
@@ -132,7 +135,13 @@ const jsonLd = {
         </a>
     </div>
 
+    <script type="module">
+        import { initUrlTracking } from '/src/utils/url-tracker.ts';
+        initUrlTracking();
+      </script>
+
 </MainGridLayout>
+<NotificationManager />
 
 <style is:global>
 #post-container :nth-child(1) { animation-delay: calc(var(--content-delay) + 0ms) }
