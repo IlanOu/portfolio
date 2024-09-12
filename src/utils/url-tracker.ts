@@ -40,7 +40,7 @@ export async function initUrlTracking() {
   
     function checkAllPostsViewed(viewedCount: number) {
       if (viewedCount >= totalPosts) {
-        window.showNotification("Tout les posts ont été vu !", "achievement", 10000);
+        window.showNotification("Tous les posts ont été vus !", "achievement", 10000);
       } 
     //   else {
     //     console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
