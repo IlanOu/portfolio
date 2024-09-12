@@ -32,9 +32,9 @@ export const siteConfig: SiteConfig = {
 export const navBarConfig: NavBarConfig = {
   links: [
     LinkPreset.Home,
+    LinkPreset.Lab,
     LinkPreset.Archive,
     LinkPreset.About,
-    LinkPreset.Lab,
     {
       name: 'GitHub',
       url: 'https://github.com/Ilanou', // Internal links should not include the base path, as it is automatically added
