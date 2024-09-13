@@ -10,29 +10,31 @@ declare global {
 
 async function getTotalPostCount() {
     const allPosts = await getAllSortedPosts();
+    console.log("allPosts: ", allPosts);
     return allPosts.length;
 }
 
 export async function initUrlTracking() {
-
+    console.log("init url tracking");
     const totalPosts = await getTotalPostCount();
 
   
     function handleUrlChange() {
       const currentUrl = window.location.href;
-  
+      
       const postMatch = currentUrl.match(/\/posts\/([^\/]+)/);
       if (postMatch) {
         const postName = postMatch[1];
-  
+        
         const viewedPosts = JSON.parse(localStorage.getItem('viewedPosts') || '[]');
-  
+        
         if (!viewedPosts.includes(postName)) {
           viewedPosts.push(postName);
           localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
-  
+          
           const viewedCount = viewedPosts.length;
-  
+          
+          console.log("url change : ", postName);
           checkAllPostsViewed(viewedCount);
         }
       }
