@@ -55,7 +55,8 @@ function checkAllPostsViewed(viewedCount: number) {
     } else {
       console.error('window.showNotification is not available');
     }
-  } else {
-    console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
   }
+  // else {
+  //   console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
+  // }
 }
