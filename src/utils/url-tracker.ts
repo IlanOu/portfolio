@@ -11,7 +11,7 @@ declare global {
 async function getTotalPostCount() {
     const allPosts = await getAllSortedPosts();
     return allPosts.length;
-  }
+}
 
 export async function initUrlTracking() {
 
@@ -42,9 +42,9 @@ export async function initUrlTracking() {
       if (viewedCount >= totalPosts) {
         window.showNotification("Tous les posts ont été vus !", "achievement", 10000);
       } 
-    //   else {
-    //     console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
-    //   }
+      else {
+        console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
+      }
     }
   
     window.addEventListener('popstate', handleUrlChange);
