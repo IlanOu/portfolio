@@ -13,7 +13,7 @@ import Markdown from "@components/misc/Markdown.astro";
 import path from "path";
 import {profileConfig} from "../../config";
 import {formatDateToYYYYMMDD} from "../../utils/date-utils";
-import NotificationManager from '../../components/widget/notifications/NotificationManager.astro';
+import NotificationManager from '../../components/widget/notifications/NotificationManager.svelte';
 
 
 export async function getStaticPaths() {
@@ -135,13 +135,19 @@ const jsonLd = {
         </a>
     </div>
 
-    <script type="module">
-        import { initUrlTracking } from '/src/utils/url-tracker.ts';
-        initUrlTracking();
+    <NotificationManager client:load />
+
+    <script>
+        import { initUrlTracking } from '/src/utils/url-tracker';
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+        // console.log('DOM fully loaded and parsed');
+        await initUrlTracking();
+        // console.log('URL tracking initialized');
+        });
     </script>
 
 </MainGridLayout>
-<NotificationManager />
 
 <style is:global>
 #post-container :nth-child(1) { animation-delay: calc(var(--content-delay) + 0ms) }
