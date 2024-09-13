@@ -1,10 +1,7 @@
 import { getAllSortedPosts } from "@utils/content-utils";
 
-declare global {
-  interface Window {
-    showNotification: (message: string, type?: string, duration?: number) => void;
-  }
-}
+import { showNotification } from "@components/widget/notifications/notificationService";
+
 
 let totalPosts: number;
 
@@ -50,8 +47,8 @@ function checkAllPostsViewed(viewedCount: number) {
   // console.log(`Checking posts viewed: ${viewedCount} out of ${totalPosts}`);
   if (viewedCount >= totalPosts) {
     // console.log('All posts viewed, attempting to show notification');
-    if (typeof window !== 'undefined' && window.showNotification) {
-      window.showNotification("Tous les posts ont été vus !", "achievement", 10000);
+    if (typeof window !== 'undefined' && showNotification) {
+      showNotification("Tous les posts ont été vus !", "achievement", 10000);
     } else {
       console.error('window.showNotification is not available');
     }

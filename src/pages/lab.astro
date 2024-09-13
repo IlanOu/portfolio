@@ -1,9 +1,7 @@
 ---
-import { getCollection, getEntry } from "astro:content";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import {i18n} from "@i18n/translation";
 import I18nKey from "@i18n/i18nKey";
-import Pagination from "../components/control/Pagination.astro";
 import {getPostUrlBySlug} from "../utils/url-utils";
 import {getSortedLabPosts} from "../utils/content-utils";
 import PostCard from "@/components/PostCard.astro";
@@ -13,6 +11,7 @@ let posts = await getSortedLabPosts()
 let delay = 0
 const interval = 50
 ---
+
 
 <MainGridLayout title={i18n(I18nKey.lab)}>
 
