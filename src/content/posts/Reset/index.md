@@ -54,6 +54,11 @@ Après le Reset, le monde est méconnaissable. La nature a repris ses droits sur
 Un nouvel écosystème s'est formé, avec des espèces adaptées aux conditions post-apocalyptiques. L'humanité survit dans des communautés dispersées, tentant de préserver les connaissances du passé tout en s'adaptant à ce nouveau monde.
 
 Le style à ce moment là sera dans le Solarpunk, avec une technologie propre, inspirée et en harmonie avec la nature.
+<br/>
+Il y aurait toujours les vestiges de l'ancien monde, des traces de la guerre, etc.
+
+| ![Reset 1](Reset_1.jpg) | ![Reset 2](Reset_2.jpg) |
+|:-----------------------:|:-----------------------:|
 
 ### Les Protagonistes
 
