@@ -10,60 +10,58 @@ declare global {
 
 async function getTotalPostCount() {
     const allPosts = await getAllSortedPosts();
-    console.log("allPosts: ", allPosts);
     return allPosts.length;
 }
 
 export async function initUrlTracking() {
-    console.log("init url tracking");
-    const totalPosts = await getTotalPostCount();
+  const totalPosts = await getTotalPostCount();
 
-  
-    function handleUrlChange() {
+  function handleUrlChange() {
       const currentUrl = window.location.href;
       
       const postMatch = currentUrl.match(/\/posts\/([^\/]+)/);
       if (postMatch) {
-        const postName = postMatch[1];
-        
-        const viewedPosts = JSON.parse(localStorage.getItem('viewedPosts') || '[]');
-        
-        if (!viewedPosts.includes(postName)) {
-          viewedPosts.push(postName);
-          localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
+          const postName = postMatch[1];
           
-          const viewedCount = viewedPosts.length;
+          const viewedPosts = JSON.parse(localStorage.getItem('viewedPosts') || '[]');
           
-          console.log("url change : ", postName);
-          checkAllPostsViewed(viewedCount);
-        }
+          if (!viewedPosts.includes(postName)) {
+              viewedPosts.push(postName);
+              localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
+              
+              const viewedCount = viewedPosts.length;
+              
+              checkAllPostsViewed(viewedCount);
+          }
       }
-    }
-  
-    function checkAllPostsViewed(viewedCount: number) {
+  }
+
+  function checkAllPostsViewed(viewedCount: number) {
       if (viewedCount >= totalPosts) {
-        window.showNotification("Tous les posts ont été vus !", "achievement", 10000);
+          window.showNotification("Tous les posts ont été vus !", "achievement", 10000);
       } 
       else {
-        console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
+          console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
       }
-    }
-  
-    window.addEventListener('popstate', handleUrlChange);
-  
-    // Surveiller les changements d'URL via pushState ou replaceState
-    const originalPushState = history.pushState;
-    const originalReplaceState = history.replaceState;
-  
-    history.pushState = function (...args) {
+  }
+
+  // Ajouter l'événement sur popstate
+  window.addEventListener('popstate', handleUrlChange);
+
+  // Surcharge de pushState et replaceState pour inclure handleUrlChange
+  const originalPushState = history.pushState;
+  const originalReplaceState = history.replaceState;
+
+  history.pushState = function (...args) {
       originalPushState.apply(this, args);
       handleUrlChange();
-    };
-  
-    history.replaceState = function (...args) {
+  };
+
+  history.replaceState = function (...args) {
       originalReplaceState.apply(this, args);
       handleUrlChange();
-    };
-  
-    handleUrlChange();
-  }
+  };
+
+  // Appel initial pour prendre en compte l'URL de la première page
+  handleUrlChange();
+}
