@@ -1,0 +1,24 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import {i18n} from "@i18n/translation";
+import I18nKey from "@i18n/i18nKey";
+import { allAchievements } from "@utils/achievementStore";
+import SuccessComponent from "@components/widget/Achievement.svelte";
+---
+
+<MainGridLayout title={i18n(I18nKey.success)}>
+  <div class="transition flex flex-col rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 md:py-0 md:bg-transparent md:gap-4 mb-4">
+    {allAchievements.map((achievement) => (
+      <SuccessComponent achievementId={achievement.id} client:load />
+    ))}
+  </div>
+</MainGridLayout>
+
+<script>
+  import { initAchievements } from '@utils/achievementStore';
+  import { initUrlTracking } from '@utils/url-tracker';
+  
+  // Initialize achievements and URL tracking on the client side
+  initAchievements();
+  initUrlTracking();
+</script>

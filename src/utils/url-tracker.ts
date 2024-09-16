@@ -1,7 +1,6 @@
 import { getAllSortedPosts } from "@utils/content-utils";
-
 import { showNotification } from "@components/widget/notifications/notificationService";
-
+import { unlockAchievement, getAchievement } from "@utils/achievementStore";
 
 let totalPosts: number;
 
@@ -38,22 +37,44 @@ function handleUrlChange() {
       viewedPosts.push(postName);
       localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
       
-      checkAllPostsViewed(viewedPosts.length);
+      const explorerAchievement = getAchievement('explorer');
+      const allPostsAchievement = getAchievement('all-posts-viewed');
+      
+      if (explorerAchievement && !explorerAchievement.unlocked) {
+        checkFivePostsViewed(viewedPosts.length);
+      }
+      
+      if (allPostsAchievement && !allPostsAchievement.unlocked) {
+        checkAllPostsViewed(viewedPosts.length);
+      }
     }
   }
 }
 
 function checkAllPostsViewed(viewedCount: number) {
-  // console.log(`Checking posts viewed: ${viewedCount} out of ${totalPosts}`);
-  if (viewedCount >= totalPosts) {
-    // console.log('All posts viewed, attempting to show notification');
+  const achievementId = 'all-posts-viewed';
+  const achievement = getAchievement(achievementId);
+
+  if (viewedCount >= totalPosts && achievement && !achievement.unlocked) {
     if (typeof window !== 'undefined' && showNotification) {
-      showNotification("Tous les posts ont été vus !", "achievement", 10000);
+      showNotification(achievement.description, "achievement", 10000);
+      unlockAchievement(achievementId);
     } else {
       console.error('window.showNotification is not available');
     }
   }
-  // else {
-  //   console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
-  // }
+}
+
+function checkFivePostsViewed(viewedCount: number) {
+  const achievementId = 'explorer';
+  const achievement = getAchievement(achievementId);
+
+  if (viewedCount >= 5 && achievement && !achievement.unlocked) {
+    if (typeof window !== 'undefined' && showNotification) {
+      showNotification(achievement.description, "achievement", 10000);
+      unlockAchievement(achievementId);
+    } else {
+      console.error('window.showNotification is not available');
+    }
+  }
 }
