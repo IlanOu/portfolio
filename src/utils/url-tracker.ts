@@ -57,7 +57,7 @@ function checkAllPostsViewed(viewedCount: number) {
 
   if (viewedCount >= totalPosts && achievement && !achievement.unlocked) {
     if (typeof window !== 'undefined' && showNotification) {
-      showNotification(achievement.description, "achievement", 10000);
+      showNotification(achievement.name, "achievement", 10000);
       unlockAchievement(achievementId);
     } else {
       console.error('window.showNotification is not available');
@@ -71,7 +71,7 @@ function checkFivePostsViewed(viewedCount: number) {
 
   if (viewedCount >= 5 && achievement && !achievement.unlocked) {
     if (typeof window !== 'undefined' && showNotification) {
-      showNotification(achievement.description, "achievement", 10000);
+      showNotification(achievement.name, "achievement", 10000);
       unlockAchievement(achievementId);
     } else {
       console.error('window.showNotification is not available');

@@ -8,8 +8,24 @@ export interface Achievement {
 }
 
 export const allAchievements: Achievement[] = [
-  { id: 'explorer', name: 'Explorer', description: 'Visiter 5 pages différentes', unlocked: false },
-  { id: 'all-posts-viewed', name: 'Tous les posts vus', description: 'Voir tous les posts du blog', unlocked: false },
+  { 
+    id: 'explorer', 
+    name: 'Curieux de nature', 
+    description: 'Vous avez cliqué sur au moins 5 projets pour en savoir plus sur les détails.', 
+    unlocked: false 
+  },
+  { 
+    id: 'all-posts-viewed', 
+    name: 'Explorateur Infatigable',
+    description: 'Vous avez parcouru l\'ensemble du portfolio et découvert tout les projets !', 
+    unlocked: false 
+  },
+  { 
+    id: 'all-success-won', 
+    name: 'Champion du portfolio',
+    description: 'Vous avez débloqué tous les succès ! Bravo ! (et oui c\'est tout ce qu\'il y a à gagner)', 
+    unlocked: false 
+  },
 ];
 
 export const achievements = writable<Achievement[]>([]);
