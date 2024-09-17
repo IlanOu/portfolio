@@ -1,7 +1,9 @@
 <script>
   import { onMount, createEventDispatcher, onDestroy } from 'svelte';
+  import Icon from '@iconify/svelte';
 
   export let message = '';
+  export let icon = '';
   export let type = 'info';
   export let duration = 3000;
   export let position = 0;
@@ -59,6 +61,10 @@
   class={`flex items-center fixed right-4 p-3 rounded-lg text-white text-sm z-50 max-w-xs break-words shadow-md transition-all duration-300 ease-in-out ${typeClass}`}
   style="opacity: {visible ? 1 : 0}; top: {1 + position * 4}rem; transform: translateX({visible ? '0' : '100%'});"
 >
-  <span class="mr-2 text-xl">{emojis[type]}</span>
+  {#if icon}
+    <Icon icon={icon} width="25" height="25" class="transition text-[var(--primary)]" />
+  {:else}
+    <span class="mr-2 text-xl">{emojis[type]}</span>
+  {/if}
   <span class="flex-1">{message}</span>
 </div>

@@ -1,30 +1,36 @@
 import { writable } from 'svelte/store';
+import { showNotification } from "@components/widget/notifications/notificationService";
+
 
 export interface Achievement {
   id: string;
   name: string;
   description: string;
   unlocked: boolean;
+  icon: string;
 }
 
 export const allAchievements: Achievement[] = [
   { 
     id: 'explorer', 
-    name: 'Curieux de nature', 
-    description: 'Vous avez cliqué sur au moins 5 projets pour en savoir plus sur les détails.', 
-    unlocked: false 
+    name: 'Fouineur professionnel', 
+    description: '5 projets visités ? Vous êtes en train de devenir accro...', 
+    unlocked: false,
+    icon: "fluent-emoji:eyes",
   },
   { 
     id: 'all-posts-viewed', 
     name: 'Explorateur Infatigable',
-    description: 'Vous avez parcouru l\'ensemble du portfolio et découvert tout les projets !', 
-    unlocked: false 
+    description: 'Vous avez lu tout mes projets ? Vous êtes sûr ??', 
+    unlocked: false,
+    icon: "fluent-emoji:detective",
   },
   { 
     id: 'all-success-won', 
-    name: 'Champion du portfolio',
-    description: 'Vous avez débloqué tous les succès ! Bravo ! (et oui c\'est tout ce qu\'il y a à gagner)', 
-    unlocked: false 
+    name: 'Complétiste compulsif',
+    description: 'Tous les succès débloqués... Vous n\'avez rien de mieux à faire ?', 
+    unlocked: false,
+    icon: "fluent-emoji:smiling-face-with-sunglasses",
   },
 ];
 
@@ -38,6 +44,11 @@ export function initAchievements() {
 }
 
 export function unlockAchievement(id: string) {
+  const achievement = getAchievement(id);
+  if (achievement){
+    showNotification(achievement.name, achievement.icon, "achievement", 10000);
+  }
+
   achievements.update(currentAchievements => {
     const updatedAchievements = currentAchievements.map(a => 
       a.id === id ? {...a, unlocked: true} : a

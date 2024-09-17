@@ -1,5 +1,4 @@
 import { getAllSortedPosts } from "@utils/content-utils";
-import { showNotification } from "@components/widget/notifications/notificationService";
 import { unlockAchievement, getAchievement } from "@utils/achievementStore";
 
 let totalPosts: number;
@@ -56,8 +55,7 @@ function checkAllPostsViewed(viewedCount: number) {
   const achievement = getAchievement(achievementId);
 
   if (viewedCount >= totalPosts && achievement && !achievement.unlocked) {
-    if (typeof window !== 'undefined' && showNotification) {
-      showNotification(achievement.name, "achievement", 10000);
+    if (typeof window !== 'undefined') {
       unlockAchievement(achievementId);
     } else {
       console.error('window.showNotification is not available');
@@ -70,8 +68,7 @@ function checkFivePostsViewed(viewedCount: number) {
   const achievement = getAchievement(achievementId);
 
   if (viewedCount >= 5 && achievement && !achievement.unlocked) {
-    if (typeof window !== 'undefined' && showNotification) {
-      showNotification(achievement.name, "achievement", 10000);
+    if (typeof window !== 'undefined') {
       unlockAchievement(achievementId);
     } else {
       console.error('window.showNotification is not available');

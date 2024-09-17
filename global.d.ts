@@ -1,6 +1,6 @@
 declare global {
     interface Window {
-        showNotification: (message: string, type?: string, duration?: number) => void;
+        showNotification: (message: string, icon?: string, type?: string, duration?: number) => void;
     }
 }
   

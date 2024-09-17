@@ -4,22 +4,17 @@
   
     let notifications = [];
   
-    function showNotification(message, type = 'info', duration = 3000) {
-    //   console.log('showNotification called:', { message, type, duration });
+    function showNotification(message, icon, type = 'info', duration = 3000) {
       const id = Date.now();
-      notifications = [...notifications, { id, message, type, duration }];
-    //   console.log('Current notifications:', notifications);
+      notifications = [...notifications, { id, message, icon, type, duration }];
       setTimeout(() => {
         notifications = notifications.filter(n => n.id !== id);
-        // console.log('Notification removed, remaining:', notifications);
       }, duration);
     }
   
     onMount(() => {
-    //   console.log('NotificationManager mounted');
       if (typeof window !== 'undefined') {
         window.showNotification = showNotification;
-        // console.log('showNotification function attached to window');
       }
     });
   </script>
