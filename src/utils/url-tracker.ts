@@ -1,10 +1,6 @@
 import { getAllSortedPosts } from "@utils/content-utils";
-
-declare global {
-  interface Window {
-    showNotification: (message: string, type?: string, duration?: number) => void;
-  }
-}
+import { unlockAchievement, getAchievement } from "@utils/achievement-store";
+import { isNightLogin } from "@utils/night-checker";
 
 let totalPosts: number;
 
@@ -32,6 +28,15 @@ export async function initUrlTracking() {
 
 function handleUrlChange() {
   const currentUrl = window.location.href;
+
+  // Achievement night visitor
+  const nightVisitorAchievement = getAchievement('night-visitor');
+  if (nightVisitorAchievement && !nightVisitorAchievement.unlocked) {
+    if (isNightLogin()){
+      unlockAchievement(nightVisitorAchievement.id);
+    }
+  }
+
   const postMatch = currentUrl.match(/\/posts\/([^\/]+)/);
   if (postMatch) {
     const postName = postMatch[1];
@@ -41,21 +46,35 @@ function handleUrlChange() {
       viewedPosts.push(postName);
       localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
       
-      checkAllPostsViewed(viewedPosts.length);
+      // Achievement explorer
+      const explorerAchievement = getAchievement('explorer');
+      if (explorerAchievement && !explorerAchievement.unlocked) {
+        checkFivePostsViewed(viewedPosts.length);
+      }
+      
+      // Achievement all posts
+      const allPostsAchievement = getAchievement('all-posts-viewed');
+      if (allPostsAchievement && !allPostsAchievement.unlocked) {
+        checkAllPostsViewed(viewedPosts.length);
+      }
     }
   }
 }
 
 function checkAllPostsViewed(viewedCount: number) {
-  // console.log(`Checking posts viewed: ${viewedCount} out of ${totalPosts}`);
-  if (viewedCount >= totalPosts) {
-    // console.log('All posts viewed, attempting to show notification');
-    if (typeof window !== 'undefined' && window.showNotification) {
-      window.showNotification("Tous les posts ont été vus !", "achievement", 10000);
-    } else {
-      console.error('window.showNotification is not available');
-    }
-  } else {
-    console.log(`You have viewed ${viewedCount} out of ${totalPosts} posts.`);
+  const achievementId = 'all-posts-viewed';
+  const achievement = getAchievement(achievementId);
+
+  if (viewedCount >= totalPosts && achievement && !achievement.unlocked) {
+    unlockAchievement(achievementId);
+  }
+}
+
+function checkFivePostsViewed(viewedCount: number) {
+  const achievementId = 'explorer';
+  const achievement = getAchievement(achievementId);
+
+  if (viewedCount >= 5 && achievement && !achievement.unlocked) {
+    unlockAchievement(achievementId);
   }
 }
