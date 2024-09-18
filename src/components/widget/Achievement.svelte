@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { achievements, isAchievementUnlocked, type Achievement } from '@utils/achievementStore';
+  import { achievements, isAchievementUnlocked, type Achievement } from '@utils/achievement-store';
   import Icon from '@iconify/svelte';
 
   export let achievementId: string;
@@ -25,7 +25,9 @@
       {#if achievement.icon}
         <Icon icon={achievement.icon} width="50" height="50" class="transition text-[var(--primary)]" />
       {/if}
-      <span class="text-2xl font-bold text-[var(--primary)]">{achievement.name}</span>
+      <span class="block text-2xl text-90 font-bold">
+        {achievement.name}
+      </span>
     </div>
     <span class="transition text-75 pr-4 text-gray-700 dark:text-gray-300">
       {achievement.description}

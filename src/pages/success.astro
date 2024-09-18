@@ -2,7 +2,7 @@
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import {i18n} from "@i18n/translation";
 import I18nKey from "@i18n/i18nKey";
-import { allAchievements } from "@utils/achievementStore";
+import { allAchievements } from "@utils/achievement-store";
 import Achievement from "@components/widget/Achievement.svelte";
 ---
 
@@ -15,7 +15,7 @@ import Achievement from "@components/widget/Achievement.svelte";
 </MainGridLayout>
 
 <script>
-  import { initAchievements } from '@utils/achievementStore';
+  import { initAchievements } from '@utils/achievement-store';
   import { initUrlTracking } from '@utils/url-tracker';
   
   // Initialize achievements and URL tracking on the client side

@@ -13,7 +13,6 @@ import Markdown from "@components/misc/Markdown.astro";
 import path from "path";
 import {profileConfig} from "../../config";
 import {formatDateToYYYYMMDD} from "../../utils/date-utils";
-import NotificationManager from '../../components/widget/notifications/NotificationManager.svelte';
 
 
 export async function getStaticPaths() {
@@ -134,8 +133,6 @@ const jsonLd = {
             </div>}
         </a>
     </div>
-
-    <NotificationManager client:load />
 
     <script>
         import { initUrlTracking } from '/src/utils/url-tracker';
