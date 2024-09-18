@@ -1,6 +1,5 @@
 import { writable } from 'svelte/store';
-// import { showNotification } from "@components/widget/notifications/notificationService";
-
+import { notifications } from '@utils/notifications-store';
 
 export interface Achievement {
   id: string;
@@ -46,7 +45,14 @@ export function initAchievements() {
 export function unlockAchievement(id: string) {
   const achievement = getAchievement(id);
   if (achievement){
-    // showNotification(achievement.name, achievement.icon, "achievement", 10000);
+    
+    notifications.add({
+      message: achievement.name,
+      type: 'success',
+      timeout: 10000,
+      icon: achievement.icon,
+    });
+
   }
 
   achievements.update(currentAchievements => {
