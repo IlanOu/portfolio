@@ -31,6 +31,13 @@ export const allAchievements: Achievement[] = [
     unlocked: false,
     icon: "fluent-emoji:smiling-face-with-sunglasses",
   },
+  {
+    id: 'night-visitor',
+    name: 'Visiteur nocturne',
+    description: '',
+    unlocked: false,
+    icon: "fluent-emoji:sleeping-face",
+  }
 ];
 
 export const achievements = writable<Achievement[]>([]);

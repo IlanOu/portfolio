@@ -25,9 +25,9 @@
       'error': 'Erreur'
     }[notification.type];
 
-  </script>
+</script>
   
-  {#if visible}
+{#if visible}
     <div 
       class="rounded-xl cursor-pointer transition bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:bg-[var(--enter-btn-bg-active)] active:scale-95 btn-regular shadow-md p-4 mb-4 flex justify-between items-center max-w-sm"
       in:fly="{{ y: 20, duration: 300, opacity: 0 }}"
@@ -54,4 +54,4 @@
         ×
       </button>
     </div>
-  {/if}
+{/if}

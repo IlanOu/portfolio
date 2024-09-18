@@ -1,5 +1,6 @@
 import { getAllSortedPosts } from "@utils/content-utils";
 import { unlockAchievement, getAchievement } from "@utils/achievement-store";
+import { isNightLogin } from "@utils/night-checker";
 
 let totalPosts: number;
 
@@ -27,6 +28,15 @@ export async function initUrlTracking() {
 
 function handleUrlChange() {
   const currentUrl = window.location.href;
+
+  // Achievement night visitor
+  const nightVisitorAchievement = getAchievement('night-visitor');
+  if (nightVisitorAchievement && !nightVisitorAchievement.unlocked) {
+    if (isNightLogin()){
+      unlockAchievement(nightVisitorAchievement.id);
+    }
+  }
+
   const postMatch = currentUrl.match(/\/posts\/([^\/]+)/);
   if (postMatch) {
     const postName = postMatch[1];
@@ -36,13 +46,14 @@ function handleUrlChange() {
       viewedPosts.push(postName);
       localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
       
+      // Achievement explorer
       const explorerAchievement = getAchievement('explorer');
-      const allPostsAchievement = getAchievement('all-posts-viewed');
-      
       if (explorerAchievement && !explorerAchievement.unlocked) {
         checkFivePostsViewed(viewedPosts.length);
       }
       
+      // Achievement all posts
+      const allPostsAchievement = getAchievement('all-posts-viewed');
       if (allPostsAchievement && !allPostsAchievement.unlocked) {
         checkAllPostsViewed(viewedPosts.length);
       }
@@ -55,11 +66,7 @@ function checkAllPostsViewed(viewedCount: number) {
   const achievement = getAchievement(achievementId);
 
   if (viewedCount >= totalPosts && achievement && !achievement.unlocked) {
-    if (typeof window !== 'undefined') {
-      unlockAchievement(achievementId);
-    } else {
-      console.error('window.showNotification is not available');
-    }
+    unlockAchievement(achievementId);
   }
 }
 
@@ -68,10 +75,6 @@ function checkFivePostsViewed(viewedCount: number) {
   const achievement = getAchievement(achievementId);
 
   if (viewedCount >= 2 && achievement && !achievement.unlocked) {
-    if (typeof window !== 'undefined') {
-      unlockAchievement(achievementId);
-    } else {
-      console.error('window.showNotification is not available');
-    }
+    unlockAchievement(achievementId);
   }
 }
