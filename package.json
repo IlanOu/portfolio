@@ -61,8 +61,6 @@
     "@types/markdown-it": "^14.1.1",
     "@types/mdast": "^4.0.4",
     "@types/sanitize-html": "^2.11.0",
-    "flowbite": "^2.5.1",
-    "flowbite-svelte": "^0.46.16",
     "remark-github-admonitions-to-directives": "^1.0.5",
     "sass": "^1.77.6",
     "stylus": "^0.63.0"
