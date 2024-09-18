@@ -3,7 +3,8 @@
     import { fade, fly } from 'svelte/transition';
     import type { Notification } from '@utils/notifications-store';
     import Icon from '@iconify/svelte';
-  
+    import {url} from "@utils/url-utils";
+
     export let notification: Notification;
   
     const dispatch = createEventDispatcher();
@@ -14,8 +15,8 @@
     });
   
     function close() {
-      visible = false;
-      setTimeout(() => dispatch('close', notification.id), 300);
+        visible = false;
+        setTimeout(() => dispatch('close', notification.id), 300);
     }
   
     $: typeText = {
@@ -28,6 +29,7 @@
 </script>
   
 {#if visible}
+<a href={url("success/")}>
     <div 
       class="rounded-xl cursor-pointer transition bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:bg-[var(--enter-btn-bg-active)] active:scale-95 btn-regular shadow-md p-4 mb-4 flex justify-between items-center max-w-sm"
       in:fly="{{ y: 20, duration: 300, opacity: 0 }}"
@@ -48,10 +50,6 @@
           </p>
         </div>
       </div>
-      <button 
-        on:click={close}
-        class="transition-colors duration-200 text-xl ml-2">
-        ×
-      </button>
     </div>
+</a>
 {/if}

@@ -20,7 +20,7 @@ export const allAchievements: Achievement[] = [
   { 
     id: 'all-posts-viewed', 
     name: 'Explorateur Infatigable',
-    description: 'Vous avez lu tout mes projets ? Vous êtes sûr ??', 
+    description: 'Vous avez vraiment lu tous mes projets ? Vous êtes sûr ??', 
     unlocked: false,
     icon: "fluent-emoji:detective",
   },
@@ -34,8 +34,8 @@ export const allAchievements: Achievement[] = [
   {
     id: 'night-visitor',
     name: 'Visiteur nocturne',
-    description: '',
-    unlocked: false,
+    description: 'Des problèmes de sommeil ou un fan inconditionnel ?',
+    unlocked: true,
     icon: "fluent-emoji:sleeping-face",
   }
 ];

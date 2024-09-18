@@ -74,7 +74,7 @@ function checkFivePostsViewed(viewedCount: number) {
   const achievementId = 'explorer';
   const achievement = getAchievement(achievementId);
 
-  if (viewedCount >= 2 && achievement && !achievement.unlocked) {
+  if (viewedCount >= 5 && achievement && !achievement.unlocked) {
     unlockAchievement(achievementId);
   }
 }
