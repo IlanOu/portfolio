@@ -99,6 +99,12 @@ importers:
       svelte:
         specifier: ^4.2.18
         version: 4.2.18
+      svelte-toast:
+        specifier: ^1.0.0
+        version: 1.0.0
+      svelte-toasts:
+        specifier: ^1.1.2
+        version: 1.1.2
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.4
@@ -4297,6 +4303,12 @@ packages:
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
+
+  svelte-toast@1.0.0:
+    resolution: {integrity: sha512-i6XHJgCgyAYmobEXS78iei6cQBLYIDgk1rrj65wM0sIi4RzCl/9205sVruZT7zUf0N2xsLkeN2rFh9inlRJXEg==}
+
+  svelte-toasts@1.1.2:
+    resolution: {integrity: sha512-m+yL4eEKXyJoyjTYaH1j1GFwF0Pi8YDqnVfwWPDmwi4712iZesv+TNCmToSNlav3R5Vkmc8ZBRkT8DOcu3sywQ==}
 
   svelte2tsx@0.7.10:
     resolution: {integrity: sha512-POOXaTncPGjwXMj6NVSRvdNj8KFqqLabFtXsQal3WyPy4X5raGsiDST2+ELhceKwfHk79/hR3qGUeU7KxYo4vQ==}
@@ -9764,6 +9776,10 @@ snapshots:
   svelte-hmr@0.16.0(svelte@4.2.18):
     dependencies:
       svelte: 4.2.18
+
+  svelte-toast@1.0.0: {}
+
+  svelte-toasts@1.1.2: {}
 
   svelte2tsx@0.7.10(svelte@4.2.18)(typescript@5.5.2):
     dependencies:
