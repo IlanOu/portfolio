@@ -1,5 +1,5 @@
 import { getAllSortedPosts } from "@utils/content-utils";
-import { unlockAchievement, getAchievement } from "@utils/achievementStore";
+import { unlockAchievement, getAchievement } from "@utils/achievement-store";
 
 let totalPosts: number;
 
@@ -67,7 +67,7 @@ function checkFivePostsViewed(viewedCount: number) {
   const achievementId = 'explorer';
   const achievement = getAchievement(achievementId);
 
-  if (viewedCount >= 5 && achievement && !achievement.unlocked) {
+  if (viewedCount >= 2 && achievement && !achievement.unlocked) {
     if (typeof window !== 'undefined') {
       unlockAchievement(achievementId);
     } else {

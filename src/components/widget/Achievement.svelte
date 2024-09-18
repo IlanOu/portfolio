@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { achievements, isAchievementUnlocked, type Achievement } from '@utils/achievementStore';
+  import { achievements, isAchievementUnlocked, type Achievement } from '@utils/achievement-store';
   import Icon from '@iconify/svelte';
 
   export let achievementId: string;
