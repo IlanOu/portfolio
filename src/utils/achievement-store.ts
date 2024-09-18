@@ -35,7 +35,7 @@ export const allAchievements: Achievement[] = [
     id: 'night-visitor',
     name: 'Visiteur nocturne',
     description: 'Des problèmes de sommeil ou un fan inconditionnel ?',
-    unlocked: true,
+    unlocked: false,
     icon: "fluent-emoji:sleeping-face",
   }
 ];
