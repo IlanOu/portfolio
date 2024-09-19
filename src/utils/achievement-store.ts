@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store';
 import { notifications } from '@utils/notifications-store';
+// import { boolean } from 'astro:schema';
 
 export interface Achievement {
   id: string;
@@ -59,7 +60,6 @@ export function unlockAchievement(id: string) {
       timeout: 10000,
       icon: achievement.icon,
     });
-
   }
 
   achievements.update(currentAchievements => {
@@ -71,6 +71,14 @@ export function unlockAchievement(id: string) {
     }
     return updatedAchievements;
   });
+
+
+  if (checkAllAchievementsUnlocked()){
+    const explorerAchievement = getAchievement('all-success-won');
+    if (explorerAchievement && !explorerAchievement.unlocked) {
+      unlockAchievement(explorerAchievement.id);
+    }
+  }
 }
 
 export function isAchievementUnlocked(id: string): boolean {
@@ -87,4 +95,15 @@ export function getAchievement(id: string): Achievement | undefined {
     achievement = currentAchievements.find(a => a.id === id);
   })();
   return achievement;
+}
+
+function checkAllAchievementsUnlocked() {
+  let achievement: Achievement | undefined;
+  let unlockedItems:Achievement[] = [];
+  achievements.subscribe(currentAchievements => {
+    unlockedItems = currentAchievements.filter(a => a.unlocked);
+  })();
+
+  console.log("checkAllAchievementsUnlocked : ", unlockedItems.length > 1);
+  return unlockedItems.length > 1;
 }
