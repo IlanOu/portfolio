@@ -98,12 +98,13 @@ export function getAchievement(id: string): Achievement | undefined {
 }
 
 function checkAllAchievementsUnlocked() {
-  let achievement: Achievement | undefined;
+  let allAchievements: Achievement[] = [];
   let unlockedItems:Achievement[] = [];
   achievements.subscribe(currentAchievements => {
+    allAchievements.push(...currentAchievements);
     unlockedItems = currentAchievements.filter(a => a.unlocked);
   })();
 
-  console.log("checkAllAchievementsUnlocked : ", unlockedItems.length > 1);
-  return unlockedItems.length > 1;
+  console.log("checkAllAchievementsUnlocked : ", unlockedItems.length <= 1);
+  return allAchievements.length - unlockedItems.length <= 1;
 }
