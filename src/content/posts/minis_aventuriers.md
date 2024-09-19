@@ -20,7 +20,7 @@ Ce projet est en développement, il n'y a pas encore de version publique.
 
 ## Description
 
-"Les Minis Aventuriers" est un jeu de collaboration où l'on incarne deux petits personnages qui sont attachés entre eux par une corde. Leur objectif est de retrouver le Yéti dans une grande chaîne montagneuse. Tout au long de l'aventure, les joueurs devront travailler ensemble pour résoudre des énigmes et des puzzles.
+`Les Minis Aventuriers` est un jeu de collaboration où l'on incarne deux petits personnages qui sont attachés entre eux par une corde. Leur objectif est de retrouver le Yéti dans une grande chaîne montagneuse. Tout au long de l'aventure, les joueurs devront travailler ensemble pour résoudre des énigmes et des puzzles.
 
 ## Caractéristiques
 

@@ -7,7 +7,7 @@
   }
 </script>
 
-<div class="notifications flex row gap-1">
+<div class="notifications flex flex-col gap-1">
   {#each $notifications as notification (notification.id)}
     <Notification {notification} on:close={closeNotification} />
   {/each}
