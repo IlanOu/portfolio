@@ -12,35 +12,39 @@ draft: false
 
 ## Pourquoi ce projet ?
 
-Ce projet est mon premier projet en équipe avec [Mathieu](https://github.com/math-pixel).
-Il créait des jeux sur **Unity** et moi je dessinais pas mal.
-Je voulais apprendre à faire de la **3D** alors il m'a proposé de créer un jeu avec lui.
-Moi je faisait des modèles, les personnages, les assets, et lui les ajoutais au jeu qu'il développait. C'était génial !
-<br>
-Ça m'a permit de me familiariser avec **Blender**, Unity, l'animation 3D, le monde du jeu vidéo, les bases du sound design mais surtout, ça m'a appris à chercher des ressources sur internet.
+**The Rook Master** marque mon premier projet en équipe, réalisé avec [Mathieu](https://github.com/math-pixel).  
+Alors qu'il créait des jeux sur **Unity**, j'étais en charge du dessin et de la modélisation.  
+Ce projet m'a permis de me plonger dans la 3D avec **Blender**, d'apprendre l'animation, de découvrir le monde du jeu vidéo et même d'explorer les bases du sound design.  
+Mais surtout, il m'a appris à rechercher et à exploiter des ressources en ligne, le tout dans une ambiance collaborative et ambitieuse.
 
-## Notre idée
+---
 
-L'idée principale vient du même principe que l'anime DanMachi. L'histoire se passe autour de la tour de Babel, récemment terminée, qui renferme des monstres. Plus on monte les étages, plus les monstres deviennent dangereux mais plus les récompenses sont grandes.
-<br>
-Notre idée était de créer un jeu vidéo basé sur ce concept, mais avec des personnages provenant d'univers complètement différents ! On voulait inclure des personnages de mangas, de films de super-héros, de romans policiers, et plus encore.
-<br>
-On était deux débutants avec de grandes ambitions par rapport à nos capacités... Au moins, on n'avait pas peur !
+## L'idée du jeu
 
+Inspirée par l'anime *DanMachi*, l'histoire se déroule autour de la tour de Babel, récemment achevée, qui abrite des monstres.  
+Plus on gravit les étages, plus les dangers augmentent, mais les récompenses aussi !  
+Notre ambition était de créer un jeu où des personnages venus d'univers très variés – mangas, films de super-héros, romans policiers, etc. – se retrouvent dans cette aventure.
 
-Voilà une des illustrations que j'ai fais pour le jeu
+> Deux débutants, une grande ambition et surtout, aucune peur d'expérimenter !
 
-![](TRM_background.png)
+---
 
-Mathieu a travaillé sur la carte avec Unity et la construction de terrains. On voit aussi la tour au centre, c'est un modèle 3D que j'ai fais
+## Illustrations du projet
 
-![](TRM_map.png)
+Voici quelques visuels issus de notre collaboration :
 
-J'ai aussi fais mon premier personnage sur Blender, puis Mathieu l'a animé et mis dans le jeu. 
-<br>
-Ces modèles que j'ai fais ont de nombreux défauts (sans parler visuellement) comme des faces qui ne sont pas réellements reliées entre elles, qu'aucune face n'est triangulé donc on pouvait rapidement se retrouver avec pas mal de bugs graphiques en jeu.
+- **Background du jeu**  
+  ![](TRM_background.png)
 
-![](TRM_mob.png)
+- **La carte et la tour**  
+  Mathieu a utilisé Unity pour construire les terrains et intégrer la tour, un modèle 3D que j'ai réalisé.  
+  ![](TRM_map.png)
 
-Ce début m'a permit d'avoir une experience dans la modélisation 3D, j'ai appris beaucoup de choses et c'est aussi ce qui m'a permit de me lancer dans l'apprentissage du développement de jeux vidéos et par la suite du Web et Python.
-<br>
+- **Premier personnage**  
+  J'ai modélisé mon premier personnage sur Blender. Mathieu l'a ensuite animé et intégré au jeu.  
+  (Note : ces modèles présentent encore quelques défauts techniques, comme des faces non reliées ou non triangulées, ce qui causait des bugs graphiques en jeu.)  
+  ![](TRM_mob.png)
+
+---
+
+Cette première expérience a été déterminante pour moi : elle a jeté les bases de ma passion pour la modélisation 3D, le développement de jeux vidéo, et même pour mon intérêt ultérieur pour le Web et Python.

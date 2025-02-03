@@ -12,20 +12,21 @@ draft: false
 
 ## Description du projet
 
-Ce deuxième TP de Javascript est un jeu à faire à deux.
+**Rockets** est un jeu à deux joueurs développé dans le cadre d'un TP en JavaScript.  
+Chaque joueur incarne une fusée : l'une bleue, l'autre rouge. Le but est simple : être le premier à atteindre Mars pour remporter la manche !  
+À chaque victoire, le joueur gagne des supporters (sous forme de bananes dansantes, évidemment !) et un point.  
+Le jeu n'a pas de limite de points, ce qui en fait une aventure infinie.
 
-Il y a deux fusées, une par joueur, une bleu et une rouge, la première à arriver sur Mars a gagné. Il n'y a pas de temps, on joue contre l'autre joueur.
-À chaque manche remportée, le joueur vainqueur gagne des supporters (qui sont des bananes qui dancent, *évidemment, quoi de plus normal*) et gagne aussi un point.
-Il n'y a pas de limite de points, le jeu est infini.
+---
 
-## qu'est-ce que je devais faire ?
+## Les objectifs du TP
 
-La demande était de créer un jeu pour deux joueurs :
+Le défi était de créer un jeu pour deux joueurs avec les règles suivantes :
 
-> - Chaque joueur tape sur une touche du clavier <br/>
-> - Une jauge augmente.<br/>
-> - Le premier à 100 points gagne. <br/>
-> - Si l'un des joueurs arrête de taper sur sa touche, la jauge redescend. <br>
-> - Ajouter du style ! <br/>
+- **Interaction au clavier :** Chaque joueur doit taper sur une touche spécifique.
+- **Barre de progression :** Une jauge augmente à mesure que l'on tape.
+- **Objectif :** Le premier joueur à atteindre 100 points remporte la manche.
+- **Dynamisme :** Si un joueur cesse de taper, sa jauge redescend.
+- **Design :** Ajouter du style pour rendre le jeu attractif.
 
-![photo de l'objet](rockets-gameplay.gif)
+![Gameplay Rockets](rockets-gameplay.gif)

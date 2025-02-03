@@ -15,27 +15,14 @@ draft: false
 :::important[TL;DR]
 <br>
 <details>
-<summary> Pour résumer </summary> 
+<summary>En résumé</summary> 
 
-### Qu'est-ce qu'on devait faire ?
+### Qu'est-ce que c'est ?
 
-"Le Bouillon Culte", notre projet de fin d'année, est un objet connecté conçu pour faciliter le quotidien des personnes âgées en EHPAD. En collaborant avec [La Fondation du Parmelan](https://fondationduparmelan.org/), nous avons créé un jeu de société qui renforce les liens entre les résidents et stimule leur mémoire.
-
-Le jeu pose des questions de culture générale sous différentes formes et se présente avec une carte de France interactive, des boutons de réponse et un écran avec une enceinte.
+"Le Bouillon Culte" est notre projet de fin d'année : un **objet connecté** qui stimule la mémoire des résidents en EHPAD grâce à un jeu de société interactif.  
+Collaborant avec [La Fondation du Parmelan](https://fondationduparmelan.org/), nous avons conçu un jeu mêlant questions de culture générale et challenges ludiques, avec une carte interactive, boutons, écran et enceinte.
 
 ![photo de l'objet](LBC_photo_ouvert.png)
-
-### Le parcours des développeurs
-
-Nous avons opté pour l'utilisation d'un Raspberry Pi et d'un ESP32 pour gérer les capteurs RFID et les boutons. Après avoir réussi à recevoir les données des capteurs, nous avons développé le système d'affichage et la lecture audio.
-
-Ensuite, nous avons créé un système pour afficher les questions et les réponses à partir de fichiers Json. Nous avons également développé 6 mini-jeux différents.
-
-Pour encourager les joueurs à rejouer, nous avons mis en place un système de points et un nombre de questions à répondre pour finir une partie.
-
-### Pour conclure
-
-Bien que nous aurions aimé avoir un meilleur rendu de l'objet, nous sommes fiers du prototype que nous avons créé. Ce projet m'a personnellement permis d'apprendre la POO et de clarifier ce concept.
 </details>
 :::
 
@@ -52,136 +39,81 @@ Bien que nous aurions aimé avoir un meilleur rendu de l'objet, nous sommes fier
 - [Billie Lou AZZANO](http://www.linkedin.com/in/billie-lou-azzano-066330258) (graphiste)
 - Théotime NOBLET (graphiste)
 - [Anthony PELAZ](https://github.com/anthony74742) (développeur)
-- [Ilan OUTHIER](https://github.com/IlanOu) (développeur)(moi)
+- [Ilan OUTHIER](https://github.com/IlanOu) (développeur) *(moi)*
 
-## C'était quoi l'objectif ?
+---
 
-Durant la deuxième partie de notre deuxième année de bachelor, nous avons travaillé sur "Le Bouillon Culte", notre projet de fin d'année.
-<br>
-La demande était la suivante :
-> Comment faciliter le quotidien des personnes âgées en EHPAD ?
+## L'objectif
 
-Et l'objectif était de concevoir un **objet connecté** !
+En deuxième partie de notre bachelor, on s'est lancé dans le défi suivant :  
+> **Comment faciliter le quotidien des personnes âgées en EHPAD ?**
 
-## Et qu'est-ce qu'on a fait ?
+La réponse : imaginer un **objet connecté** ludique pour renforcer les liens et stimuler la mémoire autour de la culture française des années 60 à 80.
 
-Pour répondre à cette demande, nous sommes allés voir [La Fondation du Parmelan](https://fondationduparmelan.org/) qui est l'EHPAD avec qui nous avons travaillé tout au long de notre projet.
+---
 
-Durant nos entretiens avec les personnes âgées, nous avons pu remarquer qu'elles passaient du temps à jouer aux jeux de société ou aux cartes.
-<br>
-Nous avons aussi remarqué que plusieurs résidents avaient des troubles de la mémoire, ils oubliaient des choses, d'autres avaient peur que l'EHPAD accueille trop de monde et qu'il n'y aurait plus vraiment de liens entre les résidents.
+## Le concept du jeu
 
-Alors nous avons réfléchi à un objet pour à la fois lier les résidents entre eux et leur faire travailler la mémoire sur un sujet qu'ils aiment !
-<br>
-C'est comme ça qu'est née l'idée du Bouillon Culte !
-<br>
-C'est un jeu de société qui demande aux joueurs d'avoir des connaissances sur chaque région de France dans les années 1960 à 1980.
+On a rencontré [La Fondation du Parmelan](https://fondationduparmelan.org/) et observé que les résidents adoraient les jeux de société. Du coup, l'idée était de créer un jeu interactif qui les rassemble et les fait réfléchir.
 
-C'est comme ça que nous avons imaginé notre nom ! Pour faire référence à l'émission TV "Bouillon de culture" mais aussi pour exprimer un mélange de connaissances et pour faire un jeu de mots sur "le bouillon cube".
+### Les mini-jeux proposés
 
-Notre jeu de société pose des questions de culture générale aux joueurs sous différentes formes :
+- **Quelle est cette musique ?**  
+  Un blind test pour retrouver la bonne musique.
+- **Où c'est ?**  
+  Identifier un lieu à partir d'une description.
+- **Devine la suite**  
+  Compléter les paroles d'une chanson.
+- **Qui suis-je ?**  
+  Deviner un personnage historique à partir d'indices.
+- **Culture générale**  
+  Des questions classiques sur divers sujets.
+- **Trois images**  
+  Relier trois images pour deviner un lieu ou une recette.
 
-- **"Quelle est cette musique ?"** 
-  <br>C'est un blind test : l'objectif est de retrouver la bonne musique qui a été passée.
-- **"Où c'est ?"**
-  <br>Il faut retrouver un lieu à partir d'une description
-- **"Devine la suite"**
-  <br>Une musique est passée, il faut trouver la suite des paroles
-- **"Qui suis-je ?"**
-  <br>Avec une description, retrouver le bon personnage historique
-- **"Culture générale"**
-  <br>Des questions de culture générale
-- **"Trois images"**
-  <br>Quelle recette peut-on faire avec les 3 ingrédients des images ou alors, avec les 3 images, il faut retrouver le bon endroit
+### L'objet en lui-même
 
-Le jeu se présente de la façon suivante :
-<br>
-Sur la première partie de l'objet, à gauche, il y a une carte de France avec les régions creusées pour pouvoir placer le pion dessus.
-<br>
-À droite, il y a 1 bouton rouge pour faire tourner la roue, et 4 boutons pour répondre aux questions.
+- **Partie gauche :** Une carte de France pour positionner le pion.
+- **Partie droite :** Un bouton rouge pour tourner la roue et quatre boutons pour répondre.
+- **Deuxième partie :** Un écran pour afficher les questions et une enceinte pour la lecture audio.
 
-Sur la deuxième partie de l'objet, il y a un écran et une enceinte.
+| ![photo de l'objet](LBC_photo_ouvert.png) | ![3D de l'objet](LBC_3D_ouvert.png) |
+|:-----------------------:|:-----------------------:|
+| **Photo de l'objet** | **3D de l'objet** |
 
-![photo de l'objet](LBC_photo_ouvert.png)
+Le déroulé est simple :
 
-Voilà une représentation de l'objet "parfait" qu'on aurait aimé pouvoir faire :
+1. **Choix du nombre de questions.**
+2. **Tour de roue** pour sélectionner un mode de jeu.
+3. **Sélection de la région** sur la carte.
+4. **Affichage de la question** et réponse via les boutons.
+5. **Vérification** de la réponse et attribution d’un point.
+6. **Répétition** jusqu’à la fin de la partie et affichage du score final.
 
-![3D de l'objet](LBC_3D_ouvert.png)
+<iframe src="https://www.youtube.com/embed/lY2ekTzoxIg?si=z9Esf8ow9zbRBDUV" width="600" height="350"></iframe>
 
-Tout au long du jeu, il y a un présentateur qui accompagne les joueurs.
-
-Le parcours est le suivant :
-
-1. **Choix du nombre de questions :** Le joueur décide combien de questions il veut tenter de répondre.
-
-2. **Tourner la roue :** Avec une simple pression sur le bouton rouge, la roue tourne et le mode de jeu est tiré au sort.
-
-3. **Sélection de la région :** Le joueur choisit la région sur laquelle il souhaite être interrogé.
-
-4. **Affichage de la question :** La question s'affiche à l'écran et le joueur utilise l'un des quatre boutons pour donner sa réponse.
-
-5. **Vérification de la réponse :** La réponse du joueur est vérifiée. Si elle est correcte, un point est accordé ; sinon, il passe à la prochaine question.
-
-6. **Recommencement :** Le processus se répète pour chaque nouvelle question.
-
-À la fin de la partie, une fois que toutes les questions ont été répondues, le joueur découvre son score final. Il peut ensuite recommencer une nouvelle partie pour tenter d'améliorer son score !
-
-<iframe src="https://www.youtube.com/embed/lY2ekTzoxIg?si=z9Esf8ow9zbRBDUV" width=600 height=350/>
-
-.
+---
 
 ## Le parcours des développeurs
 
-Pour commencer, on a réfléchi aux technologies dont on aurait besoin.
-<br>
-On s'est vite aperçu que tous les capteurs RFID et les boutons qu'on voulait utiliser risquaient de surcharger le Raspberry Pi.
-Du coup, on a opté pour l'ajout d'ESP32 pour épauler le Raspberry et éviter qu'il ne soit débordé.
-<br>
-Après ça, nous avons testé l'ajout de certaines fonctionnalités qu'on voulait intégrer.
-<br>
-Par exemple, on a travaillé sur les boutons, les capteurs RFID, etc.
-<br>
-Anthony s'est concentré sur les tests avec un ESP32, pendant que je m'occupais des tests sur le Raspberry Pi.
+Pour éviter de surcharger le Raspberry Pi avec les capteurs RFID et boutons, nous avons ajouté un **ESP32** pour gérer certaines tâches.  
+Quelques points clés :
 
-> Mise en place Raspberry Pi : Check ✔ <br>
-> Mise en place ESP32 : Check ✔ <br>
-> Réception des données des capteurs : Check ✔ <br>
+- **Connexion des capteurs et boutons :**  
+  Raspberry Pi et ESP32 en parfaite harmonie.
+- **Affichage et audio :**  
+  Un écran web et une enceinte pour une expérience immersive.
+- **Gestion des questions :**  
+  Lecture de fichiers JSON pour alimenter 6 mini-jeux différents.
+- **Challenge supplémentaire :**  
+  Un système de points et un nombre défini de questions pour inciter les joueurs à rejouer.
 
-Une fois qu'on a réussi à recevoir les données des capteurs, on s'est attaqués au traitement de ces infos et à la conception du parcours utilisateur.
-<br>
-On a alors branché un écran et développé le système d'affichage.
-Pour faciliter la partie design plus tard, on a opté pour un affichage sur une page web.
-<br>
-On a aussi ajouté une enceinte et fait un système pour lire les fichiers audio.
+> **Bon à savoir :** Un grand merci à Théotime pour sa patience et son aide sur les 60 questions !
 
-> Affichage : Check ✔ <br>
-> Lecture audio : Check ✔ <br>
-
-Ensuite, il fallait pouvoir afficher les différentes questions et réponses de notre jeu, alors nous avons créé un système qui lit des fichiers Json et les affiche sur l'écran.
-<br>
-*(D'ailleurs merci à Théotime qui a énormément aidé pour le remplissage des fichiers Json, il y avait environ 60 questions contenant chacune : des réponses + des descriptions + des images + des audios... Il est très courageux et patient !)*
-
-Nous avons dû faire 6 systèmes car nous avions 6 mini-jeux différents.
-
-> Système de questions/réponses : Check ✔ <br>
-> 6 mini-jeux : Check ✔ <br>
-
-Par la suite, en testant et en faisant tester notre objet, nous avons remarqué plusieurs choses :
-
-- L'idée est très cool, elle plaît à beaucoup de gens
-- Mais les joueurs ne répondent qu'à une question, ensuite ils s'en vont (surtout les personnes âgées)
-
-Alors on a réfléchi encore une fois, à une façon de donner envie aux joueurs de rejouer.
-<br>
-On a donc fait un système de points et un nombre de questions à répondre pour finir une partie, ça permet de challenger les joueurs !
-
-> Donner envie aux joueurs de rejouer : Check ✔ <br>
-
-Et voilà ! C'est en gros notre parcours du côté des devs (au niveau du code) ! <br>
-Il y a plusieurs tâches que nous avons faites en plus mais que je n'ai pas expliquées ici pour ne parler que des points clés du développement (comme par exemple un système de mise en veille de l'objet)
+---
 
 ## Pour conclure
 
-Pour finir, on aurait aimé pouvoir avoir un meilleur rendu de l'objet mais par faute de temps et de moyens nous n'avons pu faire qu'un prototype (ce qui était aussi la demande initiale) mais ous sommes quand même très fier du résultat !
+Même si le rendu final de l'objet n'est qu'un prototype (la contrainte du temps et des moyens nous a limité), nous sommes super fiers du résultat.  
+Ce projet m'a permis de plonger dans la POO et de vraiment comprendre ce concept, le tout en s'amusant !
 
-Ce projet m'a personnellement permit d'apprendre la POO, c'est un concept qui était un peu flou au début mais qui maintenant est clair !
