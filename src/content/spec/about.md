@@ -3,7 +3,7 @@
 Salut !
 Ravi de vous voir ici !
 
-Je m'appelle **Ilan Outhier**, j'ai 19 ans et je suis un développeur web passionné basé à **Annecy**.
+Je m'appelle **Ilan Outhier**, j'ai 20 ans et je suis un développeur web passionné basé à **Annecy**.
 
 En ce moment, je suis en troisième année de **Bachelor en Développement Web à l'École By CCI**, anciennement Gobelins. Une formation captivante qui me plonge dans l'univers du développement web, mobile et du design.
 <br/>
