@@ -4,21 +4,19 @@ published: 2023-01-18
 description: Une nouvelle version un peu mieux pensée
 tags: [HTML, CSS, JS, 3D]
 category: Projets Personnels
-draft: true
+draft: false
 version: 2.0.0
 ---
 
-<!-- # Portfolio v1 -->
+<!-- # Portfolio v2 -->
 
-Après la version initiale de mon portfolio, il était temps de passer à l'étape supérieure. J'ai commencé par travailler dessus chez moi, avec l'idée d'avoir quelque chose de plus épuré et visuellement plus soigné pour présenter mes projets.
+Après ma première version de portfolio, il était temps de passer à la vitesse supérieure. J'ai d'abord travaillé dessus en solo, dans l'optique de créer un espace plus épuré et soigné pour présenter mes projets.
 
-Ensuite, lors du deuxième workshop à l'école où nous devions créer un portfolio numérique, j'ai pu reprendre ce projet. J'y ai ajouté des éléments en 3D et corrigé certains problèmes. C'était une belle opportunité de l'améliorer davantage.
+Puis, lors du deuxième workshop à l'école dédié à la création d'un portfolio numérique, j'ai repris ce projet pour y ajouter des éléments en 3D et corriger plusieurs problèmes techniques. Cette mise à jour a marqué une étape importantedans mon apprentissage. C'était un pas de plus vers la maîtrise du développement web, en combinant mes compétences techniques avec un souci du design.
 
-Cette version 1 marquait une progression par rapport à mes débuts. C'était un pas de plus vers la maîtrise du développement web, en combinant mes compétences techniques avec un souci du design.
+J'ai également profité de l'occasion pour tester de nouvelles technologies découvertes avant même d'arriver à l'école, comme **ThreeJS** pour la 3D sur le web. Par exemple, j'ai modélisé une carte de visite que j'ai intégrée directement dans mon portfolio.
 
-J'avais pu tester des technos que je ne connaissais pas avant d'arriver à l'école, comme ThreeJS qui permet de faire de la 3D en web. J'ai modélisé une carte de visite que j'ai intégré sur mon portfolio. 
-
-Le style était plus technique que celui du précédent portfolio mais c'était aussi le problème car pour intégrer des nouveaux projets, il fallait que je modifie le code...
+Même si le style était plus technique que dans la version précédente, il présentait un inconvénient : pour intégrer de nouveaux projets, il fallait parfois modifier le code. Malgré cela, cette version représente une belle progression vers la maîtrise du développement web.
 
 ![](main.png)
 ![](projects.png)

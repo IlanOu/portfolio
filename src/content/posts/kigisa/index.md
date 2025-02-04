@@ -17,10 +17,12 @@ Bien que je doute qu'elle devienne un jour courante, elle offre une flexibilité
 
 ---
 
-## Pourquoi ce projet ?
+## Pourquoi ce projet ?  
 
-J'ai toujours été fasciné par la richesse du français, capable d'exprimer une même idée de 36 façons différentes !  
-Même si cette diversité est une véritable beauté, j'ai voulu expérimenter en créant un langage plus direct, où la logique prime, permettant d'exprimer ses idées sans détours superflus.
+Le français est une langue incroyablement riche, où une seule idée peut être exprimée de **36 façons différentes**. C'est ce qui fait son charme, mais aussi ce qui le rend parfois un peu… complexe.  
+
+J’ai voulu expérimenter en créant un langage plus direct, où la logique prime sur les exceptions et où s’exprimer devient plus simple et intuitif. Une approche qui change un peu des subtilités du français… **et de ses fameuses règles parfois illogiques** ([cette vidéo l’explique bien](https://www.youtube.com/watch?v=5YO7Vg1ByA8)).  
+
 
 ---
 
