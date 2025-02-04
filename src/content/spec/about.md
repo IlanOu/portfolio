@@ -1,19 +1,14 @@
 # Quelques mots sur moi
 
-Salut !
-Ravi de vous voir ici !
+Salut et bienvenue sur mon portfolio !
 
-Je m'appelle **Ilan Outhier**, j'ai 20 ans et je suis un développeur web passionné basé à **Annecy**.
+Je m'appelle **Ilan Outhier**, je suis un développeur créatif passionné basé à **Annecy**. Actuellement, je suis en troisième année de **Bachelor en Développement Web à l'École By CCI**, anciennement Gobelins. Une formation captivante qui me plonge dans l'univers du développement web, mobile et du design.
 
-En ce moment, je suis en troisième année de **Bachelor en Développement Web à l'École By CCI**, anciennement Gobelins. Une formation captivante qui me plonge dans l'univers du développement web, mobile et du design.
-<br/>
+En parallèle, je réalise mon alternance chez **Hyperfiction**, où j'explore le monde fascinant de la réalité virtuelle avec **Unity** !
 
-En parallèle, j'ai la chance d'effectuer mon alternance chez **Hyperfiction**, où je découvre le monde passionnant de la réalité virtuelle sur **Unity**.
+**En route vers de nouveaux horizons :**  
+Actuellement en troisième année de Bachelor, je prépare ma première année de Master pour l'année 2025-2026 et je suis à la recherche d'une alternance dès juin 2025 pour relever de nouveaux défis dans le domaine du développement.
 
-Quand je ne suis pas plongé dans le code (que ce soit à l'école ou chez Hyperfiction), vous me trouverez probablement avec un casque vissé sur les oreilles en train d'écouter ma playlist préférée en bidouillant sur un de mes projets personnels liés à **l'intelligence artificielle**, un domaine qui me fascine depuis toujours !
-<br/>
-Je suis quelqu'un de curieux qui adore explorer les nouvelles technologies.
-
-N'hésitez pas à jeter un œil à mon site pour en savoir plus sur moi, mes projets et mes passions.
+N'hésitez pas à parcourir mon site pour en savoir plus sur mes projets, mes passions et tout et tout.
 
 À bientôt !
