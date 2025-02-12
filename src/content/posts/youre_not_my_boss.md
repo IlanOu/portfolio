@@ -1,3 +1,12 @@
+---
+title: You're not my boss !
+published: 2025-02-08
+description: Ma première Game Jam
+tags: [Godot, Jeu Vidéo, 2D]
+category: Projets Personnels
+draft: false
+---
+
 # You're not my boss !
 
 Je me suis lancé un défi personnel : réaliser ma première game jam en 12 heures. Ce n'était pas un événement officiel, mais un challenge pour enrichir mon portfolio et découvrir Godot, un moteur de jeu que je n'avais encore jamais pris en main.
