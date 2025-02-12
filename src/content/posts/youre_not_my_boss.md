@@ -26,8 +26,8 @@ Première étape : poser un maximum d’idées autour du thème.
 Mots-clés associés : chaos, aléatoire, absurde, peur, panique, glisser, physique incontrôlable, pas de règles...
 
 Mais ça manquait de structure. J’ai donc reformulé la question :  
- ➡️ "Tout est hors de contrôle"... Mais "tout" quoi ? 
- ➡️ "Tout est hors de contrôle"... de quoi ?"
+ ➡️ "Tout est hors de contrôle"... Mais "tout" quoi ?  
+ ➡️ "Tout est hors de contrôle"... de quoi ?"  
 
 💡 Idée de gameplay : Dans un jeu, on contrôle un personnage… Et si ce dernier refusait d’obéir ?
 
