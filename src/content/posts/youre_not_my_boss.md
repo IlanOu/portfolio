@@ -7,7 +7,7 @@ category: Projets Personnels
 draft: false
 ---
 
-# You're not my boss !
+# Qu'est-ce que c'est ?
 
 Je me suis lancé un défi personnel : réaliser ma première game jam en 12 heures. Ce n'était pas un événement officiel, mais un challenge pour enrichir mon portfolio et découvrir Godot, un moteur de jeu que je n'avais encore jamais pris en main.
 
@@ -26,8 +26,8 @@ Première étape : poser un maximum d’idées autour du thème.
 Mots-clés associés : chaos, aléatoire, absurde, peur, panique, glisser, physique incontrôlable, pas de règles...
 
 Mais ça manquait de structure. J’ai donc reformulé la question :  
- -> "Tout est hors de contrôle… Mais tout quoi ?"  
- -> "Tout est hors de contrôle de quoi ?"
+ ➡️ "Tout est hors de contrôle"... Mais "tout" quoi ? 
+ ➡️ "Tout est hors de contrôle"... de quoi ?"
 
 💡 Idée de gameplay : Dans un jeu, on contrôle un personnage… Et si ce dernier refusait d’obéir ?
 
@@ -151,9 +151,9 @@ Derniers réglages :
 
 12 heures de travail, un prototype fonctionnel et une belle découverte de Godot.  
  Ce projet m’a permis de :  
- ✔ Apprendre les bases de Godot  
- ✔ Expérimenter une IA (simple) réactive et évolutive  
- ✔ Construire un concept de jeu original et amusant
+ ✅ Apprendre les bases de Godot  
+ ✅ Expérimenter une IA (simple) réactive et évolutive  
+ ✅ Construire un concept de jeu original et amusant
 
 Prochaine étape ? Peut-être améliorer ce prototype et en faire un vrai jeu jouable !
 
