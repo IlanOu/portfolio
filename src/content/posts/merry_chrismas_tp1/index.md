@@ -27,7 +27,7 @@ J'ai fais un style sur le thème de Noël avec une musique et un père Noël qui
 > - Le joueur a n chances pour trouver l'intrus.<br/>
 > - Ajouter du style.<br/>
 
-![photo de l'objet](MC-gameplay.gif)
-![photo de l'objet](MC-lvl1.gif)
-![photo de l'objet](MC-lvl2.gif)
-![photo de l'objet](MC-lvl3.gif)
+![](MC-gameplay.gif)
+![](MC-lvl1.gif)
+![](MC-lvl2.gif)
+![](MC-lvl3.gif)
