@@ -61,6 +61,8 @@ Apprentissage express ! J’ai suivi quelques tutoriels YouTube pour comprendre 
  ✅ Ajout d’une image au personnage  
  ✅ Première map de test en vue isométrique
 
+![vidéo des déplacements](video_1.gif)
+
 ---
 
 ## 3ème heure : Animation et IA du personnage
@@ -77,7 +79,7 @@ IA du personnage :
 
 J’ai synchronisé ses déplacements avec ses animations et ajouté un suivi caméra.
 
-![vidéo des déplacements](video_1.gif)
+![vidéo des interactions](video_2.gif)
 
 ---
 
@@ -95,8 +97,6 @@ Le personnage réagit à ses émotions :
 - Colère élevée → passe en mode Chase (attaque)
 - Peur élevée → passe en mode Flee (fuite)
 - Sinon, il se balade ou reste immobile.
-
-![vidéo des interactions](video_2.gif)
 
 ---
 
