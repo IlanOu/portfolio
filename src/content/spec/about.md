@@ -9,8 +9,8 @@ En parallèle, je réalise mon alternance chez **Hyperfiction**, où j'explore l
 J'aime imaginer des nouveaux univers, langages, histoires... Et je suis curieux d'apprendre de nouveaux outils qui me permettent de concevoir mes projets. Le jeu vidéo me permet d'allier créativité et technique.
 
 **En route vers de nouveaux horizons :** 
-J'intégrerai un master de jeux vidéos à la rentrée 2025-2026 (école Gaming Campus de Lyon "Développeur de jeu vidéo, rendu 3D réel et technologies immersives").
-Je suis actuellement à la recherche d'une alternance dans laquelle je pourrai participer aux projets de l'entreprise.
+J'intégrerai un master de jeux vidéos à la rentrée 2025-2026 (école Gaming Campus de Lyon "Développeur de jeu vidéo, rendu 3D réel et technologies immersives"). Je suivrai le rythme 3 semaines en entreprise et 1 semaine à l'école.
+Je suis actuellement à la recherche d'une alternance dans laquelle je pourrai participer aux projets d'une entreprise dynamique dans le jeu vidéo.
 
 N'hésitez pas à parcourir mon site pour en savoir plus sur mes projets et mes passions.
 
