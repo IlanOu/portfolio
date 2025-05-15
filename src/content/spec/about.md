@@ -10,7 +10,7 @@ J'aime imaginer des nouveaux univers, langages, histoires... Et je suis curieux 
 
 **En route vers de nouveaux horizons :** 
 
-J'intégrerai un master de jeux vidéos à la rentrée 2025-2026 (école Gaming Campus de Lyon "Développeur de jeu vidéo, rendu 3D réel et technologies immersives"). Je suivrai le rythme 3 semaines en entreprise et 1 semaine à l'école.
+J'intégrerai un master de jeux vidéo à la rentrée 2025-2026 (école Gaming Campus de Lyon "Développeur de jeu vidéo, rendu 3D réel et technologies immersives"). Je suivrai le rythme 3 semaines en entreprise et 1 semaine à l'école.
 
 Je suis actuellement à la recherche d'une alternance dans laquelle je pourrai participer aux projets d'une entreprise dynamique dans le jeu vidéo.
 
