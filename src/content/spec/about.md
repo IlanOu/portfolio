@@ -6,9 +6,12 @@ Je m'appelle **Ilan Outhier**, je suis un développeur créatif passionné basé
 
 En parallèle, je réalise mon alternance chez **Hyperfiction**, où j'explore le monde fascinant de la réalité virtuelle avec **Unity** !
 
-**En route vers de nouveaux horizons :**  
-Actuellement en troisième année de Bachelor, je prépare ma première année de Master pour l'année 2025-2026 et je suis à la recherche d'une alternance dès juin 2025 pour relever de nouveaux défis dans le domaine du développement.
+J'aime imaginer des nouveaux univers, langages, histoires... Et je suis curieux d'apprendre de nouveaux outils qui me permettent de concevoir mes projets. Le jeu vidéo me permet d'allier créativité et technique.
 
-N'hésitez pas à parcourir mon site pour en savoir plus sur mes projets, mes passions et tout et tout.
+**En route vers de nouveaux horizons :** 
+J'intégrerai un master de jeux vidéos à la rentrée 2025-2026 (école Gaming Campus de Lyon "Développeur de jeu vidéo, rendu 3D réel et technologies immersives").
+Je suis actuellement à la recherche d'une alternance dans laquelle je pourrai participer aux projets de l'entreprise.
+
+N'hésitez pas à parcourir mon site pour en savoir plus sur mes projets et mes passions.
 
 À bientôt !
