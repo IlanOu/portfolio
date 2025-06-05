@@ -13,6 +13,8 @@ lab: true
 **Reset** est mon tout premier projet d'écriture. Petit à petit, j'y construis un univers complet : personnages, mythes, légendes et une histoire qui explore la relation entre l'humanité et la technologie.  
 L'idée ? Créer un monde riche et cohérent, qui servira aussi de socle pour d'éventuels projets futurs (comme un jeu vidéo, par exemple).
 
+![Graph](Reset_4.png)
+
 ---
 
 ## Pourquoi je fais ça ?

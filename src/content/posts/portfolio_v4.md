@@ -4,7 +4,7 @@ published: 2024-04-11
 description: Une nouvelle version à la fois plus simple et plus élégante
 tags: [Astro, Svelte, TS, Tailwind]
 category: Projets Personnels
-draft: false
+draft: true
 version: 4.0.0
 ---
 

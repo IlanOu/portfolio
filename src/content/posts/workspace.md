@@ -4,7 +4,7 @@ published: 2024-01-07
 description: Le premier projet de la Yey-Team
 tags: [Astro, Svelte, TS, Collaboration]
 category: Projets Open Source
-draft: false
+draft: true
 ---
 
 <!-- # Workspace -->
