@@ -2,7 +2,7 @@
 title: Les Minis Aventuriers
 published: 2024-01-09
 description: Un jeu d'aventure et de puzzle en duo !
-tags: [Unity, Jeu Vidéo, 3D, Collaboration]
+tags: [Unity, Csharp, Jeu Vidéo, 3D, Collaboration]
 category: Projets Personnels
 draft: true
 ---

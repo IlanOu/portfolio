@@ -3,7 +3,7 @@ title: Turbo Miniverse
 description: Turbo Miniverse – Jeu d'arcade miniature dans une chambre d'enfant
 published: 2025-06-05
 image: ./Logo-Turbo-Miniverse-Transparent_Cleaned.png
-tags: [Jeu Vidéo, Unity, C#, Game Design]
+tags: [Jeu Vidéo, Unity, Csharp, Game Design]
 category: Projets Scolaires
 draft: false
 ---

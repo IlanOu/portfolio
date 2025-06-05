@@ -3,7 +3,7 @@ title: Le Bouillon Culte
 published: 2024-06-13
 description: Jeu de société connecté sur la culture française pour un EHPAD
 image: "./bouillon_culte_cover.png"
-tags: [Jeu Vidéo, Python, Raspberry PI, JS]
+tags: [Jeu Vidéo, Unity, Csharp, Python, Raspberry PI, JS]
 category: Projets Scolaires
 draft: true
 ---

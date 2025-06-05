@@ -3,7 +3,7 @@ title: Polar Dash
 published: 2023-12-08
 description: Reconnaissance de mouvements et Unity 2D
 image: "./polar_dash_cover.png"
-tags: [Unity, Python, Jeu Vidéo, 2D]
+tags: [Jeu Vidéo,Unity, Csharp, Python, 2D]
 category: Projets Scolaires
 draft: false
 ---

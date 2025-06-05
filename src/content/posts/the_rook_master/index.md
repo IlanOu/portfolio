@@ -3,7 +3,7 @@ title: The Rook Master
 published: 2019-10-23
 description: Mon premier pas dans le monde du développement
 image: "./cover.png"
-tags: [Blender, Unity, Jeu Vidéo, 3D]
+tags: [Blender, Unity, Csharp, Jeu Vidéo, 3D]
 category: Projets Personnels
 draft: false
 ---
