@@ -1,10 +1,13 @@
 {
-    "redirects": [
-      {
-        "source": "/cv",
-        "destination": "/cv/CV-Ilan-OUTHIER.pdf",
-        "permanent": true
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/cv",
+      "destination": "/cv/CV-Ilan-OUTHIER.pdf",
+      "permanent": true
+    }
+  ],
+  "env": {
+    "BUN_INSTALL": "true"
+  },
+  "build": "bun run build"
+}
