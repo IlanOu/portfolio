@@ -1,6 +1,6 @@
 ---
 title: Spinback
-published: 2025-07-01
+published: 2025-06-11
 description: Jeu narratif interactif avec contrôleur DJ et enquête étudiante
 image: "./main.jpg"
 tags: [Jeu Vidéo, Unity, Csharp, Narration]

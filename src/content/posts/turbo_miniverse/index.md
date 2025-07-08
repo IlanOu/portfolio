@@ -1,7 +1,7 @@
 ---
 title: "Turbo Miniverse"
 description: "Jeu d’exploration miniature dans une chambre d’enfant : trouvez des clés et reconstituez une piste de course !"
-published: 2025-06-05
+published: 2025-06-08
 image: ./Logo-Turbo-Miniverse-Transparent_Cleaned.png
 tags: [Jeu Vidéo, Unity, Csharp, Game Design]
 category: Projets Scolaires
