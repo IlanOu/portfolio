@@ -9,5 +9,7 @@
   "env": {
     "BUN_INSTALL": "true"
   },
-  "build": "bun run build"
+  "build": {
+    "command": "bun run build"
+  }
 }
