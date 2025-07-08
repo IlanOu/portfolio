@@ -2,7 +2,7 @@
 title: Reset
 published: 2024-08-05
 description: J'écris une histoire !
-tags: ["Histoire"]
+tags: ["Narration"]
 category: Projets Personnels
 draft: false
 lab: true
