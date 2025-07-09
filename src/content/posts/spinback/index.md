@@ -15,7 +15,7 @@ draft: false
 ## Notre équipe
 
 - [Jeremy BERTHET](https://linktr.ee/aarleem) (graphiste)
-- Paul FIGARI (graphiste)
+- [Paul FIGARI](https://www.paulfigari.fr/) (graphiste)
 - Alice MELAN (graphiste)
 - [Emmanuel MOULIN](https://github.com/Kibishi47) (développeur)
 - [Ilan OUTHIER](https://github.com/IlanOu) (développeur) *(moi)*
