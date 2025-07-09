@@ -16,7 +16,7 @@ draft: false
 
 - [Jeremy BERTHET](https://linktr.ee/aarleem) (graphiste)
 - [Paul FIGARI](https://www.paulfigari.fr/) (graphiste)
-- Alice MELAN (graphiste)
+- [Alice MELAN](https://www.linkedin.com/in/alice-melan-267378258/) (graphiste)
 - [Emmanuel MOULIN](https://github.com/Kibishi47) (développeur)
 - [Ilan OUTHIER](https://github.com/IlanOu) (développeur) *(moi)*
 

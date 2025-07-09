@@ -22,7 +22,7 @@ Nous avons également créé un site web dédié au projet : [découvrez-le ici]
 
 ## Notre équipe
 
-- Alice MELAN (graphiste)
+- [Alice MELAN](https://www.linkedin.com/in/alice-melan-267378258/) (graphiste)
 - Matias LA CORTE (graphiste)
 - Ugo MOLLIER-BILLET (graphiste)
 - [Raphaël MAKARYAN](https://github.com/raphaelmakaryan) (développeur)
