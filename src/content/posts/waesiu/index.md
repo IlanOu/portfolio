@@ -1,7 +1,7 @@
 ---
 title: Waesiu
 published: 2024-08-05
-description: Un univers entier. Rien que ça.
+description: "Un petit projet de rien du tout : un univers."
 tags: ["Narration", "Worldbuilding"]
 category: Projets Personnels
 draft: false
