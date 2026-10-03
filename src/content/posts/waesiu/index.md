@@ -1,7 +1,7 @@
 ---
 title: Waesiu
 published: 2024-08-05
-description: J'écris un univers !
+description: Un univers entier. Rien que ça.
 tags: ["Narration", "Worldbuilding"]
 category: Projets Personnels
 draft: false
@@ -10,14 +10,14 @@ lab: true
 
 ## Qu'est-ce que c'est ?
 
-**Waesiu** est mon projet d'écriture. Petit à petit, j'y construis un univers complet de **science-fiction post-apocalyptique** : personnages, peuples, langues, légendes, technologies et une histoire qui tourne autour d'une seule question : **qui sommes-nous vraiment ?**  
-L'idée ? Créer un monde riche et cohérent, qui servira aussi de socle pour d'autres projets (comme un jeu vidéo, par exemple).
+**Waesiu** est mon projet d'écriture. Petit à petit, j'y construis un univers complet de **science-fiction post-apocalyptique** : personnages, peuples, langues, légendes, technologies et autant d'histoires que mon imagination me le permet et qui abordent chacune leurs questions.
+L'idée ? Créer un monde riche et cohérent, qui servira aussi de socle pour d'autres projets (comme un jeu vidéo, un court métrage ou simplement un concept art, par exemple).
 
 :::note
 Vous avez peut-être connu ce projet sous le nom de **Reset**. L'univers a bien grandi depuis, et il a changé de nom en chemin !
 :::
 
-![Graph](waesiu_graph.png)
+![Carte du monde](waesiu_carte.webp)
 
 ---
 
@@ -26,7 +26,7 @@ Vous avez peut-être connu ce projet sous le nom de **Reset**. L'univers a bien 
 J'adore inventer des mondes et donner vie à des idées.  
 Quand je crée un jeu, j'imagine toujours l'histoire d'un personnage : pourquoi il fait ce qu'il fait, quelle personnalité il a, etc.
 Quand je crée un outil web, je pense à des outils complémentaires et à une grande structure complexe pour l'améliorer.
-Cette fois-ci, je m'aventure dans l'écriture pour imaginer un univers où chaque détail compte, du plus petit objet aux grands événements historiques.  
+Depuis quelques temps, je m'aventure dans l'écriture pour imaginer un univers où chaque détail compte, du plus petit objet aux grands événements historiques.  
 Et si un événement du passé avait changé ? Voilà ce qui me fascine !
 
 Créer une histoire me donne un sujet à développer. Par exemple, si je veux créer un jeu vidéo, je peux situer mon jeu à un moment et à un endroit précis dans mon univers, et j'ai déjà des personnages, des objets, des décors, etc.
@@ -35,7 +35,7 @@ Créer une histoire me donne un sujet à développer. Par exemple, si je veux cr
 
 :::important[Le pitch]
 
-> **On peut mesurer une âme. Ça ne dit toujours pas qui on est.**
+> **Imaginons un monde dans lequel on a compris ce qu'est une âme...**
 
 ### L'Avant
 
@@ -49,17 +49,11 @@ Cette catastrophe n'a même pas de nom : les survivants parlent seulement de **l
 
 ### L'Après
 
-Ce qui reste, ce sont des gens qui ne savent plus qui ils sont, dans un monde qui a oublié qu'il avait su.  
+Ce qui reste, ce sont des gens qui ne savent plus qui ils sont, dans un monde vidé... mais encore plein de tout ce qu'on avait oublié.  
 La nature reprend ses droits sur les ruines, dans une ambiance **Solarpunk** : une technologie propre, en harmonie avec la nature, mais toujours marquée par les cicatrices du passé.
 
-| ![Waesiu 1](waesiu_1.jpg) | ![Waesiu 2](waesiu_2.jpg) |
-|:-------------------------:|:-------------------------:|
+### La plateforme
 
-### Les thèmes
-
-L'histoire aborde :
-- L'identité : qui est-on quand on ne sait plus qui on est ?
-- La relation entre l'humanité et la technologie.
-- La mémoire collective et ce qu'on oublie.
-- Le lien avec les autres, et ce qu'il peut coûter.
+C'est un projet d'au moins une vie ! Alors en parallèle de l'univers, je conçois une **plateforme** pour que tout le monde puisse participer à son développement : écrire, dessiner, composer, modéliser...  
+Chacun pourra y ajouter sa pierre, sans que le monde perde sa cohérence. Oui, mon objectif, c'est d'ouvrir l'univers à tous !
 :::
