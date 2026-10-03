@@ -31,7 +31,7 @@ const oklchToHex = (str) => {
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fuwari.vercel.app/",
+  site: "https://www.ilan-outhier.fr/",
   base: "/",
   trailingSlash: "always",
   integrations: [
