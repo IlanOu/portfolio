@@ -4,6 +4,16 @@
       "source": "/cv",
       "destination": "/cv/CV-Ilan-OUTHIER.pdf",
       "permanent": true
+    },
+    {
+      "source": "/posts/reset/:path*",
+      "destination": "/posts/waesiu/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/reset",
+      "destination": "/posts/waesiu/",
+      "permanent": true
     }
   ],
   "env": {
