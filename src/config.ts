@@ -59,6 +59,11 @@ export const profileConfig: ProfileConfig = {
       icon: 'fa6-brands:github',
       url: 'https://github.com/IlanOu',
     },
+    {
+      name: 'CV',
+      icon: 'fa6-solid:file-lines',
+      url: '/cv/CV-Ilan-OUTHIER.pdf',
+    },
   ],
 }
 
