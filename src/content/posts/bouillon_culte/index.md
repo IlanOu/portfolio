@@ -5,7 +5,7 @@ description: Jeu de société connecté sur la culture française pour un EHPAD
 image: "./bouillon_culte_cover.png"
 tags: [Jeu Vidéo, Unity, Csharp, Python, Raspberry PI, JS]
 category: Projets Scolaires
-draft: true
+draft: false
 ---
 
 <!-- # Le Bouillon Culte -->

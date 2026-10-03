@@ -5,7 +5,7 @@ description: Clicker game avec des fusées !
 image: "./cover.png"
 tags: [HTML, CSS, JS, Jeu Vidéo, 2D]
 category: Projets Scolaires
-draft: false
+draft: true
 ---
 
 <!-- # Rockets -->
